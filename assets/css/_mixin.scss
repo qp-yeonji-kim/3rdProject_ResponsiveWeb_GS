@@ -18,3 +18,7 @@
   -webkit-background-size: $value !important;
   background-size: $value !important;
 }
+@mixin b-radius($value...){
+  -webkit-border-radius: $value; 
+  border-radius: $value; 
+}

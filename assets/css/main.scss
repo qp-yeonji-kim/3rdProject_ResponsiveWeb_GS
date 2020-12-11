@@ -23,7 +23,7 @@
     }
   }
   .controller{
-    position: absolute;width: 70px;height: 20px;left: 20%;top: 75%;background: red;z-index : 100;
+    position: absolute;width: 70px;height: 20px;left: 20%;top: 75%;z-index : 100;
     &::after{content: "";position: absolute;left: 20%;top: calc(75% + 18px);width: 100%;height: 2px;background: #fff;}
     .swiper-button-prev, .swiper-button-next, .autoplay{
       @include bg-size(cover);
@@ -36,6 +36,7 @@
     .autoplay.stop{background-image: url("../images/common/pause_w.svg");}
     .autoplay.play{background-image: url("../images/common/play_w.svg");}
     .swiper-button-next::after, .swiper-button-prev::after{display: none;}
+    .swiper-pagination{display: none;}
   }
 }
 }
@@ -52,18 +53,19 @@
 }
 
 #subsidairy{
+  margin-bottom: 100px;
   li{
     @include bg-size(cover);
-    position: relative;float: left;width: calc(100% / 3);height: calc(100vw/2);background: center no-repeat;text-align: center;color: #fff;
-    p, ul{width: 90%;}
-    h3{
-      @include t-form(translateX(-50%));
-      position: relative;top: 50%;left: 50%;font-size: 3.6rem;font-weight: 700;
-      &::before{content: "";position: absolute;top: -2rem;left: calc(50% - 2rem);width: 4rem;height: 0.2rem;background: #fff;}
+    position: relative;float: left;width: calc(100% / 3);height: calc(100vw/2);background: center no-repeat;overflow: hidden;text-align: center;color: #fff;
+    &.active{
+      .txtbox{top: 35%;}
+      p{display: none;}
+      .keypoint{opacity: 1;}
+      h3::before{opacity: 0;}
     }
-    p{position: absolute;top: 60%;font-size: 2rem;font-weight: 500;}
     &.f-energy{
       background-image: url("../images/main/energy.png");
+      li + li{margin-top: 20px !important;}
     }
     &.f-circulation{
       background-image: url("../images/main/distribution.png");
@@ -71,8 +73,31 @@
     &.f-build{
       background-image: url("../images/main/build.png");
     }
+    .txtbox{
+      position: absolute;top: 45%;left: 0%;width: 100%;
+    }
+    h3{
+      @include t-form(translateX(-50%));
+      position: relative;top: 50%;left: 50%;margin-bottom: 5.9375%;font-size: 36px;font-weight: 700;
+      &::before{content: "";position: absolute;top: -2rem;left: calc(50% - 2rem);width: 4rem;height: 0.2rem;background: #fff;}
+    }
+    .txtbox, h3::before, p, .keypoint{@include t-sition(all 0.5s);}
+    p{padding: 0 7%;font-size: 2rem;font-weight: 500;}
+    .keypoint{
+      opacity: 0;
+      strong{
+        display: block;padding-bottom: 20px;font-size: 1.8rem;font-weight: 500;
+      }
+      .company{
+        top: 75%;width: 18rem;margin: 0 auto;
+        li{
+          @include b-radius(2px);
+          display: block;width: 16rem;height: 5rem;border: 1px solid #fff;}
+        li + li{margin-top: 20px;}
+        a{display: block;font-size: 2rem;line-height: 5rem;}
+      }
+    }
   }
-<<<<<<< HEAD
 }
 
 #grow{
@@ -174,6 +199,3 @@
     }
   }
 }
-=======
-}
->>>>>>> parent of cff211d... index- #promote style

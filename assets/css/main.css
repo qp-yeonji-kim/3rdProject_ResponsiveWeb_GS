@@ -33,7 +33,6 @@
   height: 20px;
   left: 20%;
   top: 75%;
-  background: red;
   z-index: 100; }
   #coreValue .swiper-container .controller::after {
     content: "";
@@ -67,6 +66,8 @@
   #coreValue .swiper-container .controller .autoplay.play {
     background-image: url("../images/common/play_w.svg"); }
   #coreValue .swiper-container .controller .swiper-button-next::after, #coreValue .swiper-container .controller .swiper-button-prev::after {
+    display: none; }
+  #coreValue .swiper-container .controller .swiper-pagination {
     display: none; }
 
 #introduce {
@@ -166,7 +167,6 @@
         margin: 0 auto; }
         #subsidairy li .keypoint .company li {
           -webkit-border-radius: 2px;
-          -moz-border-radius: 2px;
           border-radius: 2px;
           display: block;
           width: 16rem;
@@ -284,7 +284,6 @@
         letter-spacing: -0.1vw; }
       #recruit .recruit_content .recruit_text a {
         -webkit-border-radius: 2px;
-        -moz-border-radius: 2px;
         border-radius: 2px;
         display: inline-block;
         padding: 0.7291666666666667vw;

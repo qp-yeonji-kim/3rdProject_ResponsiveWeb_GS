@@ -219,6 +219,7 @@ h2 {
         display: inline-block;
         margin-left: 34px; }
     .header .util .lang_menu {
+      display: none;
       margin-top: 30px; }
       .header .util .lang_menu li {
         width: 85px;
@@ -333,13 +334,13 @@ h2 {
         font-size: 1.4rem;
         color: #fff; }
     #footer .footer_area #familySite {
+      margin: 32px 0 0 250px;
       height: 2rem;
       color: #fff;
       font-size: 1.6rem; }
-      #footer .footer_area #familySite > * {
-        float: left; }
       #footer .footer_area #familySite strong {
         position: relative;
+        display: block;
         line-height: 38px; }
         #footer .footer_area #familySite strong::before {
           -webkit-background-size: cover !important;
@@ -354,6 +355,7 @@ h2 {
       #footer .footer_area #familySite ul li {
         display: none; }
       #footer .footer_area #familySite a {
+        display: inline-block;
         padding: 5px 32px;
         border: 2px solid #fff; }
 
