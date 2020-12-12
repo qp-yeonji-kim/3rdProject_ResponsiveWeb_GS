@@ -19,8 +19,9 @@ $(document).ready(function () {
     /* 검색창 열고 닫기 */
     var $searchBtn = $('.header .search button');
     $searchBtn.on('click', function(){
-        $(this).next().slideToggle();
+        $('.util').next().slideToggle();
     });
+
     
     /* gnb 네비게이션 Full down 효과 */
     var $dep1ul = $('#pcGnb > ul');
