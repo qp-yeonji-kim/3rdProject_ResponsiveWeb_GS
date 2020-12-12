@@ -74,12 +74,12 @@ header, section, article, footer{display: block;}
 .summary{display: block;margin: 1.8rem 0 2.8rem;font-size: 40px;font-weight: 700;}
 
 html{font-size: 10px;}
-body{font-family: NtSansKR;color: #000;word-break: keep-all;}
+body{font-family: NtSansKR, "맑은 고딕", "Malgun Gothic", sans-serif;color: #000;word-break: keep-all;}
 *{-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
 h2{display: inline-block;font-size: 2rem;border-bottom: 1px solid #000;}
 
-#skip a{position: absolute;display: block;top: 0;left: -9999px;z-index: 1000;}
-#skip a:focus{top: 0;left: 0;width: 100%;height: 4rem;line-height: 4rem;color: #fff;z-index: 900;background: $bluegreen;text-align: center;}
+#skip a{display: block;position: absolute;top: 0;left: -9999px;z-index: 1000;}
+#skip a:focus{left: 0;width: 100%;height: 6rem;font-size: 1.8rem;line-height: 6rem;font-weight: 500;color: #fff;text-align: center;background: $bluegreen;}
 #wrap{max-width: 1400px;}
 
 
@@ -88,43 +88,67 @@ h2{display: inline-block;font-size: 2rem;border-bottom: 1px solid #000;}
   position: fixed;top: 0;left: 0;width: 100%;height: 8.4rem;z-index: 100;
   &#mHeader{display: none;}
     .header_content{
-      max-width: 1280px;margin: 0 auto;}
-    h1, .util{position: relative;z-index: 100;}
-    h1 {float: left;padding-top: 2.2rem;
+      max-width: 1280px;height: 100%;margin: 0 auto;}
+    h1, .util{
+      @include t-form(translateY(-50%));
+      position: relative;top: 50%;z-index: 100;}
+    h1{
+      float: left;width: 8.6rem;height: 4.5rem;
       img{width: 8.6rem;}
     }
-    .util{padding-top: 3rem;
-      > * {float: left;padding: 0 1.6rem;}
-      .search{
+    .util{
+      float: right;width: 15rem;height: 100%;padding-bottom: 1.5rem;
+      > li{float: left;position: absolute;top: 0;height: 100%;}
+      .lang >button, .search > button{
         @include bg-size(cover);
-        position: relative;width: 28px;height: 24px;background: center no-repeat;background-image: url("../images/common/search_b.svg");
-        &::after{content: "";position: absolute;top: 4px;right: -16px;width: 2px;height: 18px;background-color: rgba(0, 0, 0, .3);}
-      }
-      .search_wrap{
-        display: none;position: fixed;top: 83px;left: 0;width: 100%;height: 170px;background: rgba(255, 255, 255, .8);
-        /* 따로 안써줘도 될 것 같은데 클래스.. */
-        .search_place{
-          @include t-form(translateY(-50%));
-          width: 500px;margin: 85px auto;border-bottom: 2px solid rgba(0, 164, 153, .6);
-          .searchTxt{ width: 420px;padding: 0 30px 8px 40px;font-size: 3rem;}
-          button{width: 45px;padding-bottom: 8px;vertical-align: middle}
-        }
+        @include t-form(translateY(-50%));
+        position: absolute;top: 50%;height: 2.4rem;background: center no-repeat;
       }
       .lang{
-        @include bg-size(cover);
-        display: inline-block;width: 24px;height: 24px;font-size: 1.6rem;background: center no-repeat;background-image: url("../images/common/global.svg");
-        span:nth-child(2){display: inline-block;margin-left: 34px;}
+        left: 0;width: 7.5rem;
+        &.on{
+          > button{
+            color: $red;border-color: $red;
+            span{border-color: $red;}
+          }
+          .lang_menu{display: block;}
+        }
+        > button{
+          display: inline-block;width: 2.4rem;font-size: 1.6rem;font-weight: 500;background-image: url("../images/common/global.svg");
+          &:focus{
+            color: $red;
+            span{border-color: $red;}
+            }
+          span{display: inline-block;margin-left: 2.8rem;border-bottom: 1px solid transparent;}
+        }
+        .lang_menu{
+          display: none;position: absolute;top: 8.4rem;
+          li{
+            width: 7.5rem;height: 3.5rem;background: rgba(255, 255, 255, .8);border : 1px solid #fff;font-size: 1.6rem;text-align: center;line-height: 3.7rem;
+            a{border-bottom: 1px solid transparent;
+              &:hover, &:focus{color: $red;border-color: $red;}
+            }
+          }
+        }
       }
-      .lang_menu{
-        display: none;margin-top: 30px;
-        li{width: 85px;height: 35px;background: rgba(255, 255, 255, .8);border : 1px solid #fff;font-size: 1.6rem;text-align: center;line-height: 37px;
+      .search{
+        left: 8.5rem;width: 2.8rem;
+        > button{
+          width: 2.8rem;background-image: url("../images/common/search_b.svg");
+          &::after{content: "";position: absolute;top: 0.6rem;left: -1rem;width: 2px;height: 18px;background-color: rgba(0, 0, 0, .3);}
+        }
+        .search_wrap{
+          display: none;position: fixed;top: 83px;left: 0;width: 100%;height: 170px;background: rgba(255, 255, 255, .8);
+          .search_place{
+            @include t-form(translateY(-50%));
+            width: 500px;margin: 85px auto;border-bottom: 2px solid rgba(0, 164, 153, .6);
+            .searchTxt{width: 420px;padding: 0 30px 8px 40px;font-size: 3rem;}
+            button{width: 45px;padding-bottom: 8px;vertical-align: middle}
+          }
         }
       }
     }
   }
-.util{
-  float: right;padding-top: 26px;
-}
 
 /* gnb */
 .gnb{

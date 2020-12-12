@@ -106,7 +106,7 @@ html {
   font-size: 10px; }
 
 body {
-  font-family: NtSansKR;
+  font-family: NtSansKR, "맑은 고딕", "Malgun Gothic", sans-serif;
   color: #000;
   word-break: keep-all; }
 
@@ -121,22 +121,22 @@ h2 {
   border-bottom: 1px solid #000; }
 
 #skip a {
-  position: absolute;
   display: block;
+  position: absolute;
   top: 0;
   left: -9999px;
   z-index: 1000; }
 
 #skip a:focus {
-  top: 0;
   left: 0;
   width: 100%;
-  height: 4rem;
-  line-height: 4rem;
+  height: 6rem;
+  font-size: 1.8rem;
+  line-height: 6rem;
+  font-weight: 500;
   color: #fff;
-  z-index: 900;
-  background: #00a499;
-  text-align: center; }
+  text-align: center;
+  background: #00a499; }
 
 #wrap {
   max-width: 1400px; }
@@ -153,86 +153,116 @@ h2 {
     display: none; }
   .header .header_content {
     max-width: 1280px;
+    height: 100%;
     margin: 0 auto; }
   .header h1, .header .util {
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
     position: relative;
+    top: 50%;
     z-index: 100; }
   .header h1 {
     float: left;
-    padding-top: 2.2rem; }
+    width: 8.6rem;
+    height: 4.5rem; }
     .header h1 img {
       width: 8.6rem; }
   .header .util {
-    padding-top: 3rem; }
-    .header .util > * {
+    float: right;
+    width: 15rem;
+    height: 100%;
+    padding-bottom: 1.5rem; }
+    .header .util > li {
       float: left;
-      padding: 0 1.6rem; }
-    .header .util .search {
+      position: absolute;
+      top: 0;
+      height: 100%; }
+    .header .util .lang > button, .header .util .search > button {
       -webkit-background-size: cover !important;
       background-size: cover !important;
-      position: relative;
-      width: 28px;
-      height: 24px;
-      background: center no-repeat;
-      background-image: url("../images/common/search_b.svg"); }
-      .header .util .search::after {
-        content: "";
-        position: absolute;
-        top: 4px;
-        right: -16px;
-        width: 2px;
-        height: 18px;
-        background-color: rgba(0, 0, 0, 0.3); }
-    .header .util .search_wrap {
-      display: none;
-      position: fixed;
-      top: 83px;
-      left: 0;
-      width: 100%;
-      height: 170px;
-      background: rgba(255, 255, 255, 0.8);
-      /* 따로 안써줘도 될 것 같은데 클래스.. */ }
-      .header .util .search_wrap .search_place {
-        -webkit-transform: translateY(-50%);
-        transform: translateY(-50%);
-        width: 500px;
-        margin: 85px auto;
-        border-bottom: 2px solid rgba(0, 164, 153, 0.6); }
-        .header .util .search_wrap .search_place .searchTxt {
-          width: 420px;
-          padding: 0 30px 8px 40px;
-          font-size: 3rem; }
-        .header .util .search_wrap .search_place button {
-          width: 45px;
-          padding-bottom: 8px;
-          vertical-align: middle; }
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      position: absolute;
+      top: 50%;
+      height: 2.4rem;
+      background: center no-repeat; }
     .header .util .lang {
-      -webkit-background-size: cover !important;
-      background-size: cover !important;
-      display: inline-block;
-      width: 24px;
-      height: 24px;
-      font-size: 1.6rem;
-      background: center no-repeat;
-      background-image: url("../images/common/global.svg"); }
-      .header .util .lang span:nth-child(2) {
+      left: 0;
+      width: 7.5rem; }
+      .header .util .lang.on > button {
+        color: #cf4520;
+        border-color: #cf4520; }
+        .header .util .lang.on > button span {
+          border-color: #cf4520; }
+      .header .util .lang.on .lang_menu {
+        display: block; }
+      .header .util .lang > button {
         display: inline-block;
-        margin-left: 34px; }
-    .header .util .lang_menu {
-      display: none;
-      margin-top: 30px; }
-      .header .util .lang_menu li {
-        width: 85px;
-        height: 35px;
-        background: rgba(255, 255, 255, 0.8);
-        border: 1px solid #fff;
+        width: 2.4rem;
         font-size: 1.6rem;
-        text-align: center;
-        line-height: 37px; }
-
-.util {
-  float: right;
-  padding-top: 26px; }
+        font-weight: 500;
+        background-image: url("../images/common/global.svg"); }
+        .header .util .lang > button:focus {
+          color: #cf4520; }
+          .header .util .lang > button:focus span {
+            border-color: #cf4520; }
+        .header .util .lang > button span {
+          display: inline-block;
+          margin-left: 2.8rem;
+          border-bottom: 1px solid transparent; }
+      .header .util .lang .lang_menu {
+        display: none;
+        position: absolute;
+        top: 8.4rem; }
+        .header .util .lang .lang_menu li {
+          width: 7.5rem;
+          height: 3.5rem;
+          background: rgba(255, 255, 255, 0.8);
+          border: 1px solid #fff;
+          font-size: 1.6rem;
+          text-align: center;
+          line-height: 3.7rem; }
+          .header .util .lang .lang_menu li a {
+            border-bottom: 1px solid transparent; }
+            .header .util .lang .lang_menu li a:hover, .header .util .lang .lang_menu li a:focus {
+              color: #cf4520;
+              border-color: #cf4520; }
+    .header .util .search {
+      left: 8.5rem;
+      width: 2.8rem; }
+      .header .util .search > button {
+        width: 2.8rem;
+        background-image: url("../images/common/search_b.svg"); }
+        .header .util .search > button::after {
+          content: "";
+          position: absolute;
+          top: 0.6rem;
+          left: -1rem;
+          width: 2px;
+          height: 18px;
+          background-color: rgba(0, 0, 0, 0.3); }
+      .header .util .search .search_wrap {
+        display: none;
+        position: fixed;
+        top: 83px;
+        left: 0;
+        width: 100%;
+        height: 170px;
+        background: rgba(255, 255, 255, 0.8); }
+        .header .util .search .search_wrap .search_place {
+          -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+          width: 500px;
+          margin: 85px auto;
+          border-bottom: 2px solid rgba(0, 164, 153, 0.6); }
+          .header .util .search .search_wrap .search_place .searchTxt {
+            width: 420px;
+            padding: 0 30px 8px 40px;
+            font-size: 3rem; }
+          .header .util .search .search_wrap .search_place button {
+            width: 45px;
+            padding-bottom: 8px;
+            vertical-align: middle; }
 
 /* gnb */
 .gnb {
