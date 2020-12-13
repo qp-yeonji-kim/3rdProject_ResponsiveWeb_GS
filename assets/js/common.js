@@ -15,11 +15,21 @@ $(document).ready(function () {
         }, 10);
     });
 
-
-    /* 검색창 열고 닫기 */
-    var $searchBtn = $('.header .search button');
-    $searchBtn.on('click', function(){
-        $('.util').next().slideToggle();
+    
+    /* 검색창 */
+    //1) 버튼 눌러 열고 닫기
+    var $searchOpen = $('.header .search button');
+    var $searchForm = $('.header .search_wrap form')
+    $searchOpen.on('click', function(){
+        $searchForm.parent().slideToggle();
+    });
+    //2) 포커스 빠져나가거나 다른 곳 클릭할 시 닫히기
+    $searchForm.find('button').on('blur', function(){
+        setTimeout(function(){
+            if(!$searchForm.children().is(':focus')) {
+                $searchForm.parent().slideUp();
+                $searchOpen.focus();}
+        }, 10);
     });
 
     
@@ -27,7 +37,7 @@ $(document).ready(function () {
     var $dep1ul = $('#pcGnb > ul');
     var $dep2ul = $dep1ul.find('>li >ul');
 
-    //1) depth2 ul  모두 숨기고 시작
+    //1) depth2 ul 모두 숨기고 시작
     $dep2ul.hide();
 
     //2)depth1 ul에 마우스 진입과 나가기
