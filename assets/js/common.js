@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    /* lang_menu 숨기고 보이기 */
+    /* 언어 옵션 제어버튼 */
     //1) 클릭 시 옵션 열고 닫기, 다른 곳으로 이동하면 옵션 숨기기
     var $langBtn = $('.header .lang');
     $langBtn.on('click', function(){
@@ -16,7 +16,7 @@ $(document).ready(function () {
     });
 
     
-    /* 검색창 */
+    /* 검색창 열기 버튼 */
     //1) 버튼 눌러 열고 닫기
     var $searchOpen = $('.header .search button');
     var $searchForm = $('.header .search_wrap form')
@@ -74,4 +74,25 @@ $(document).ready(function () {
             if (!$dep1ul.find('a').is(':focus')) gnbReturn();
         }, 10);
     });
+
+
+    /* family site 옵션 열고 닫기 */
+    var $familyOpen = $('#familySite .f_btn');
+    var $f_siteGo = $('#familySite .fGo_btn');
+
+    //1) 클릭하면 옵션 열고 닫기
+    $familyOpen.on('click', function(){
+        $(this).toggleClass('on').next('ul').stop().slideToggle();
+    });
+
+    //2) 포커스 떠나면 옵션 닫기
+    $familyOpen.next().find('a:first, a:last').on('blur', function(){
+        setTimeout(function(){
+            if(! $familyOpen.next.find('a').is(':focus')) {
+                $familyOpen.removeClass('on').next('ul').removeClass('on');
+            };
+        }, 10);
+    });
+
+    //3) a클릭할 시 
 });
