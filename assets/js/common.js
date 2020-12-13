@@ -78,6 +78,7 @@ $(document).ready(function () {
 
     /* family site 옵션 열고 닫기 */
     var $familyOpen = $('#familySite .f_btn');
+    var $familyLink = $('#familySite > ul > li')
     var $f_siteGo = $('#familySite .fGo_btn');
 
     //1) 클릭하면 옵션 열고 닫기
@@ -86,13 +87,25 @@ $(document).ready(function () {
     });
 
     //2) 포커스 떠나면 옵션 닫기
-    $familyOpen.next().find('a:first, a:last').on('blur', function(){
+    $familyLink.children('a:first, a:last').on('blur', function(){
         setTimeout(function(){
-            if(! $familyOpen.next.find('a').is(':focus')) {
-                $familyOpen.removeClass('on').next('ul').removeClass('on');
+            if(! $familyLink.children('a').is(':focus')) {
+                $familyOpen.removeClass('on').next('ul').stop().slideUp();
             };
         }, 10);
     });
 
-    //3) a클릭할 시 
+    //3) a클릭할 시 텍스트, href변수에 담고 $familyOpen 글자 변경 - 작동 잘 안됨
+    var aHref = $(this).attr('href');
+    var aTxt = $(this).text();
+    $familyLink.children('a').on('click', function(e){
+        e.preventDefault();
+        $familyOpen().text(aTxt).focus().next('ul').stop().slideToggle();
+    });
+
+    //4) GO버튼 누르면 페이지 이동
+    $f_siteGo.on('click', function(e){
+        e.preventDefault();
+        window.open(aHref, 'popup');
+    });
 });
