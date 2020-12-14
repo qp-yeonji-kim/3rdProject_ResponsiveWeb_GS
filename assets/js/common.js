@@ -96,16 +96,24 @@ $(document).ready(function () {
     });
 
     //3) a클릭할 시 텍스트, href변수에 담고 $familyOpen 글자 변경 - 작동 잘 안됨
-    var aHref = $(this).attr('href');
-    var aTxt = $(this).text();
+    var aHref = $familyLink.first().children('a').attr('href');
+    var aTxt = $familyLink.first().children('a').text();
+    
     $familyLink.children('a').on('click', function(e){
         e.preventDefault();
-        $familyOpen().text(aTxt).focus().next('ul').stop().slideToggle();
+        aHref = $(this).attr('href');
+        aTxt = $(this).text();
+        console.log(aHref, aTxt);
+        $familyOpen.text(aTxt).focus().next('ul').stop().slideToggle();
     });
 
     //4) GO버튼 누르면 페이지 이동
     $f_siteGo.on('click', function(e){
         e.preventDefault();
-        window.open(aHref, 'popup');
+        window.open(aHref, 'popup'); //=target="_blank"
+    });
+
+    $('#familySite').on('mouseleave', function(){
+        $familyOpen.next('ul').stop().slideToggle();
     });
 });
