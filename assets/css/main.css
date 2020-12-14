@@ -96,7 +96,7 @@
 
 #subsidairy {
   margin-bottom: 100px; }
-  #subsidairy li {
+  #subsidairy .fields > li {
     -webkit-background-size: cover !important;
     background-size: cover !important;
     position: relative;
@@ -107,28 +107,28 @@
     overflow: hidden;
     text-align: center;
     color: #fff; }
-    #subsidairy li.active .txtbox {
-      top: 35%; }
-    #subsidairy li.active p {
+    #subsidairy .fields > li.active .txtbox {
+      top: 40%; }
+    #subsidairy .fields > li.active p {
       display: none; }
-    #subsidairy li.active .keypoint {
+    #subsidairy .fields > li.active .keypoint {
       opacity: 1; }
-    #subsidairy li.active h3::before {
+    #subsidairy .fields > li.active h3::before {
       opacity: 0; }
-    #subsidairy li.f-energy {
+    #subsidairy .fields > li.f-energy {
       background-image: url("../images/main/energy.png"); }
-      #subsidairy li.f-energy li + li {
+      #subsidairy .fields > li.f-energy li + li {
         margin-top: 20px !important; }
-    #subsidairy li.f-circulation {
+    #subsidairy .fields > li.f-circulation {
       background-image: url("../images/main/distribution.png"); }
-    #subsidairy li.f-build {
+    #subsidairy .fields > li.f-build {
       background-image: url("../images/main/build.png"); }
-    #subsidairy li .txtbox {
+    #subsidairy .fields > li .txtbox {
       position: absolute;
       top: 45%;
       left: 0%;
       width: 100%; }
-    #subsidairy li h3 {
+    #subsidairy .fields > li h3 {
       -webkit-transform: translateX(-50%);
       transform: translateX(-50%);
       position: relative;
@@ -137,7 +137,7 @@
       margin-bottom: 5.9375%;
       font-size: 36px;
       font-weight: 700; }
-      #subsidairy li h3::before {
+      #subsidairy .fields > li h3::before {
         content: "";
         position: absolute;
         top: -2rem;
@@ -145,39 +145,38 @@
         width: 4rem;
         height: 0.2rem;
         background: #fff; }
-    #subsidairy li .txtbox, #subsidairy li h3::before, #subsidairy li p, #subsidairy li .keypoint {
+    #subsidairy .fields > li .txtbox, #subsidairy .fields > li h3::before, #subsidairy .fields > li p, #subsidairy .fields > li .keypoint {
       -webkit-transition: all 0.5s;
       -moz-transition: all 0.5s;
       -o-transition: all 0.5s;
       transition: all 0.5s; }
-    #subsidairy li p {
+    #subsidairy .fields > li p {
       padding: 0 7%;
       font-size: 2rem;
       font-weight: 500; }
-    #subsidairy li .keypoint {
+    #subsidairy .fields > li .keypoint {
       opacity: 0; }
-      #subsidairy li .keypoint strong {
+      #subsidairy .fields > li .keypoint strong {
         display: block;
         padding-bottom: 20px;
         font-size: 1.8rem;
         font-weight: 500; }
-      #subsidairy li .keypoint .company {
+      #subsidairy .fields > li .keypoint .company {
         top: 75%;
         width: 18rem;
         margin: 0 auto; }
-        #subsidairy li .keypoint .company li {
+        #subsidairy .fields > li .keypoint .company li {
+          width: 16rem;
+          height: 5rem; }
+        #subsidairy .fields > li .keypoint .company li + li {
+          margin-top: 20px; }
+        #subsidairy .fields > li .keypoint .company a {
           -webkit-border-radius: 2px;
           border-radius: 2px;
           display: block;
-          width: 16rem;
-          height: 5rem;
-          border: 1px solid #fff; }
-        #subsidairy li .keypoint .company li + li {
-          margin-top: 20px; }
-        #subsidairy li .keypoint .company a {
-          display: block;
           font-size: 2rem;
-          line-height: 5rem; }
+          line-height: 5rem;
+          border: 1px solid #fff; }
 
 #grow article {
   width: 50%;
@@ -305,7 +304,9 @@
     background: url("../images/main/man.png") no-repeat bottom center; }
 
 #news {
-  padding: 0 260px; }
+  width: 1172px;
+  height: 60px;
+  margin: 0 auto; }
   #news .news_content {
     position: relative;
     width: 1400px;

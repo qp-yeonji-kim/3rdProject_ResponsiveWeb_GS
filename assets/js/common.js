@@ -33,7 +33,7 @@ $(document).ready(function () {
     });
 
     
-    /* gnb 네비게이션 Full down 효과 */
+    /* pcGnb 네비게이션 Full down 효과 */
     var $dep1ul = $('#pcGnb > ul');
     var $dep2ul = $dep1ul.find('>li >ul');
 
@@ -110,10 +110,32 @@ $(document).ready(function () {
     //4) GO버튼 누르면 페이지 이동
     $f_siteGo.on('click', function(e){
         e.preventDefault();
-        window.open(aHref, 'popup'); //=target="_blank"
+        window.open(aHref, 'popup');
     });
 
     $('#familySite').on('mouseleave', function(){
         $familyOpen.next('ul').stop().slideToggle();
+    });
+
+    /* mGnb네비게이션 열고 닫기 */
+    var $mGnb1depBtn = $('#mHeader .menuBtn button');
+    var $mGnb1dep = $('#mGnb ul');
+    var $mGnb2depBtn = $('#mGnb ul li a');
+    
+    $mGnb1dep.hide();
+    $mGnb2depBtn.next().hide();
+    /* 이상하게 숨겨도 자꾸 2dep도 내려온다. preventDefault, slideUp도 먹히지 않는다. */
+
+    //1) 1dep ul 열고 닫기
+    $mGnb1depBtn.on('click', function(){
+        $(this).parent().toggleClass('on');
+        $mGnb1dep.stop().slideToggle();
+        
+        //2) 2dep ul 열고 닫기
+        $mGnb2depBtn.on('click', function(e){
+            e.preventDefault();
+        $(this).siblings().next().slideUp();
+        $(this).next().stop().slideDown();
+        });
     });
 });

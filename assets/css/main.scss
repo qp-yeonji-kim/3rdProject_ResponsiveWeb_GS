@@ -54,11 +54,11 @@
 
 #subsidairy{
   margin-bottom: 100px;
-  li{
+  .fields > li{
     @include bg-size(cover);
     position: relative;float: left;width: calc(100% / 3);height: calc(100vw/2);background: center no-repeat;overflow: hidden;text-align: center;color: #fff;
     &.active{
-      .txtbox{top: 35%;}
+      .txtbox{top: 40%;}
       p{display: none;}
       .keypoint{opacity: 1;}
       h3::before{opacity: 0;}
@@ -90,11 +90,12 @@
       }
       .company{
         top: 75%;width: 18rem;margin: 0 auto;
-        li{
-          @include b-radius(2px);
-          display: block;width: 16rem;height: 5rem;border: 1px solid #fff;}
+        li{width: 16rem;height: 5rem;}
         li + li{margin-top: 20px;}
-        a{display: block;font-size: 2rem;line-height: 5rem;}
+        a{
+          @include b-radius(2px);
+          display: block;font-size: 2rem;line-height: 5rem;border: 1px solid #fff;
+        }
       }
     }
   }
@@ -160,7 +161,7 @@
 }
 
 #news{
-  padding: 0 260px;
+  width: 1172px;height: 60px;margin: 0 auto;
   .news_content{
     position: relative;width: 1400px;height: 6rem;padding: 20px 0;
     &::before{
