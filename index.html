@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GS, 함께 하는 내일</title>
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.css">
+    <link rel="apple-touch-icon" href="assets/images/common/favicon-ios.png">
+    <link rel="shortcut icon" href="assets/images/common/favicon-android.png">
+    <script src="assets/js/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/swiper.min.js"></script>
+</head>
+
+<body>
+    <div id="skip"><a href="#coreValue">본문 바로가기</a></div>
+    <header class="header">
+        <div class="header_content">
+            <h1 class="logo"><a href="index.html"><img src="assets/images/common/logo_gs.png" alt="GS"></a></h1>
+            <ul class="util clearfix">
+                <li class="lang">
+                    <span class="blind-b">언어 선택</span>
+                    <button type="button"><span>KOR</span></button>
+                    <ul class="lang_menu">
+                        <li><a href="" aria-current="page">KOR</a></li>
+                        <li><a href="">ENG</a></li>
+                    </ul>
+                </li>
+                <li class="search">
+                    <span class="blind-b">검색창 열기</span>
+                    <button type="button"></button>
+                </li>
+            </ul>
+            <div class="search_wrap">
+                <form action="index.html" class="search_place">
+                    <label for="PcSearchTxt" class="blind-b">검색어</label>
+                    <input type="text" class="searchTxt" id="PcSearchTxt" name="PcSearchTxt"
+                        placeholder="검색어를 입력하세요.">
+                    <button><img src="assets/images/common/search_link_b.svg" alt="검색"></button>
+                </form>
+            </div>
+            <nav class="gnb" id="pcGnb">
+                <ul class="clearfix">
+                    <li>
+                        <a href="">GS 소개</a>
+                        <ul>
+                            <li><a href="">개요</a></li>
+                            <li><a href="">인사말</a></li>
+                            <li><a href="">연혁</a></li>
+                            <li><a href="">지주회사</a></li>
+                            <li><a href="">계열사</a></li>
+                            <li><a href="">CI/BI</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">경영철학</a>
+                        <ul>
+                            <li><a href="">경영이념 및 비전</a></li>
+                            <li><a href="">경영노트</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">Grow with uS</a>
+                        <ul>
+                            <li><a href="">고객성장</a></li>
+                            <li><a href="">윤리경영</a></li>
+                            <li><a href="">동반성장</a></li>
+                            <li><a href="">사회공헌</a></li>
+                            <li><a href="">환경경영</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">GS 소식</a>
+                        <ul>
+                            <li><a href="">GS 뉴스</a></li>
+                            <li><a href="">광고·홍보영상</a></li>
+                            <li><a href="">이벤트</a></li>
+                            <li><a href="">계열사 소식</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">투자정보</a>
+                        <ul>
+                            <li><a href="">IR 정보</a></li>
+                            <li><a href="">주가정보</a></li>
+                            <li><a href="">재무정보</a></li>
+                            <li><a href="">공시정보</a></li>
+                            <li><a href="">IR 문의</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">인재채용</a>
+                        <ul>
+                            <li><a href="">계열사 채용정보</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <header class="header" id="mHeader">
+        <h1 class="logo"><a href="index.html"><img src="assets/images/common/logo_gs.png" alt="GS"></a></h1>
+        <ul class="util clearfix">
+            <li class="lang">
+                <span class="blind-b">언어 선택</span>
+                <button type="button"><span>KOR</span></button>
+                <ul class="lang_menu">
+                    <li><a href="" aria-current="page">KOR</a></li>
+                    <li><a href="">ENG</a></li>
+                </ul>
+            </li>
+            <li class="menuBtn">
+                <span class="blind-b">메뉴 열기</span>
+                <!-- 버튼 안으로 blind-b넣기 ////// -->
+                <button type="button">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </li>
+        </ul>
+            <nav class="gnb" id="mGnb">
+                <ul class="clearfix">
+                    <li>
+                        <a href="">GS 소개</a>
+                        <ul>
+                            <li><a href="">개요</a></li>
+                            <li><a href="">인사말</a></li>
+                            <li><a href="">연혁</a></li>
+                            <li><a href="">지주회사</a></li>
+                            <li><a href="">계열사</a></li>
+                            <li><a href="">CI/BI</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">경영철학</a>
+                        <ul>
+                            <li><a href="">경영이념 및 비전</a></li>
+                            <li><a href="">경영노트</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">Grow with uS</a>
+                        <ul>
+                            <li><a href="">고객성장</a></li>
+                            <li><a href="">윤리경영</a></li>
+                            <li><a href="">동반성장</a></li>
+                            <li><a href="">사회공헌</a></li>
+                            <li><a href="">환경경영</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">GS 소식</a>
+                        <ul>
+                            <li><a href="">GS 뉴스</a></li>
+                            <li><a href="">광고·홍보영상</a></li>
+                            <li><a href="">이벤트</a></li>
+                            <li><a href="">계열사 소식</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">투자정보</a>
+                        <ul>
+                            <li><a href="">IR 정보</a></li>
+                            <li><a href="">주가정보</a></li>
+                            <li><a href="">재무정보</a></li>
+                            <li><a href="">공시정보</a></li>
+                            <li><a href="">IR 문의</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">인재채용</a>
+                        <ul>
+                            <li><a href="">계열사 채용정보</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+    </header>
+    <section id="coreValue">
+        <h2 class="blind-b">GS의 공유가치</h2>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide customer">
+                    <strong>
+                        고객만족을 최고의<br>
+                        사명으로 하는<br>
+                        생활속 동반자
+                    </strong>
+                    <p>
+                        고객만족은 GS가 추구하는 제1의 가치이며<br>
+                        궁극적인 사명이자 존재 이유입니다.
+                    </p>
+                    <span>Customer Satisfaction</span>
+                </div>
+                <div class="swiper-slide job">
+                    <strong>
+                        직원의 꿈과<br>
+                        이상을 실현하는<br>
+                        보람된 일터
+                    </strong>
+                    <p>
+                        구성원들이 즐겁게 일하고, 일을 통해 자신과<br>
+                        회사의 꿈을 실현할 수 있는 기회와 환경을 제공합니다.
+                    </p>
+                    <span>Rewarding Workplace</span>
+                </div>
+                <div class="swiper-slide citizen">
+                    <strong>
+                        투명한 경영과<br>탁월한 성과로<br>
+                        인정받는 기업시민
+                    </strong>
+                    <p>
+                        배려와 상호존중의 정신으로<br>
+                        이해관계자 모두의 발전에 도움이 되는 관계를 구축합니다.
+                    </p>
+                    <span>Respect</span>
+                </div>
+            </div>
+            <div class="controller">
+                <button class="swiper-button-prev" type="button"></button>
+                <button class="stop autoplay" title="일시정지" type="button"><img src="assets/images/common/pause_w.svg" alt="일시정지"></button>
+                <button class="play autoplay" title="자동실행" type="button"><img src="assets/images/common/play_w.svg" alt="자동실행"></button>
+                <button class="swiper-button-next" type="button"></button>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+
+    </section>
+    <section id="introduce" class="max1400">
+        <div class="intro">
+            <h2>기업소개</h2>
+            <strong class="summary">
+                고객과 함께 내일을 꿈꾸며<br>
+                새로운 삶의 가치를 창조합니다.
+            </strong>
+            <p>GS는 고객 가치를 최우선으로 생각하며 고객과 함께 성장해 나가는 기업입니다. 창의적인 조직역량과 도전적인 경영 능력을 확보해 성장과 이익이 균형 잡힌 사업성과를 창출해내는 확고부동한 1위 기업으로 자리 잡겠습니다.</p>
+        </div>
+        <img src="assets/images/main/intro2.jpg" alt="">
+    </section>
+    <section id="subsidairy">
+        <div class="max1400">
+            <h2>계열사소개</h2>
+            <strong class="summary">
+                GS는 선망받는 모든 분야에서 최고로<br>
+                인정받는 가치 선도 기업을 지향합니다.
+            </strong>
+        </div>
+        <ul class="fields clearfix">
+            <li class="f-energy">
+                <div class="txtbox">
+                    <h3>에너지·발전</h3>
+                    <p>
+                        GS는 주요 성장동력인 에너지부문에 역량을 집중하고 있습니다.
+                        특히 GS칼텍스의 설비 고도화와 증설 및 해외진출 등은
+                        GS가 글로벌 기업으로 성장할 수 있는 토대가 되고 있습니다.
+                    </p>
+                    <div class="keypoint">
+                        <strong>
+                            지속성장의 심장
+                        </strong>
+                        <ul class="company">
+                            <li><a href="">GS에너지</a></li>
+                            <li><a href="">GS EPS</a></li>
+                            <li><a href="">GS칼텍스</a></li>
+                            <li><a href="">GS E&R</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="f-circulation">
+                <div class="txtbox">
+                    <h3>유통·무역</h3>
+                    <p>
+                        GS리테일과 GS홈쇼핑은 유통 부문에서 성장동력의 한 축을 담당하고 있으며, GS는 출범 초기부터 유통 부문의 지속성장을 위하여 사업 인프라 조성에 집중하고 있습니다.
+                    </p>
+                    <div class="keypoint">
+                        <strong>
+                            성장동력의 혈맥
+                        </strong>
+                        <ul class="company">
+                            <li><a href="">GS리테일</a></li>
+                            <li><a href="">GS글로벌</a></li>
+                            <li><a href="">GS홈쇼핑</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li class="f-build">
+                <div class="txtbox">
+                    <h3>건설·서비스</h3>
+                    <p>
+                        GS건설은 시공능력과 엔지니어링 기술을 확보한 최고 수준의 건설회사로 거듭나고 있습니다.
+                        GS스포츠는 대한민국 스포츠 발전을 위해 공헌하고 있습니다.
+                    </p>
+                    <div class="keypoint">
+                        <strong>
+                            초일류기업의 골격
+                        </strong>
+                        <ul class="company">
+                            <li><a href="">GS건설</a></li>
+                            <li><a href="">GS스포츠</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <section id="grow" class="max1400 clearfix">
+        <article class="article_grow clearfix">
+            <h2>Grow with GS</h2>
+            <p class="explane">사회적 책임을 성실히 수행하는 기업시민</p>
+            <ul role="tablist" class="tablist" aria-label="Grow with GS">
+                <li role="tab" class="tab first" id="ethical" aria-controls="d_ethical">윤리경영</li>
+                <li role="tab" class="tab" id="co_develop" aria-controls="d_co_develop">동반성장</li>
+                <li role="tab" class="tab" id="contribution" aria-controls="d_contribution">사회공헌</li>
+                <li role="tab" class="tab last" id="eco_management" aria-controls="d_eco_management">환경경영</li>
+            </ul>
+            <div role="tabpanel" class="tabpanel" id="d_ethical" aria-labelledby="ethical">
+                <img src="assets/images/main/ethical.png" alt="">
+                <p>
+                    GS는 임직원의 직위를 이용한 부당한 요구 및 부정비리 사실에 대한 제보를 접수받고 처리합니다. 건전한 기업시민의 역할과 책임을 다해 나감으로써 지속 가능한 성장을 추구할 것을
+                    약속합니다.
+                </p>
+                <a href="">
+                    <span>더보기</span>
+                    <img src="assets/images/common/next_equal_b.svg" alt="">
+                </a>
+            </div>
+            <div role="tabpanel" class="tabpanel" id="d_co_develop" aria-labelledby="co_develop">
+                <img src="assets/images/main/co_develop.png" alt="">
+                <p>
+                    협력업체의 경쟁력 강화를 위해 각 계열사별로 협력회사와 공동기술 및 상품 개발, 특허출원, 판로개척을 지원하고 있으며, 혁신활동 및 안전교육, 품질교육 등 교육 훈련도
+                    지원하고 있습니다.
+                </p>
+                <a href="">더보기<img src="assets/images/common/next_equal_b.svg" alt=""></a>
+            </div>
+            <div role="tabpanel" class="tabpanel" id="d_contribution" aria-labelledby="contribution">
+                <img src="assets/images/main/contribution.png" alt="">
+                <p>
+                    GS는 기업의 사회적 책임과 역할을 다하기 위해 각 회사의 사회공헌 슬로건 아래 다양한 활동을 펼치고 있으며 기업의 성과를 사회와 함께 나누어 지역사회 발전을 이루기 위해
+                    노력하고 있습니다.
+                </p>
+                <a href="">더보기<img src="assets/images/common/next_equal_b.svg" alt=""></a>
+            </div>
+            <div role="tabpanel" class="tabpanel" id="d_eco_management" aria-labelledby="eco_management">
+                <img src="assets/images/main/eco.png" alt="">
+                <p>
+                    GS는 국내외 표준인증 획득, 우수한 안전관리시스템 및 기후변화 대응체제 구축을 통해 안전하고 환경친화적인 기업 경영을 하고 있습니다.
+                </p>
+                <a href="">더보기<img src="assets/images/common/next_equal_b.svg" alt=""></a>
+            </div>
+        </article>
+        <article class="article_promote">
+            <video poster="assets/images/main/movie_thumb.jpg" controls>
+                <source src="assets/movies/gs_promote.mp4" type="video/mp4">
+                <source src="assets/movies/gs_promote.mp4" type="video/webm">
+                <source src="assets/movies/gs_promote.mp4" type="video/ogg">
+                현재 브라우저는 동영상을 지원하지 못합니다. 브라우저를 업데이트 해주세요.
+            </video>
+            <!-- <a href="" class="md_open" type="button" data-targetmodal="#movie" aria-haspopup="dialog" title="대화상자"><img src="" alt="홍보영상 썸네일"></a> -->
+            <h2>홍보영상</h2>
+            <p class="summary">
+                <strong>Grow with uS</strong>
+                <span>함께 가는 내일</span>
+            </p>
+            <p class="movie_point">에너지부터 가족·스포츠까지 GS는 세상을 밝게 비추는 빛처럼<br>
+                고객에게 없어서는 안 될 소중한 역할을 하고 있습니다.<br>
+                GS는 언제나 고객과 함께합니다.</p>
+        </article>
+    </section>
+    <section id="recruit">
+        <div class="recruit_bg"></div>
+        <div class="recruit_content">
+            <div class="recruit_text">
+                <h2>인사채용</h2>
+                <p class="summary">
+                    뜨거운 열정과 창의적인 도전 정신으로<br>
+                    미래 GS를 이끌어갈 인재를 찾습니다.
+                </p>
+                <a href="" role="button">계열사 채용정보<img src="assets/images/common/next_longer-b.svg" alt=""></a>
+            </div>
+            <div class="recruit_img"></div>
+        </div>
+    </section>
+    <section id="news">
+        <div class="news_content">
+            <a href="">
+                <h2>GS NEWS</h2><img src="assets/images/common/next_equal_b.svg" alt="">
+            </a>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="">GS, 2021년도 임원인사 내정</a>
+                        <span>2020.11.13</span>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="">GS, ‘수해 복구 지원’ 성금 10억원 기탁</a>
+                        <span>2020.08.12</span>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="">코로나19 위기극복 위해 일하는 방식 바꿔라</a>
+                        <span>2020.06.18</span>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="">허태수 회장, 27일 ㈜GS 주주총회 및 이사회를 통해 대표이사로 선임</a>
+                        <span>2020.03.27</span>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="">GS, ‘코로나19 지원’ 성금 10억원 기탁</a>
+                        <span>2020.02.27</span>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="">허태수 GS 회장, 취임 후 ‘혁신’을 첫 경영 화두로 제시</a>
+                        <span>2020.01.14</span>
+                    </div>
+                </div>
+                <div class="controller">
+                    <div class="swiper-pagination"></div>
+                    <button class="swiper-button-prev" type="button"></button>
+                    <button class="stop autoplay" title="일시정지" type="button"></button>
+                    <button class="play autoplay" title="자동실행" type="button"></button>
+                    <button class="swiper-button-next" type="button"></button>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <footer id="footer">
+        <div class="footer_area max1400">
+            <p><img src="assets/images/common/logo_gs_w.png" alt=""></p>
+            <div class="info_txt">
+                <ul>
+                    <li><a href="">법적고지</a></li>
+                    <li><a href="">공시정보관리규정</a></li>
+                    <li><a href="">관리규정</a></li>
+                    <li><a href="">찾아오시는 길</a></li>
+                    <li><a href="">사이트맵 </a></li>
+                    <li><a href="">GS 타워</a></li>
+                </ul>
+                <address>
+                    (주)GS 서울특별시 강남구 논현로 508 (역삼동) GS타워 <br>
+                    대표전화 02-2005-1114</address>
+                <span>Copyright ⓒ Since 2020 By GS, All Rights Reserved</span>
+            </div>
+            <div id="familySite">
+                <strong>family Site</strong>
+                <button type="button" class="f_btn">GS에너지</button>
+                <ul>
+                    <li><a href="http://www.gsenergy.co.kr/Default.aspx">GS에너지</a></li>
+                    <li><a href="https://www.gscaltex.com/kr/">GS칼텍스</a></li>
+                    <li><a href="http://www.gsretail.com/gsretail/ko/main">GS리테일</a></li>
+                    <li><a href="http://company.gsshop.com/main/index">GS홈쇼핑</a></li>
+                    <li><a href="https://www.gseps.com/kor/main/main.aspx">GS EPS</a></li>
+                    <li><a href="http://www.gsgcorp.com/Kr/">GS글로벌</a></li>
+                    <li><a href="http://www.gsenr.com/">GS E&R</a></li>
+                    <li><a href="https://www.fcseoul.com/">GS스포츠</a></li>
+                    <li><a href="http://www.gsenc.com/">GS건설</a></li>
+                </ul>
+                <button type="button" class="fGo_btn" title="새창열기">GO</button>
+            </div>
+    </footer>
+</body>
+
+</html>
