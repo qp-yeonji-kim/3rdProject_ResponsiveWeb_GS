@@ -46,10 +46,6 @@ $(document).ready(function () {
         },
         slidesPerView: 2,
         slidesPerGroup: 2,
-
-
-        // 1200이하부터 슬라이드 하나로 줄이기 모르겠다...
-       
     });
 
     $('#news .controller .play').hide();
@@ -63,14 +59,25 @@ $(document).ready(function () {
     });
 
     //subsidairy 목록요소
-    $('.fields > li').on({
-        'mouseenter focusin': function () {
-            $(this).addClass('active');
-        },
-        'mouseleave focusout': function () {
-            $(this).removeClass('active');
-        }
-    })
+    if($(window).width() >= 1200) {
+        $('.fields > li').on({
+            'mouseenter focusin': function () {
+                $(this).addClass('active');
+            },
+            'mouseleave focusout': function () {
+                $(this).removeClass('active');
+            }
+        })
+    } else if($(window).width() < 1200) {
+        $('.fields > li').on({
+            'mouseenter focusin': function () {
+                $(this).addClass('active');
+            },
+            'mouseleave focusout': function () {
+                $(this).removeClass('active');
+            }
+        })
+    }
 
     /* tabpanel */
     //접근성 제어
