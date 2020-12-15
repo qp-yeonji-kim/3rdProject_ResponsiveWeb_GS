@@ -244,6 +244,8 @@ h2{display: inline-block;font-size: 2rem;border-bottom: 1px solid #000;}
 }
 
 @media screen and (max-width: 1200px){
+  html{font-size: 14px;}
+  .max1400{max-width: 1100px;width: 1100px;padding: 0 5%;}
   .header{
     display: none;
     &#mHeader{display: block;background: #fff;}
@@ -323,7 +325,7 @@ h2{display: inline-block;font-size: 2rem;border-bottom: 1px solid #000;}
   .gnb{
     display: none;
     &#mGnb{
-      display: block;top: 8.4rem;width: 100%;background: #fff;
+      display: block;top: 8.4rem;width: 100%;background: #fff;overflow-y: auto;
       ::before{display: none;}
       > ul{display: none;width: 100%;margin: 0;border-top: 1px solid rgba(0, 0, 0, .5);
         > li{float: none;display: block;width: 100%;text-align: left;border-bottom: 1px solid rgba(0, 0, 0, .5);
@@ -344,10 +346,7 @@ h2{display: inline-block;font-size: 2rem;border-bottom: 1px solid #000;}
       } 
     }
   }
-
-  #introduce{
-    
-  }
+  
 }
 
 @media screen and (max-width: 768px){

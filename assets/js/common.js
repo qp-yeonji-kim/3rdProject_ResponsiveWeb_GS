@@ -84,6 +84,11 @@ $(document).ready(function () {
     //1) 클릭하면 옵션 열고 닫기
     $familyOpen.on('click', function(){
         $(this).toggleClass('on').next('ul').stop().slideToggle();
+
+        // 옵션에서 마우스가 나가면 자동 닫힘
+        $('#familySite').on('mouseleave', function(){
+            $familyOpen.next('ul').stop().slideUp();
+        });
     });
 
     //2) 포커스 떠나면 옵션 닫기
@@ -113,29 +118,26 @@ $(document).ready(function () {
         window.open(aHref, 'popup');
     });
 
-    $('#familySite').on('mouseleave', function(){
-        $familyOpen.next('ul').stop().slideToggle();
-    });
 
     /* mGnb네비게이션 열고 닫기 */
-    var $mGnb1depBtn = $('#mHeader .menuBtn button');
-    var $mGnb1dep = $('#mGnb ul');
-    var $mGnb2depBtn = $('#mGnb ul li a');
-    
-    $mGnb1dep.hide();
-    $mGnb2depBtn.next().hide();
-    /* 이상하게 숨겨도 자꾸 2dep도 내려온다. preventDefault, slideUp도 먹히지 않는다. */
+    var $mGnb1dep = $('#mGnb > ul');
 
     //1) 1dep ul 열고 닫기
-    $mGnb1depBtn.on('click', function(){
-        $(this).parent().toggleClass('on');
-        $mGnb1dep.stop().slideToggle();
-        
+    $('#mHeader .menuBtn button').on('click', function(){
+        if(! $(this).parent().hasClass('on')){
+            $(this).parent().addClass('on');
+        $mGnb1dep.stop().slideDown();
+
+        } else{
+            $(this).parent().removeClass('on');
+            $mGnb1dep.stop().slideUp(function(){
+                $mGnb1dep.find('li.on').removeClass('on').children('ul').slideUp();
+            });
+        }
         //2) 2dep ul 열고 닫기
-        $mGnb2depBtn.on('click', function(e){
+        $('#mGnb > ul > li > a').on('click', function(e){
             e.preventDefault();
-        $(this).siblings().next().slideUp();
-        $(this).next().stop().slideDown();
+        $(this).next().slideToggle().parent().toggleClass('on').siblings().removeClass('on').children('ul').stop().slideUp();
         });
     });
 });

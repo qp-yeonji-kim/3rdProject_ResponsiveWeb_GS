@@ -46,6 +46,10 @@ $(document).ready(function () {
         },
         slidesPerView: 2,
         slidesPerGroup: 2,
+
+
+        // 1200이하부터 슬라이드 하나로 줄이기 모르겠다...
+       
     });
 
     $('#news .controller .play').hide();
@@ -57,7 +61,6 @@ $(document).ready(function () {
         $(this).hide().siblings('.autoplay').show();
         newsSlider.autoplay.start();
     });
-
 
     //subsidairy 목록요소
     $('.fields > li').on({
