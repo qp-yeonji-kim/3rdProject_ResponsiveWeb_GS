@@ -65,15 +65,15 @@ $(document).ready(function () {
         newsSlider.autoplay.start();
     });
 
-    //subsidairy 목록요소
-        $('.fields > li').on({
-            'mouseenter focusin': function () {
-                $(this).addClass('active');
-            },
-            'mouseleave focusout': function () {
-                $(this).removeClass('active');
-            }
-        });
+    //subsidairy li접근 시 클래스명 붙이기
+    $('.fields > li').on({
+        'mouseenter focusin': function () {
+            if($(window).width() >= 1200) $(this).addClass('active');
+        },
+        'mouseleave focusout': function () {
+            if($(window).width() >= 1200) $(this).removeClass('active');
+        }
+    });
 
     /* tabpanel */
     //접근성 제어
@@ -147,10 +147,19 @@ $(document).ready(function () {
     }
 
     //느린 스크롤로 배경 이동
-    var start = $('#grow').offset().top;
+
     $(window).on('scroll', function () {
         var scrollY = $(this).scrollTop();
-        var littleMov = (scrollY - start) * -0.2;
+        var start = $('#grow').offset().top;
+        var windowSize = $(window).width();
+
+        if(windowSize > 1300){
+            var littleMov = (scrollY - start) * -0.2;
+        } else if(windowSize <= 1300 && windowSize >= 650){
+            var littleMov = (scrollY - start) * -0.05;
+        }
+
+        
         $('.recruit_bg').css('background-position', '50%' + littleMov + 'px');
     });
 });

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 #coreValue .swiper-container .swiper-wrapper .swiper-slide {
   -webkit-background-size: cover !important;
   background-size: cover !important;
@@ -109,7 +110,7 @@
     background: center no-repeat;
     color: #fff; }
     #subsidairy .fields > li.active .txtbox {
-      top: 40%; }
+      top: 30%; }
     #subsidairy .fields > li.active p {
       display: none; }
     #subsidairy .fields > li.active .keypoint {
@@ -118,8 +119,6 @@
       opacity: 0; }
     #subsidairy .fields > li.f-energy {
       background-image: url("../images/main/energy.png"); }
-      #subsidairy .fields > li.f-energy li + li {
-        margin-top: 20px !important; }
     #subsidairy .fields > li.f-circulation {
       background-image: url("../images/main/distribution.png"); }
     #subsidairy .fields > li.f-build {
@@ -159,12 +158,11 @@
       opacity: 0; }
       #subsidairy .fields > li .keypoint strong {
         display: block;
-        padding-bottom: 20px;
         font-size: 1.8rem;
         font-weight: 500; }
       #subsidairy .fields > li .keypoint .company {
         width: 18rem;
-        margin: 0 auto; }
+        margin: 20px auto 0; }
         #subsidairy .fields > li .keypoint .company li + li {
           margin-top: 20px; }
         #subsidairy .fields > li .keypoint .company a {
@@ -200,6 +198,9 @@
   text-align: center;
   font-weight: 400;
   border-bottom: 2px solid #aaa; }
+  #grow .article_grow li.on {
+    font-weight: 600;
+    color: #00a499; }
 #grow .article_grow .tabpanel {
   display: none;
   position: relative;
@@ -221,7 +222,7 @@
   #grow .article_grow .tabpanel a {
     position: absolute;
     right: 20px;
-    bottom: 0;
+    bottom: -1rem;
     height: 2rem;
     overflow: hidden; }
     #grow .article_grow .tabpanel a span {
@@ -307,7 +308,7 @@
   padding: 20px 50px 20px 150px; }
   #news .news_content > a {
     position: absolute;
-    left: 0;
+    left: 20px;
     width: 100px;
     padding-top: 4px; }
     #news .news_content > a h2 {
@@ -447,9 +448,11 @@
           -o-transition: all 0.5s;
           transition: all 0.5s; }
         #subsidairy .fields > li .txtbox {
-          top: 40%; }
+          top: 28%; }
           #subsidairy .fields > li .txtbox h3 {
-            margin-bottom: 30px; }
+            margin-bottom: 15px; }
+            #subsidairy .fields > li .txtbox h3::before {
+              opacity: 0; }
           #subsidairy .fields > li .txtbox p {
             display: none; }
           #subsidairy .fields > li .txtbox .keypoint {
@@ -458,32 +461,46 @@
               opacity: 1;
               font-size: 1.8rem; }
             #subsidairy .fields > li .txtbox .keypoint .company {
-              opacity: 0;
+              opacity: 1;
               width: 100%;
               height: 5rem;
               text-align: center; }
               #subsidairy .fields > li .txtbox .keypoint .company li {
                 display: inline-block;
-                width: 16rem;
-                height: 5rem; }
+                width: 8rem;
+                height: 3rem; }
                 #subsidairy .fields > li .txtbox .keypoint .company li + li {
-                  margin-top: 0; }
+                  margin-top: 0;
+                  margin-left: 10px; }
               #subsidairy .fields > li .txtbox .keypoint .company a {
                 float: left;
-                margin-left: 20px;
-                width: 14rem;
-                height: 4rem;
-                line-height: 4.2rem; }
-        #subsidairy .fields > li.active .txtbox {
-          top: 28%; }
-          #subsidairy .fields > li.active .txtbox h3 {
-            margin-bottom: 15px; }
-          #subsidairy .fields > li.active .txtbox h3::before {
-            opacity: 0; }
-          #subsidairy .fields > li.active .txtbox .keypoint .company {
-            opacity: 1; }
+                width: 8rem;
+                height: 3rem;
+                line-height: 3.2rem;
+                font-size: 1.4rem; }
 
-  #news .news_content > a {
-    width: 140px; } }
+  #news .news_content {
+    padding: 20px 100px 20px 200px; }
+    #news .news_content > a {
+      width: 140px; }
+  #news .swiper-container .swiper-wrapper .swiper-slide-active::before {
+    display: none; } }
+/* 글자 너비에 따라 변화하는 태블릿 */
+@media screen and (max-width: 900px) {
+  #coreValue .swiper-container .swiper-wrapper .swiper-slide {
+    -webkit-background-size: cover !important;
+    background-size: cover !important;
+    width: 100%;
+    height: 100vh;
+    background: no-repeat center;
+    color: #fff; }
+    #coreValue .swiper-container .swiper-wrapper .swiper-slide strong, #coreValue .swiper-container .swiper-wrapper .swiper-slide p, #coreValue .swiper-container .swiper-wrapper .swiper-slide span {
+      position: absolute;
+      left: 20%; }
+    #coreValue .swiper-container .swiper-wrapper .swiper-slide strong {
+      top: 25%;
+      font-size: 50px;
+      font-weight: 700; } }
+/* 모바일 */
 
 /*# sourceMappingURL=main.css.map */

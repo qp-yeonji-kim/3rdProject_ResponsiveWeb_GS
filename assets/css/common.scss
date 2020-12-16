@@ -76,8 +76,10 @@ header, section, article, footer{display: block;}
 .summary{display: block;margin: 1.8rem 0 2.8rem;font-size: 40px;font-weight: 700;}
 
 html{font-size: 10px;}
-body{font-family: NtSansKR, "맑은 고딕", "Malgun Gothic", sans-serif;color: #000;word-break: keep-all;}
-*{-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+body{
+  font-family: NtSansKR, "맑은 고딕", "Malgun Gothic", sans-serif;color: #000;word-break: keep-all;
+  *{-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
+}
 h2{display: inline-block;font-size: 2rem;border-bottom: 1px solid #000;}
 
 #skip a{display: block;position: absolute;top: 0;left: -9999px;z-index: 1000;}
@@ -245,13 +247,17 @@ h2{display: inline-block;font-size: 2rem;border-bottom: 1px solid #000;}
 
 @media screen and (max-width: 1400px){
   .max1400{max-width: 100%;width: 100%;padding: 0 5%;}
+  #footer .footer_area #familySite{
+    float: right;margin: 32px 0 0 0;width: 260px;
+  }
 }
+
 
 @media screen and (max-width: 1200px){
   html{font-size: 14px;}
   .header{
     display: none;
-    &#mHeader{display: block;background: #fff;}
+    &#mHeader{display: block;width: 100%;background: #fff;}
     h1{left: 5%;width: 8.6rem;height: 4.5rem;}
     .util{
       float: right;width: 15rem;height: 100%;padding-bottom: 1.5rem;
@@ -324,9 +330,9 @@ h2{display: inline-block;font-size: 2rem;border-bottom: 1px solid #000;}
             display: block;
             &:hover, &focus{color: $red;text-decoration: underline;}
           }
-          > a{width: 100%;height: 5rem;padding-top: 2px;padding-left: 10%;font-size: 2rem;line-height: 5rem;border-bottom: 1px solid rgba(0, 0, 0, .5);}
+          > a{width: 100%;height: 5rem;padding-top: 2px;padding-left: 10%;font-size: 2rem;line-height: 5rem;}
           ul{
-            display: none;padding-bottom: 1rem;
+            display: none;padding-bottom: 1rem;border-top: 1px solid rgba(0, 0, 0, .5);
             &::after{content: "";clear:both;display: block;}
             li{
               float: left;width: 50%;height: 5.4rem;
@@ -340,7 +346,7 @@ h2{display: inline-block;font-size: 2rem;border-bottom: 1px solid #000;}
   #footer{
     height: 500px;
     .footer_area{
-      width: 100%;height: 100%;font-size: 1.6rem;text-align: center;
+      width: 100%;height: 100%;font-size: 1.6rem;
       > *{float: none;}
       p{display: none;}
       .info_txt{
@@ -349,11 +355,11 @@ h2{display: inline-block;font-size: 2rem;border-bottom: 1px solid #000;}
         address{margin: 0 auto;width: 500px;height: auto;}
       }
       #familySite{
-        display: inline-block;margin: 0;width: auto;height: auto;font-size: 1.6rem;color: #fff;
-        strong{position: relative;display: block;width: 142px;line-height: 38px;
+        float: none;margin: 0 auto;width: 240px;height: auto;font-size: 1.6rem;color: #fff;
+        strong{position: relative;display: block;width: 199px;padding-left: 36px;line-height: 38px;
           &::before{
             @include bg-size(cover);
-            content: "";position: absolute;top: 4px;left: -38px;width: 30px;height: 26px;background: url("../images/common/twoperson_w.svg") no-repeat center;
+            content: "";position: absolute;top: 4px;left: 0;width: 30px;height: 26px;background: url("../images/common/twoperson_w.svg") no-repeat center;
           }
         }
         .f_btn, ul a{display: inline-block;width: 150px;height: 34px;padding-left: 30px;border: 1px solid $l-bluegreen;background: $bluegreen;}
@@ -382,7 +388,12 @@ h2{display: inline-block;font-size: 2rem;border-bottom: 1px solid #000;}
   }
 }
 
-@media screen and (max-width: 768px){
+/* 글자 너비에 따라 변화하는 태블릿 */
+@media screen and (max-width: 900px){
 
 }
 
+/* 모바일 */
+@media screen and (max-width: 768px){
+
+}
