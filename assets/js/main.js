@@ -44,8 +44,16 @@ $(document).ready(function () {
             firstSlideMessage: '첫 번째 슬라이드',
             lastSlideMessage: '마지막 슬라이드',
         },
-        slidesPerView: 2,
-        slidesPerGroup: 2,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+
+        breakpoints: {
+            1200: {
+              slidesPerView: 2,
+              slidesPerGroup: 2,
+            }
+        }
+
     });
 
     $('#news .controller .play').hide();

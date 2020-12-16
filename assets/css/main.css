@@ -103,7 +103,7 @@
     position: relative;
     float: left;
     width: calc(100% / 3);
-    height: calc(100vw/2);
+    height: calc(100vw / 2);
     background: center no-repeat;
     overflow: hidden;
     text-align: center;
@@ -163,20 +163,18 @@
         font-size: 1.8rem;
         font-weight: 500; }
       #subsidairy .fields > li .keypoint .company {
-        top: 75%;
         width: 18rem;
         margin: 0 auto; }
-        #subsidairy .fields > li .keypoint .company li {
-          width: 16rem;
-          height: 5rem; }
         #subsidairy .fields > li .keypoint .company li + li {
           margin-top: 20px; }
         #subsidairy .fields > li .keypoint .company a {
           -webkit-border-radius: 2px;
           border-radius: 2px;
           display: block;
+          width: 16rem;
+          height: 5rem;
           font-size: 2rem;
-          line-height: 5rem;
+          line-height: 5.2rem;
           border: 1px solid #fff; }
 
 #grow article {
@@ -306,52 +304,47 @@
 
 #news .news_content {
   position: relative;
-  margin: 0 auto;
-  width: calc(100% - 520px);
-  height: 6rem;
-  padding: 20px 100px; }
-  #news .news_content::before {
-    -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
-    content: "";
-    position: absolute;
-    left: calc(50% - 48px);
-    top: 50%;
-    width: 1px;
-    height: 1.6rem;
-    background: #aaa; }
-  #news .news_content a {
+  padding: 20px 50px 20px 150px; }
+  #news .news_content > a {
     position: absolute;
     left: 0;
     width: 100px;
-    height: 200px;
     padding-top: 4px; }
-    #news .news_content a h2 {
+    #news .news_content > a h2 {
       font-size: 1.8rem;
       line-height: 2rem;
       font-weight: 700;
       border-bottom: 0; }
-    #news .news_content a img {
+    #news .news_content > a img {
       width: 1.4rem;
       height: 1.4rem;
       vertical-align: top; }
 #news .swiper-container .swiper-wrapper .swiper-slide {
-  margin-right: 192px; }
-  #news .swiper-container .swiper-wrapper .swiper-slide a {
+  font-size: 0;
+  line-height: 1.8rem; }
+  #news .swiper-container .swiper-wrapper .swiper-slide > * {
     display: inline-block;
     padding-top: 6px;
-    width: 360px;
+    vertical-align: middle; }
+  #news .swiper-container .swiper-wrapper .swiper-slide a {
+    width: 65%;
     font-size: 1.8rem;
-    line-height: 1.8rem;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis; }
   #news .swiper-container .swiper-wrapper .swiper-slide span {
-    float: right;
-    padding-top: 6px;
+    padding-left: 10px;
     font-size: 1.6rem;
-    line-height: 1.8rem;
     font-weight: 300; }
+#news .swiper-container .swiper-wrapper .swiper-slide-active::before {
+  content: "";
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  width: 1px;
+  height: 1.6rem;
+  background: #aaa;
+  z-index: 10; }
 #news .swiper-container .controller {
   position: absolute;
   width: 7rem;
@@ -384,6 +377,10 @@
   #news .swiper-container .controller .swiper-button-prev::after, #news .swiper-container .controller .swiper-button-next::after, #news .swiper-container .controller .autoplay::after {
     display: none; }
 
+@media screen and (max-width: 1400px) {
+  #grow .article_promote video {
+    width: 100%;
+    height: auto; } }
 @media screen and (max-width: 1200px) {
   #introduce {
     position: static;
@@ -410,7 +407,100 @@
       height: 66.58932714617169%; }
 
   #subsidairy {
-    margin: 100px 0; }
+    margin: 100px 0;
+    color: #fff; }
+    #subsidairy .fields {
+      width: 100%;
+      height: auto; }
+      #subsidairy .fields > li {
+        -webkit-background-size: cover !important;
+        background-size: cover !important;
+        position: relative;
+        float: none;
+        width: 100vw;
+        height: 38.96103896103896vw;
+        overflow: hidden;
+        text-align: center;
+        background: center no-repeat; }
+        #subsidairy .fields > li .keypoint {
+          opacity: 1; }
+        #subsidairy .fields > li .company {
+          opacity: 0; }
+        #subsidairy .fields > li.f-energy {
+          background-image: url("../images/main/energy_t.png"); }
+          #subsidairy .fields > li.f-energy li + li {
+            margin-top: 20px !important; }
+        #subsidairy .fields > li.f-circulation {
+          background-image: url("../images/main/distribution_t.png"); }
+        #subsidairy .fields > li.f-build {
+          background-image: url("../images/main/build_t.png"); }
+        #subsidairy .fields > li .txtbox {
+          position: absolute;
+          top: 45%;
+          left: 0%;
+          width: 100%; }
+          #subsidairy .fields > li .txtbox h3 {
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+            position: relative;
+            top: 50%;
+            left: 50%;
+            margin-bottom: 30px;
+            font-size: 36px;
+            font-weight: 700; }
+            #subsidairy .fields > li .txtbox h3::before {
+              content: "";
+              position: absolute;
+              top: -2rem;
+              left: calc(50% - 2rem);
+              width: 4rem;
+              height: 0.2rem;
+              background: #fff; }
+          #subsidairy .fields > li .txtbox p {
+            display: none;
+            padding: 0 7%;
+            font-size: 2rem;
+            font-weight: 500; }
+        #subsidairy .fields > li .keypoint strong {
+          opacity: 1;
+          display: block;
+          padding-bottom: 20px;
+          font-size: 1.8rem;
+          font-weight: 500; }
+        #subsidairy .fields > li .keypoint .company {
+          opacity: 0;
+          margin: 0 auto;
+          width: 100%;
+          height: 5rem;
+          text-align: center; }
+          #subsidairy .fields > li .keypoint .company li {
+            display: inline-block;
+            width: 16rem;
+            height: 5rem; }
+            #subsidairy .fields > li .keypoint .company li + li {
+              margin-top: 0; }
+          #subsidairy .fields > li .keypoint .company a {
+            -webkit-border-radius: 2px;
+            border-radius: 2px;
+            display: block;
+            float: left;
+            margin-left: 20px;
+            width: 14rem;
+            height: 4rem;
+            font-size: 2rem;
+            line-height: 4.2rem;
+            border: 1px solid #fff; }
+        #subsidairy .fields > li .txtbox, #subsidairy .fields > li h3::before, #subsidairy .fields > li p, #subsidairy .fields > li .keypoint {
+          -webkit-transition: all 0.5s;
+          -moz-transition: all 0.5s;
+          -o-transition: all 0.5s;
+          transition: all 0.5s; }
+        #subsidairy .fields > li.active h3::before {
+          opacity: 0; }
+        #subsidairy .fields > li.active .txtbox {
+          top: 40%; }
+        #subsidairy .fields > li.active .company {
+          opacity: 1; }
 
   #grow article {
     width: auto;
@@ -447,80 +537,29 @@
     #grow .article_promote h2 {
       float: none; }
 
-  #news {
-    width: 1172px;
-    height: 60px;
-    margin: 0 auto; }
-    #news .news_content {
-      position: relative;
-      width: calc(100% - 20px);
-      height: 6rem;
-      padding: 200px 0; }
-      #news .news_content::before {
-        display: none; }
-      #news .news_content a {
-        position: absolute;
-        padding-top: 4px; }
-        #news .news_content a h2 {
-          font-size: 1.8rem;
-          line-height: 2rem;
-          font-weight: 700;
-          border-bottom: 0; }
-        #news .news_content a img {
-          width: 1.4rem;
-          height: 1.4rem;
-          vertical-align: top; }
-    #news .swiper-container {
-      width: 1115px;
-      max-width: 1115px;
-      height: 2rem; }
-      #news .swiper-container .swiper-wrapper .swiper-slide {
-        padding-right: 96px; }
-        #news .swiper-container .swiper-wrapper .swiper-slide a {
-          display: inline-block;
-          padding-top: 6px;
-          width: 360px;
-          font-size: 1.8rem;
-          line-height: 1.8rem;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis; }
-        #news .swiper-container .swiper-wrapper .swiper-slide span {
-          float: right;
-          padding-top: 6px;
-          font-size: 1.6rem;
-          line-height: 1.8rem;
-          font-weight: 300; }
-      #news .swiper-container .controller {
-        position: absolute;
-        width: 7rem;
-        height: 2rem;
-        right: 0px;
-        top: 5px; }
-        #news .swiper-container .controller .swiper-button-prev, #news .swiper-container .controller .swiper-button-next, #news .swiper-container .controller .autoplay {
-          -webkit-background-size: cover !important;
-          background-size: cover !important;
-          width: 1.4rem;
-          height: 1.4rem;
-          background: no-repeat center; }
-        #news .swiper-container .controller .swiper-button-prev, #news .swiper-container .controller .swiper-button-next {
-          top: 0;
-          margin-top: 0; }
-        #news .swiper-container .controller .swiper-button-prev {
-          left: 0.5rem;
-          background-image: url("../images/common/prev_equal_b.svg"); }
-        #news .swiper-container .controller .swiper-button-next {
-          right: 0.5rem;
-          background-image: url("../images/common/next_equal_b.svg"); }
-        #news .swiper-container .controller .autoplay {
-          position: absolute;
-          left: 2.9rem;
-          z-index: 10; }
-        #news .swiper-container .controller .autoplay.stop {
-          background-image: url("../images/common/pause_b.svg"); }
-        #news .swiper-container .controller .autoplay.play {
-          background-image: url("../images/common/play_b.svg"); }
-        #news .swiper-container .controller .swiper-button-prev::after, #news .swiper-container .controller .swiper-button-next::after, #news .swiper-container .controller .autoplay::after {
-          display: none; } }
+  #news .news_content > a {
+    position: absolute;
+    left: 0;
+    width: 140px;
+    padding-top: 4px; }
+  #news .swiper-container .swiper-wrapper .swiper-slide {
+    font-size: 0;
+    line-height: 1.8rem; }
+    #news .swiper-container .swiper-wrapper .swiper-slide > * {
+      display: inline-block;
+      padding-top: 6px;
+      vertical-align: middle; }
+    #news .swiper-container .swiper-wrapper .swiper-slide a {
+      width: 65%;
+      font-size: 1.8rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+    #news .swiper-container .swiper-wrapper .swiper-slide span {
+      padding-left: 10px;
+      font-size: 1.6rem;
+      font-weight: 300; }
+  #news .swiper-container .swiper-wrapper .swiper-slide-active::before {
+    display: none; } }
 
 /*# sourceMappingURL=main.css.map */
