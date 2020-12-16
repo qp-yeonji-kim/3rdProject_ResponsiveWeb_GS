@@ -390,10 +390,15 @@ h2{display: inline-block;font-size: 2rem;border-bottom: 1px solid #000;}
 
 /* 글자 너비에 따라 변화하는 태블릿 */
 @media screen and (max-width: 900px){
-
+  .summary{
+    margin: 1.2rem 0 1.8rem;
+  }
 }
 
 /* 모바일 */
 @media screen and (max-width: 768px){
-
+  html{font-size: 12px;}
+  .summary{
+    margin: 1.2rem 0 1.2rem;
+  }
 }

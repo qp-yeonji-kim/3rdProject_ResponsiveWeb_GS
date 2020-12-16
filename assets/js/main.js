@@ -55,7 +55,7 @@ $(document).ready(function () {
         }
     });
 
-    $('#news .controller .play').hide();
+    $('#news .controller .play').hide(); 
     $('#news .controller .stop').on('click', function () {
         $(this).hide().siblings('.autoplay').show();
         newsSlider.autoplay.stop();
