@@ -268,8 +268,8 @@
 
   #news{
     .news_content{
-      padding: 20px 100px 20px 200px;
-      > a{width: 140px;}
+      padding: 20px 100px 20px 210px;
+      > a{width: 140px;left: 30px;}
     }
 
     .swiper-container{
@@ -298,9 +298,42 @@
       }
     }
   }
+
+  #news{
+    .news_content{
+      padding: 20px 20px 20px 160px;
+      > a{left: 20px;}
+    }
+  }
+
 }
+
 
 /* 모바일 */
 @media screen and (max-width: 768px){
+  #news{
+    .swiper-container{
+      .swiper-wrapper{
+        .swiper-slide{
+          a{width: 60%;}
+        }
+      }
+    }
+  }
+}
 
+@media screen and (max-width: 640px){
+  #news{
+    .news_content{
+      padding: 20px 10px;
+      > a{position: static;display: block; width: auto;margin-bottom: 10px;}
+    }
+    .swiper-container{
+      .swiper-wrapper{
+        .swiper-slide{
+          a{width: 55%;}
+        }
+      }
+    }
+  }
 }

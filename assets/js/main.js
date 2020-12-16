@@ -48,7 +48,7 @@ $(document).ready(function () {
         slidesPerGroup: 1,
 
         breakpoints: {
-            1200: {
+            1201: {
               slidesPerView: 2,
               slidesPerGroup: 2,
             }
@@ -147,18 +147,22 @@ $(document).ready(function () {
     }
 
     //느린 스크롤로 배경 이동
-
     $(window).on('scroll', function () {
         var scrollY = $(this).scrollTop();
-        var start = $('#grow').offset().top;
         var windowSize = $(window).width();
+        var start;
+        var littleMov;
 
-        if(windowSize > 1300){
-            var littleMov = (scrollY - start) * -0.2;
-        } else if(windowSize <= 1300 && windowSize >= 650){
-            var littleMov = (scrollY - start) * -0.05;
+        if(windowSize > 1400){
+            start = $('#grow').offset().top;
+            littleMov = (scrollY - start) * -0.2;
+        } else if(windowSize > 1200){
+            start = $('.article_promote').offset().top;
+            littleMov = (scrollY - start) * -0.05;
+        } else{
+            start = $('.article_promote').offset().top;
+            littleMov = (scrollY - start) * -0.08;
         }
-
         
         $('.recruit_bg').css('background-position', '50%' + littleMov + 'px');
     });
