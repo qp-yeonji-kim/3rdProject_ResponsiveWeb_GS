@@ -16,7 +16,7 @@
     left: 20%; }
   #coreValue .swiper-container .swiper-wrapper .swiper-slide strong {
     top: 25%;
-    font-size: 5rem;
+    font-size: 50px;
     font-weight: 700; }
   #coreValue .swiper-container .swiper-wrapper .swiper-slide p {
     top: 55%;
@@ -29,8 +29,8 @@
     font-weight: 700; }
 #coreValue .swiper-container .controller {
   position: absolute;
-  width: 70px;
-  height: 20px;
+  width: 7rem;
+  height: 2rem;
   left: 20%;
   top: 75%;
   z-index: 100; }
@@ -104,9 +104,9 @@
     float: left;
     width: calc(100% / 3);
     height: calc(100vw / 2);
-    background: center no-repeat;
     overflow: hidden;
     text-align: center;
+    background: center no-repeat;
     color: #fff; }
     #subsidairy .fields > li.active .txtbox {
       top: 40%; }
@@ -378,9 +378,35 @@
     display: none; }
 
 @media screen and (max-width: 1400px) {
-  #grow .article_promote video {
-    width: 100%;
-    height: auto; } }
+  #grow article {
+    width: auto;
+    float: none; }
+  #grow .article_grow ul, #grow .article_grow .tabpanel {
+    margin-top: 40px; }
+  #grow .article_grow ul {
+    width: 30%; }
+  #grow .article_grow .tabpanel {
+    width: 60%;
+    padding: 0; }
+    #grow .article_grow .tabpanel > img {
+      width: 100%;
+      height: 100%; }
+    #grow .article_grow .tabpanel p {
+      width: 100%;
+      height: auto;
+      padding: 25px; }
+  #grow .article_promote {
+    margin-top: 100px;
+    border-left: none; }
+    #grow .article_promote video {
+      display: block;
+      width: 100%;
+      height: auto;
+      /* width: 100vw;height: 56.32352941176471vw; */
+      margin-bottom: 40px;
+      padding-left: 0; }
+    #grow .article_promote h2 {
+      float: none; } }
 @media screen and (max-width: 1200px) {
   #introduce {
     position: static;
@@ -396,7 +422,7 @@
       #introduce .intro strong {
         display: block;
         margin: 18px 0 28px;
-        font-size: 4rem;
+        font-size: 40px;
         font-weight: 700; }
       #introduce .intro p {
         width: 50rem;
@@ -407,159 +433,57 @@
       height: 66.58932714617169%; }
 
   #subsidairy {
-    margin: 100px 0;
-    color: #fff; }
+    margin: 100px 0; }
     #subsidairy .fields {
       width: 100%;
       height: auto; }
       #subsidairy .fields > li {
-        -webkit-background-size: cover !important;
-        background-size: cover !important;
-        position: relative;
         float: none;
         width: 100vw;
-        height: 38.96103896103896vw;
-        overflow: hidden;
-        text-align: center;
-        background: center no-repeat; }
-        #subsidairy .fields > li .keypoint {
-          opacity: 1; }
-        #subsidairy .fields > li .company {
-          opacity: 0; }
-        #subsidairy .fields > li.f-energy {
-          background-image: url("../images/main/energy_t.png"); }
-          #subsidairy .fields > li.f-energy li + li {
-            margin-top: 20px !important; }
-        #subsidairy .fields > li.f-circulation {
-          background-image: url("../images/main/distribution_t.png"); }
-        #subsidairy .fields > li.f-build {
-          background-image: url("../images/main/build_t.png"); }
-        #subsidairy .fields > li .txtbox {
-          position: absolute;
-          top: 45%;
-          left: 0%;
-          width: 100%; }
-          #subsidairy .fields > li .txtbox h3 {
-            -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-            position: relative;
-            top: 50%;
-            left: 50%;
-            margin-bottom: 30px;
-            font-size: 36px;
-            font-weight: 700; }
-            #subsidairy .fields > li .txtbox h3::before {
-              content: "";
-              position: absolute;
-              top: -2rem;
-              left: calc(50% - 2rem);
-              width: 4rem;
-              height: 0.2rem;
-              background: #fff; }
-          #subsidairy .fields > li .txtbox p {
-            display: none;
-            padding: 0 7%;
-            font-size: 2rem;
-            font-weight: 500; }
-        #subsidairy .fields > li .keypoint strong {
-          opacity: 1;
-          display: block;
-          padding-bottom: 20px;
-          font-size: 1.8rem;
-          font-weight: 500; }
-        #subsidairy .fields > li .keypoint .company {
-          opacity: 0;
-          margin: 0 auto;
-          width: 100%;
-          height: 5rem;
-          text-align: center; }
-          #subsidairy .fields > li .keypoint .company li {
-            display: inline-block;
-            width: 16rem;
-            height: 5rem; }
-            #subsidairy .fields > li .keypoint .company li + li {
-              margin-top: 0; }
-          #subsidairy .fields > li .keypoint .company a {
-            -webkit-border-radius: 2px;
-            border-radius: 2px;
-            display: block;
-            float: left;
-            margin-left: 20px;
-            width: 14rem;
-            height: 4rem;
-            font-size: 2rem;
-            line-height: 4.2rem;
-            border: 1px solid #fff; }
-        #subsidairy .fields > li .txtbox, #subsidairy .fields > li h3::before, #subsidairy .fields > li p, #subsidairy .fields > li .keypoint {
+        height: 38.96103896103896vw; }
+        #subsidairy .fields > li .txtbox, #subsidairy .fields > li h3, #subsidairy .fields > li h3::before, #subsidairy .fields > li p, #subsidairy .fields > li .keypoint {
           -webkit-transition: all 0.5s;
           -moz-transition: all 0.5s;
           -o-transition: all 0.5s;
           transition: all 0.5s; }
-        #subsidairy .fields > li.active h3::before {
-          opacity: 0; }
-        #subsidairy .fields > li.active .txtbox {
+        #subsidairy .fields > li .txtbox {
           top: 40%; }
-        #subsidairy .fields > li.active .company {
-          opacity: 1; }
-
-  #grow article {
-    width: auto;
-    float: none; }
-  #grow .article_grow .explane {
-    margin-top: 20px;
-    font-size: 40px;
-    font-weight: 700; }
-  #grow .article_grow ul, #grow .article_grow .tabpanel {
-    float: left;
-    margin-top: 40px; }
-  #grow .article_grow ul {
-    width: 30%; }
-  #grow .article_grow .tabpanel {
-    width: 60%;
-    padding: 0; }
-    #grow .article_grow .tabpanel > img {
-      width: 100%;
-      height: 100%; }
-    #grow .article_grow .tabpanel p {
-      width: 100%;
-      height: auto;
-      padding: 25px;
-      font-size: 1.6rem; }
-  #grow .article_promote {
-    margin-top: 100px;
-    border-left: none; }
-    #grow .article_promote video {
-      display: block;
-      width: 100vw;
-      height: 56.32352941176471vw;
-      margin-bottom: 40px;
-      padding-left: 0; }
-    #grow .article_promote h2 {
-      float: none; }
+          #subsidairy .fields > li .txtbox h3 {
+            margin-bottom: 30px; }
+          #subsidairy .fields > li .txtbox p {
+            display: none; }
+          #subsidairy .fields > li .txtbox .keypoint {
+            opacity: 1; }
+            #subsidairy .fields > li .txtbox .keypoint strong {
+              opacity: 1;
+              font-size: 1.8rem; }
+            #subsidairy .fields > li .txtbox .keypoint .company {
+              opacity: 0;
+              width: 100%;
+              height: 5rem;
+              text-align: center; }
+              #subsidairy .fields > li .txtbox .keypoint .company li {
+                display: inline-block;
+                width: 16rem;
+                height: 5rem; }
+                #subsidairy .fields > li .txtbox .keypoint .company li + li {
+                  margin-top: 0; }
+              #subsidairy .fields > li .txtbox .keypoint .company a {
+                float: left;
+                margin-left: 20px;
+                width: 14rem;
+                height: 4rem;
+                line-height: 4.2rem; }
+        #subsidairy .fields > li.active .txtbox {
+          top: 28%; }
+          #subsidairy .fields > li.active .txtbox h3 {
+            margin-bottom: 15px; }
+          #subsidairy .fields > li.active .txtbox h3::before {
+            opacity: 0; }
+          #subsidairy .fields > li.active .txtbox .keypoint .company {
+            opacity: 1; }
 
   #news .news_content > a {
-    position: absolute;
-    left: 0;
-    width: 140px;
-    padding-top: 4px; }
-  #news .swiper-container .swiper-wrapper .swiper-slide {
-    font-size: 0;
-    line-height: 1.8rem; }
-    #news .swiper-container .swiper-wrapper .swiper-slide > * {
-      display: inline-block;
-      padding-top: 6px;
-      vertical-align: middle; }
-    #news .swiper-container .swiper-wrapper .swiper-slide a {
-      width: 65%;
-      font-size: 1.8rem;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis; }
-    #news .swiper-container .swiper-wrapper .swiper-slide span {
-      padding-left: 10px;
-      font-size: 1.6rem;
-      font-weight: 300; }
-  #news .swiper-container .swiper-wrapper .swiper-slide-active::before {
-    display: none; } }
+    width: 140px; } }
 
 /*# sourceMappingURL=main.css.map */

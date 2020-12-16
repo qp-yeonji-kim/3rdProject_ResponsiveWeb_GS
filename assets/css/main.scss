@@ -17,13 +17,13 @@
         background-image: url("../images/main/mainslider3.jpg");
       }
       strong, p, span{position: absolute;left: 20%;}
-      strong{top: 25%;font-size: 5rem;font-weight: 700;}
+      strong{top: 25%;font-size: 50px;font-weight: 700;}
       p{top: 55%;font-size: 1.8rem;font-weight: 400;line-height: 28px;}
       span{top: 80%;font-size: 2rem;font-weight: 700;}
     }
   }
   .controller{
-    position: absolute;width: 70px;height: 20px;left: 20%;top: 75%;z-index : 100;
+    position: absolute;width: 7rem;height: 2rem;left: 20%;top: 75%;z-index : 100;
     &::after{content: "";position: absolute;left: 20%;top: calc(75% + 18px);width: 100%;height: 2px;background: #fff;}
     .swiper-button-prev, .swiper-button-next, .autoplay{
       @include bg-size(cover);
@@ -56,7 +56,7 @@
   margin-bottom: 100px;
   .fields > li{
     @include bg-size(cover);
-    position: relative;float: left;width: calc(100% / 3);height: calc(100vw / 2);background: center no-repeat;overflow: hidden;text-align: center;color: #fff;
+    position: relative;float: left;width: calc(100% / 3);height: calc(100vw / 2);overflow: hidden;text-align: center;background: center no-repeat;color: #fff;
     &.active{
       .txtbox{top: 40%;}
       p{display: none;}
@@ -87,9 +87,7 @@
     p{padding: 0 7%;font-size: 2rem;font-weight: 500;}
     .keypoint{
       opacity: 0;
-      strong{
-        display: block;padding-bottom: 20px;font-size: 1.8rem;font-weight: 500;
-      }
+      strong{display: block;padding-bottom: 20px;font-size: 1.8rem;font-weight: 500;}
       .company{
         width: 18rem;margin: 0 auto;
         li + li{margin-top: 20px;}
@@ -204,11 +202,24 @@
 
 @media screen and (max-width: 1400px){
   #grow{
+    article{width: auto;float: none;}
+    .article_grow{
+      ul, .tabpanel{margin-top: 40px;}
+      ul{width: 30%;}
+      .tabpanel{
+        width: 60%;padding: 0;
+        >img{width: 100%;height: 100%;}
+        p{width: 100%;height: auto;padding: 25px;}
+      }
+    }
     .article_promote{
-      video{width: 100%;height: auto;}
+      margin-top: 100px;border-left: none;
+      video{display: block;width: 100%;height: auto;/* width: 100vw;height: 56.32352941176471vw; */margin-bottom: 40px;padding-left: 0;}
+      h2{float: none;}
     }
   }
 }
+
 
 @media screen and (max-width: 1200px){
   #introduce{
@@ -216,7 +227,7 @@
     > *{position: static;}
     .intro{
       bottom: 0;right: 0;padding: 0 0 50px 0;background: none;
-      strong{display: block;margin: 18px 0 28px;font-size: 4rem;font-weight: 700;}
+      strong{display: block;margin: 18px 0 28px;font-size: 40px;font-weight: 700;}
       p{width: 50rem;font-size: 1.8rem;line-height: 1.4;}
     }
     img{
@@ -224,95 +235,49 @@
   }
   
   #subsidairy{
-    margin: 100px 0;color: #fff;
+    margin: 100px 0;
     .fields{
       width: 100%;height: auto;
       > li{
-        @include bg-size(cover);
-        position: relative;float: none;width: 100vw;height: 38.96103896103896vw;overflow: hidden;text-align: center;background: center no-repeat;
-        .keypoint{opacity: 1;}
-        .company{opacity: 0;}
-        &.f-energy{
-          background-image: url("../images/main/energy_t.png");
-          li + li{margin-top: 20px !important;}
-        }
-        &.f-circulation{
-          background-image: url("../images/main/distribution_t.png");
-        }
-        &.f-build{
-          background-image: url("../images/main/build_t.png");
-        }
-        .txtbox{
-          position: absolute;top: 45%;left: 0%;width: 100%;
-          h3{
-            @include t-form(translateX(-50%));
-            position: relative;top: 50%;left: 50%;margin-bottom: 30px;font-size: 36px;font-weight: 700;
-            &::before{content: "";position: absolute;top: -2rem;left: calc(50% - 2rem);width: 4rem;height: 0.2rem;background: #fff;}
-          }
-          p{display: none;padding: 0 7%;font-size: 2rem;font-weight: 500;}
-        }
-        .keypoint{
-          strong{opacity: 1;display: block;padding-bottom: 20px;font-size: 1.8rem;font-weight: 500;}
-          .company{
-            opacity: 0;margin: 0 auto;width: 100%;height: 5rem;text-align: center;
-            li {
-              display: inline-block;width: 16rem;height: 5rem;
-              + li{margin-top: 0;}
-            }
-            a{
-              @include b-radius(2px);
-              display: block;float: left;margin-left: 20px;width: 14rem;height: 4rem;font-size: 2rem;line-height: 4.2rem;border: 1px solid #fff;
-            }
-          }
-        }
-        .txtbox, h3::before, p, .keypoint{
+        float: none;width: 100vw;height: 38.96103896103896vw;
+        .txtbox, h3, h3::before, p, .keypoint{
           @include t-sition(all 0.5s);
         }
+        .txtbox{
+          top: 40%;
+          h3{margin-bottom: 30px;}
+          p{display: none;}
+          .keypoint{
+            opacity: 1;
+            strong{opacity: 1;font-size: 1.8rem;}
+            .company{
+              opacity: 0;width: 100%;height: 5rem;text-align: center;
+              li{
+                display: inline-block;width: 16rem;height: 5rem;
+                + li{margin-top: 0;}
+              }
+              a{float: left;margin-left: 20px;width: 14rem;height: 4rem;line-height: 4.2rem;}
+            }
+          }
+        }
         &.active{
-          h3::before{opacity: 0;}
-          .txtbox{top: 40%;}
-          .company{opacity: 1;}
+          .txtbox{
+            top: 28%;
+            h3{margin-bottom: 15px;}
+            h3::before{opacity: 0;}
+            .keypoint{
+              .company{opacity: 1;}
+            }
+          }
         }
       }
     }
   }
 
-  #grow{
-    article{width: auto;float: none;}
-    .article_grow{
-      .explane{margin-top: 20px;font-size: 40px;font-weight: 700;}
-      ul, .tabpanel{float: left;margin-top: 40px;}
-      ul{width: 30%;}
-      .tabpanel{
-        width: 60%;padding: 0;
-        >img{width: 100%;height: 100%;}
-        p{width: 100%;height: auto;padding: 25px;font-size: 1.6rem;}
-      }
-    }
-    .article_promote{
-      margin-top: 100px;border-left: none;
-      video{display: block;width: 100vw;height: 56.32352941176471vw;margin-bottom: 40px;padding-left: 0;}
-      h2{float: none;}
-    }
-  }
 
   #news{
     .news_content{
-      > a{position: absolute;left: 0;width: 140px;padding-top: 4px;
-      }
-    }
-    .swiper-container{
-      .swiper-wrapper{
-        .swiper-slide{
-          font-size: 0;line-height: 1.8rem;
-          > *{display: inline-block;padding-top: 6px;vertical-align: middle}
-          a{width: 65%;font-size: 1.8rem;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
-          span{padding-left: 10px;font-size: 1.6rem;font-weight: 300;}
-        }
-        .swiper-slide-active{
-          &::before{display: none;}
-        }
-      }
+      > a{width: 140px;}
     }
   }
 
