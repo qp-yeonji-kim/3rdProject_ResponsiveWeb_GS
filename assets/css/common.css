@@ -552,23 +552,23 @@ h2 {
           width: 2.8rem;
           height: 0.4rem;
           background: #000; }
-          .header .util .menuBtn button span:nth-child(1) {
-            top: 0; }
           .header .util .menuBtn button span:nth-child(2) {
+            top: 0; }
+          .header .util .menuBtn button span:nth-child(3) {
             -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
             top: 50%; }
-          .header .util .menuBtn button span:nth-child(3) {
+          .header .util .menuBtn button span:nth-child(4) {
             bottom: 0; }
-      .header .util .menuBtn.on span:nth-child(1), .header .util .menuBtn.on span:nth-child(3) {
+      .header .util .menuBtn.on span:nth-child(2), .header .util .menuBtn.on span:nth-child(4) {
         -webkit-transform: translateY(-50%);
         transform: translateY(-50%);
         top: 50%; }
-      .header .util .menuBtn.on span:nth-child(1) {
-        transform: rotate(45deg); }
       .header .util .menuBtn.on span:nth-child(2) {
-        opacity: 0; }
+        transform: rotate(45deg); }
       .header .util .menuBtn.on span:nth-child(3) {
+        opacity: 0; }
+      .header .util .menuBtn.on span:nth-child(4) {
         transform: rotate(-45deg); }
 
   .gnb {
