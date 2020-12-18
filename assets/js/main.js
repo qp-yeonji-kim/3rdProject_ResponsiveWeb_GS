@@ -12,6 +12,8 @@ $(document).ready(function () {
         loop: true,
         autoplay: {
             delay: 5000,
+        },
+        a11y: {
             prevSlideMessage: '이전 슬라이드 보기',
             nextSlideMessage: '다음 슬라이드 보기',
             firstSlideMessage: '첫 번째 슬라이드',
@@ -39,23 +41,24 @@ $(document).ready(function () {
         loop: true,
         autoplay: {
             delay: 5000,
-            prevSlideMessage: '이전 슬라이드 보기',
-            nextSlideMessage: '다음 슬라이드 보기',
-            firstSlideMessage: '첫 번째 슬라이드',
-            lastSlideMessage: '마지막 슬라이드',
         },
         slidesPerView: 1,
         slidesPerGroup: 1,
-
         breakpoints: {
             1201: {
-              slidesPerView: 2,
-              slidesPerGroup: 2,
+                slidesPerView: 2,
+                slidesPerGroup: 2,
             }
         }
+        a11y: {
+            prevSlideMessage: '이전 슬라이드 보기',
+            nextSlideMessage: '다음 슬라이드 보기',
+            firstSlideMessage: '첫번째 슬라이드',
+            lastSlideMessage: '마지막 슬라이드',
+        },
     });
 
-    $('#news .controller .play').hide(); 
+    $('#news .controller .play').hide();
     $('#news .controller .stop').on('click', function () {
         $(this).hide().siblings('.autoplay').show();
         newsSlider.autoplay.stop();
@@ -68,10 +71,10 @@ $(document).ready(function () {
     //subsidairy li접근 시 클래스명 붙이기
     $('.fields > li').on({
         'mouseenter focusin': function () {
-            if($(window).width() >= 1200) $(this).addClass('active');
+            if ($(window).width() >= 1200) $(this).addClass('active');
         },
         'mouseleave focusout': function () {
-            if($(window).width() >= 1200) $(this).removeClass('active');
+            if ($(window).width() >= 1200) $(this).removeClass('active');
         }
     });
 
@@ -83,8 +86,7 @@ $(document).ready(function () {
 
     //키보드 제어
     $('.tab').on('keydown', function (e) {
-        var key = e.keyCode; //위38, 아래40, 왼37, 오39, 홈 36, 엔드 35, 스페이스32, 엔터13
-        console.log(key);
+        var key = e.keyCode;
         switch (key) {
             case 40:
             case 39:
@@ -153,17 +155,17 @@ $(document).ready(function () {
         var start;
         var littleMov;
 
-        if(windowSize > 1400){
+        if (windowSize > 1400) {
             start = $('#grow').offset().top;
             littleMov = (scrollY - start) * -0.2;
-        } else if(windowSize > 1200){
+        } else if (windowSize > 1200) {
             start = $('.article_promote').offset().top;
             littleMov = (scrollY - start) * -0.05;
-        } else{
+        } else {
             start = $('.article_promote').offset().top;
             littleMov = (scrollY - start) * -0.08;
         }
-        
+
         $('.recruit_bg').css('background-position', '50%' + littleMov + 'px');
     });
 });
