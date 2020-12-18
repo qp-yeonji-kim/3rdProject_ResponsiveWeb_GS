@@ -49,7 +49,7 @@ $(document).ready(function () {
                 slidesPerView: 2,
                 slidesPerGroup: 2,
             }
-        }
+        },
         a11y: {
             prevSlideMessage: '이전 슬라이드 보기',
             nextSlideMessage: '다음 슬라이드 보기',
