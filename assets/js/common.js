@@ -1,21 +1,4 @@
 $(document).ready(function () {
-    /* 언어 옵션 제어버튼 */
-    //1) 클릭 시 옵션 열고 닫기, 다른 곳으로 이동하면 옵션 숨기기
-    var $langBtn = $('.header .lang');
-    $langBtn.on('click', function(){
-        $(this).toggleClass('on');
-        $langBtn.on('mouseleave', function(){
-            $(this).removeClass('on');
-        });
-    });
-    //2) 첫 번째, 마지막 a태그에서 포커스가 ul밖으로 나갔으면 옵션 숨기기
-    $langBtn.find('a:first, a:last').on('blur', function(){
-        setTimeout(function(){
-            if(!$('.lang a').is(':focus')) $langBtn.removeClass('on');
-        }, 10);
-    });
-
-    
     /* 검색창 열기 버튼 */
     //1) 버튼 눌러 열고 닫기
     var $searchOpen = $('.header .search button');
@@ -100,7 +83,7 @@ $(document).ready(function () {
         }, 10);
     });
 
-    //3) a클릭할 시 텍스트, href변수에 담고 $familyOpen 글자 변경 - 작동 잘 안됨
+    //3) a클릭할 시 텍스트, href변수에 담고 $familyOpen 글자 변경
     var aHref = $familyLink.first().children('a').attr('href');
     var aTxt = $familyLink.first().children('a').text();
     

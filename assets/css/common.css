@@ -7,33 +7,23 @@
   src: url("../fonts/NotoSansKR-Regular.eot#iefix") format("embedded-opentype"), url("../fonts/NotoSansKR-Regular.woff2") format("woff2"), url("../fonts/NotoSansKR-Regular.woff") format("woff"), url("../fonts/NotoSansKR-Regular.ttf") format("truetype"); }
 @font-face {
   font-family: NtSansKR;
-  font-weight: 500;
-  font-style: normal;
-  src: url("../fonts/NotoSansKR-Medium.eot");
-  src: url("../fonts/NotoSansKR-Medium.eot#iefix") format("embedded-opentype"), url("../fonts/NotoSansKR-Medium.woff2") format("woff2"), url("../fonts/NotoSansKR-Medium.woff") format("woff"), url("../fonts/NotoSansKR-Medium.otf") format("opentype"); }
-@font-face {
-  font-family: NtSansKR;
   font-weight: 700;
   font-style: normal;
   src: url("../fonts/NotoSansKR-Bold.eot");
   src: url("../fonts/NotoSansKR-Bold.eot#iefix") format("embedded-opentype"), url("../fonts/NotoSansKR-Bold.woff2") format("woff2"), url("../fonts/NotoSansKR-Bold.woff") format("woff"), url("../fonts/NotoSansKR-Bold.ttf") format("truetype"); }
-@font-face {
-  font-family: Roboto;
-  font-weight: 300;
-  font-style: normal;
-  src: url("../fonts/Roboto-Regular.eot");
-  src: url("../fonts/Roboto-Regular.eot#iefix") format("embedded-opentype"), url("../fonts/Roboto-Regular.woff2") format("woff2"), url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.ttf") format("truetype"); }
-@font-face {
-  font-family: Roboto;
-  font-weight: 500;
-  font-style: normal;
-  src: url("../fonts/Roboto-Bold.eot");
-  src: url("../fonts/Roboto-Bold.eot#iefix") format("embedded-opentype"), url("../fonts/Roboto-Bold.woff2") format("woff2"), url("../fonts/Roboto-Bold.woff") format("woff"), url("../fonts/Roboto-Bold.ttf") format("truetype"); }
-body, h1, h2, h3, p, ul, form {
-  margin: 0;
-  padding: 0; }
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+form {
+  padding: 0;
+  margin: 0; }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: inherit;
   font-size: 100%; }
 
@@ -41,28 +31,35 @@ ul {
   list-style: none; }
 
 img {
-  border: none;
-  vertical-align: top; }
+  vertical-align: top;
+  border: none; }
 
-button, input {
-  border: none;
-  background: none;
+button,
+input {
   font-family: inherit;
   font-size: inherit;
+  line-height: inherit;
   color: inherit;
-  line-height: inherit; }
+  border: none;
+  background: none; }
 
 button {
   cursor: pointer; }
 
-a:link, a:visited, a:hover, a:active {
-  text-decoration: none;
-  color: inherit; }
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+  text-decoration: none; }
 
 address {
   font-style: normal; }
 
-header, section, article, footer {
+header,
+section,
+article,
+footer {
   display: block; }
 
 .blind-b {
@@ -122,16 +119,16 @@ h2 {
 #skip a {
   display: block;
   position: absolute;
-  top: 0;
   left: -9999px;
+  top: 0;
   z-index: 1000; }
 
 #skip a:focus {
   left: 0;
   width: 100%;
   height: 6rem;
-  font-size: 1.8rem;
   line-height: 6rem;
+  font-size: 1.8rem;
   font-weight: 500;
   color: #fff;
   text-align: center;
@@ -143,18 +140,19 @@ h2 {
 /* header */
 .header {
   position: fixed;
-  top: 0;
   left: 0;
+  top: 0;
   width: 100%;
   height: 8.4rem;
   z-index: 100; }
   .header#mHeader {
     display: none; }
   .header .header_content {
-    max-width: 1280px;
+    max-width: 1400px;
     height: 100%;
     margin: 0 auto; }
-  .header h1, .header .util {
+  .header h1,
+  .header .util {
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     position: relative;
@@ -162,21 +160,22 @@ h2 {
     z-index: 100; }
   .header h1 {
     float: left;
-    width: 8.6rem;
-    height: 4.5rem; }
+    width: 80px;
+    height: 41.52px; }
     .header h1 img {
-      width: 8.6rem; }
+      width: 80px; }
   .header .util {
     float: right;
-    width: 15rem;
+    width: 120px;
     height: 100%;
-    padding-bottom: 1.5rem; }
+    padding-bottom: 1.5px;
+    background: red; }
     .header .util > li {
       float: left;
       position: absolute;
       top: 0;
       height: 100%; }
-    .header .util .lang > button, .header .util .search > button {
+    .header .util .search > button {
       -webkit-background-size: cover !important;
       background-size: cover !important;
       -webkit-transform: translateY(-50%);
@@ -303,7 +302,8 @@ h2 {
     #pcGnb > ul ul li a {
       font-size: 1.6rem;
       line-height: 60px; }
-    #pcGnb > ul a:hover, #pcGnb > ul a:focus {
+    #pcGnb > ul a:hover,
+    #pcGnb > ul a:focus {
       color: #cf4520;
       border-color: #cf4520; }
   #pcGnb::before {
@@ -405,7 +405,8 @@ h2 {
           width: 30px;
           height: 26px;
           background: url("../images/common/twoperson_w.svg") no-repeat center; }
-      #footer .footer_area #familySite .f_btn, #footer .footer_area #familySite ul a {
+      #footer .footer_area #familySite .f_btn,
+      #footer .footer_area #familySite ul a {
         display: inline-block;
         width: 150px;
         height: 34px;
@@ -488,7 +489,8 @@ h2 {
         position: absolute;
         top: 0;
         height: 100%; }
-      .header .util .lang > button, .header .util .menuBtn > button {
+      .header .util .lang > button,
+      .header .util .menuBtn > button {
         -webkit-background-size: cover !important;
         background-size: cover !important;
         -webkit-transform: translateY(-50%);
@@ -560,7 +562,8 @@ h2 {
             top: 50%; }
           .header .util .menuBtn button span:nth-child(4) {
             bottom: 0; }
-      .header .util .menuBtn.on span:nth-child(2), .header .util .menuBtn.on span:nth-child(4) {
+      .header .util .menuBtn.on span:nth-child(2),
+      .header .util .menuBtn.on span:nth-child(4) {
         -webkit-transform: translateY(-50%);
         transform: translateY(-50%);
         top: 50%; }
@@ -669,7 +672,8 @@ h2 {
             width: 30px;
             height: 26px;
             background: url("../images/common/twoperson_w.svg") no-repeat center; }
-        #footer .footer_area #familySite .f_btn, #footer .footer_area #familySite ul a {
+        #footer .footer_area #familySite .f_btn,
+        #footer .footer_area #familySite ul a {
           display: inline-block;
           width: 150px;
           height: 34px;
