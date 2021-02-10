@@ -181,7 +181,7 @@ h2 {
   left: 0;
   top: 0;
   width: 100%;
-  height: 8.4rem;
+  height: 81px;
   z-index: 100;
 
   &#mHeader {
@@ -216,7 +216,6 @@ h2 {
     float: right;
     width: 120px;
     height: 100%;
-    padding-bottom: 1.5px;
     background: red;
 
     >li {
@@ -327,7 +326,7 @@ h2 {
   .search_wrap {
     display: none;
     position: absolute;
-    top: 8.4rem;
+    top: 80px;
     left: 0;
     width: 100%;
     height: 170px;
@@ -346,12 +345,12 @@ h2 {
       .searchTxt {
         padding: 0 30px 0 40px;
         width: 420px;
-        height: 3.6rem;
-        font-size: 2.8rem;
+        height: 36px;
+        font-size: 28px;
 
         &::placeholder {
-          height: 3.6rem;
-          font-size: 2.8rem;
+          height: 36px;
+          font-size: 28px;
         }
       }
 
@@ -365,36 +364,34 @@ h2 {
 }
 
 /* gnb */
-.gnb {
+#pcGnb {
   position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
   background: rgba(255, 255, 255, .8);
-  border-bottom: 1px solid #fff;
 
   a {
     display: block;
-    font-size: 1.8rem;
+    height: 81px;
+    font-size: 18px;
     font-weight: 700;
-    line-height: 8.5rem;
+    line-height: 81px;
     border-bottom: 1px solid transparent;
   }
-}
-
-#pcGnb {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
 
   >ul {
     position: relative;
-    width: 840px;
-    height: 8.4rem;
+    max-width: 840px;
+    height: 81px;
     margin: 0 auto;
+    background: orange;
 
     >li {
       position: relative;
       float: left;
       width: 140px;
+      max-width: 140px;
       height: 100%;
       text-align: center;
 
@@ -405,8 +402,9 @@ h2 {
     }
 
     ul li a {
-      font-size: 1.6rem;
+      height: 61px;
       line-height: 60px;
+      font-size: 16px;
     }
 
     a:hover,
@@ -449,7 +447,7 @@ h2 {
 
 #footer {
   width: 100%;
-  height: 200px;
+  height: 262px;
   background: $bluegreen;
 
   .footer_area {
