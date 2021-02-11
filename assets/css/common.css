@@ -1,16 +1,5 @@
 @charset "UTF-8";
-@font-face {
-  font-family: NtSansKR;
-  font-weight: 400;
-  font-style: normal;
-  src: url("../fonts/NotoSansKR-Regular.eot");
-  src: url("../fonts/NotoSansKR-Regular.eot#iefix") format("embedded-opentype"), url("../fonts/NotoSansKR-Regular.woff2") format("woff2"), url("../fonts/NotoSansKR-Regular.woff") format("woff"), url("../fonts/NotoSansKR-Regular.ttf") format("truetype"); }
-@font-face {
-  font-family: NtSansKR;
-  font-weight: 700;
-  font-style: normal;
-  src: url("../fonts/NotoSansKR-Bold.eot");
-  src: url("../fonts/NotoSansKR-Bold.eot#iefix") format("embedded-opentype"), url("../fonts/NotoSansKR-Bold.woff2") format("woff2"), url("../fonts/NotoSansKR-Bold.woff") format("woff"), url("../fonts/NotoSansKR-Bold.ttf") format("truetype"); }
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans+KR:regular,700);
 body,
 h1,
 h2,
@@ -99,17 +88,10 @@ footer {
   font-size: 40px;
   font-weight: 700; }
 
-html {
-  font-size: 10px; }
-
 body {
-  font-family: NtSansKR, "맑은 고딕", "Malgun Gothic", sans-serif;
+  font-family: "Noto Sans KR", "맑은 고딕", "Malgun Gothic", sans-serif;
   color: #000;
   word-break: keep-all; }
-  body * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box; }
 
 h2 {
   display: inline-block;
@@ -143,7 +125,7 @@ h2 {
   left: 0;
   top: 0;
   width: 100%;
-  height: 81px;
+  height: 80px;
   z-index: 100; }
   .header#mHeader {
     display: none; }
@@ -173,7 +155,8 @@ h2 {
       float: left;
       position: absolute;
       top: 0;
-      height: 100%; }
+      height: 100%;
+      background: green; }
     .header .util .search > button {
       -webkit-background-size: cover !important;
       background-size: cover !important;
@@ -276,15 +259,15 @@ h2 {
   background: rgba(255, 255, 255, 0.8); }
   #pcGnb a {
     display: block;
-    height: 81px;
+    height: 80px;
     font-size: 18px;
     font-weight: 700;
-    line-height: 81px;
+    line-height: 80px;
     border-bottom: 1px solid transparent; }
   #pcGnb > ul {
     position: relative;
     max-width: 840px;
-    height: 81px;
+    height: 80px;
     margin: 0 auto;
     background: orange; }
     #pcGnb > ul > li {
@@ -298,7 +281,7 @@ h2 {
         height: 451px;
         background: rgba(255, 255, 255, 0.4); }
     #pcGnb > ul ul li a {
-      height: 61px;
+      height: 60px;
       line-height: 60px;
       font-size: 16px; }
     #pcGnb > ul a:hover,
@@ -337,80 +320,78 @@ h2 {
 
 #footer {
   width: 100%;
-  height: 262px;
+  height: 240px;
+  color: #fff;
   background: #00a499; }
   #footer .footer_area {
     width: 100%;
-    height: 200px; }
-    #footer .footer_area > * {
-      float: left; }
-    #footer .footer_area p {
-      width: 91px;
-      margin: 76px 34px 0 0; }
-      #footer .footer_area p img {
-        width: 91px;
-        height: 48px;
-        line-height: 200px; }
-    #footer .footer_area .info_txt {
-      padding-top: 32px;
-      height: 100%; }
-      #footer .footer_area .info_txt ul {
-        height: 30px; }
-        #footer .footer_area .info_txt ul li {
-          float: left;
-          position: relative; }
-          #footer .footer_area .info_txt ul li::after {
-            content: "";
-            position: absolute;
-            top: 0.6rem;
-            right: -1.6rem;
-            width: 1px;
-            height: 1.4rem;
-            background-color: rgba(255, 255, 255, 0.8); }
-          #footer .footer_area .info_txt ul li:last-child::after {
-            display: none; }
-          #footer .footer_area .info_txt ul li a {
-            font-size: 1.8rem;
-            color: #fff; }
-        #footer .footer_area .info_txt ul li + li {
-          margin-left: 30px; }
-      #footer .footer_area .info_txt address {
-        margin-top: 20px;
-        font-size: 1.8rem;
-        color: #fff; }
-      #footer .footer_area .info_txt > span {
-        display: inline-block;
-        margin-top: 14px;
-        font-size: 1.4rem;
-        color: #fff; }
-    #footer .footer_area #familySite {
-      position: relative;
-      margin: 32px 0 0 250px;
-      width: 300px;
-      height: 7.0rem;
-      color: #fff;
-      font-size: 1.6rem; }
-      #footer .footer_area #familySite strong {
+    height: 100%;
+    background: hotpink; }
+    #footer .footer_area .info_link {
+      max-width: 920px;
+      height: 80px;
+      margin: 0 auto; }
+      #footer .footer_area .info_link li {
+        float: left;
         position: relative;
-        display: block;
-        line-height: 38px; }
-        #footer .footer_area #familySite strong::before {
-          -webkit-background-size: cover !important;
-          background-size: cover !important;
-          left: -38px;
-          top: 4px;
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        font-size: 18px;
+        text-align: center; }
+        #footer .footer_area .info_link li:last-child {
+          width: 120px; }
+        #footer .footer_area .info_link li + li {
+          margin-left: 20px; }
+        #footer .footer_area .info_link li::after {
+          -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
           content: "";
           position: absolute;
-          width: 30px;
-          height: 26px;
-          background: url("../images/common/twoperson_w.svg") no-repeat center; }
+          right: -10px;
+          top: 50%;
+          width: 1px;
+          height: 16px;
+          background-color: rgba(255, 255, 255, 0.8); }
+        #footer .footer_area .info_link li:last-child::after {
+          display: none; }
+    #footer .footer_area p {
+      float: left;
+      width: 154px;
+      height: 80px;
+      margin: 0 40px 0 46px;
+      background: orange; }
+      #footer .footer_area p img {
+        width: 154px;
+        height: 80px; }
+    #footer .footer_area .info_txt {
+      float: left;
+      width: 440px;
+      height: 80px;
+      background: green; }
+      #footer .footer_area .info_txt address {
+        font-size: 18px;
+        line-height: 1.5; }
+      #footer .footer_area .info_txt > span {
+        display: block;
+        font-size: 14px; }
+    #footer .footer_area #familySite {
+      float: right;
+      width: 320px;
+      height: 80px;
+      font-size: 18px;
+      color: #fff;
+      background: skyblue; }
+      #footer .footer_area #familySite strong {
+        display: block;
+        line-height: 38px; }
       #footer .footer_area #familySite .f_btn,
       #footer .footer_area #familySite ul a {
         display: inline-block;
-        width: 150px;
-        height: 34px;
+        width: 200px;
+        height: 40px;
         padding-left: 30px;
-        border: 1px solid #7FD1CC;
+        border: 1px solid #fff;
         background: #00a499; }
       #footer .footer_area #familySite .f_btn {
         position: relative;
@@ -431,21 +412,21 @@ h2 {
       #footer .footer_area #familySite ul {
         display: none;
         position: absolute;
-        bottom: 30px;
+        bottom: 40px;
         z-index: 100;
-        line-height: 32px; }
+        line-height: 40px; }
         #footer .footer_area #familySite ul li + li {
           margin-top: -1px; }
         #footer .footer_area #familySite ul li a {
-          height: 34px; }
+          height: 40px; }
           #footer .footer_area #familySite ul li a:hover, #footer .footer_area #familySite ul li a:focus {
             text-decoration: underline;
             color: #00a499;
             background: #fff; }
       #footer .footer_area #familySite .fGo_btn {
         position: absolute;
-        width: 86px;
-        height: 34px;
+        width: 80px;
+        height: 40px;
         color: #fff;
         background: #00a499;
         border: 2px solid #fff; }
@@ -454,20 +435,7 @@ h2 {
           color: #00a499;
           border-color: #7FD1CC; }
 
-@media screen and (max-width: 1400px) {
-  .max1400 {
-    max-width: 100%;
-    width: 100%;
-    padding: 0 5%; }
-
-  #footer .footer_area #familySite {
-    float: right;
-    margin: 32px 0 0 0;
-    width: 260px; } }
-@media screen and (max-width: 1200px) {
-  html {
-    font-size: 14px; }
-
+@media screen and (max-width: 1024px) {
   .header {
     display: none; }
     .header#mHeader {
@@ -622,115 +590,6 @@ h2 {
                 margin-left: 20%;
                 height: 5.4rem;
                 line-height: 5.4rem;
-                font-size: 1.8rem; }
-
-  #footer {
-    height: 500px; }
-    #footer .footer_area {
-      width: 100%;
-      height: 100%;
-      font-size: 1.6rem; }
-      #footer .footer_area > * {
-        float: none; }
-      #footer .footer_area p {
-        display: none; }
-      #footer .footer_area .info_txt {
-        width: 100%;
-        height: auto;
-        padding: 60px 0;
-        text-align: center; }
-        #footer .footer_area .info_txt ul {
-          display: inline-block;
-          margin-bottom: 20px;
-          width: 500px;
-          height: auto; }
-        #footer .footer_area .info_txt address {
-          margin: 0 auto;
-          width: 500px;
-          height: auto; }
-      #footer .footer_area #familySite {
-        float: none;
-        margin: 0 auto;
-        width: 240px;
-        height: auto;
-        font-size: 1.6rem;
-        color: #fff; }
-        #footer .footer_area #familySite strong {
-          position: relative;
-          display: block;
-          width: 199px;
-          padding-left: 36px;
-          line-height: 38px; }
-          #footer .footer_area #familySite strong::before {
-            -webkit-background-size: cover !important;
-            background-size: cover !important;
-            content: "";
-            position: absolute;
-            top: 4px;
-            left: 0;
-            width: 30px;
-            height: 26px;
-            background: url("../images/common/twoperson_w.svg") no-repeat center; }
-        #footer .footer_area #familySite .f_btn,
-        #footer .footer_area #familySite ul a {
-          display: inline-block;
-          width: 150px;
-          height: 34px;
-          padding-left: 30px;
-          border: 1px solid #7FD1CC;
-          background: #00a499; }
-        #footer .footer_area #familySite .f_btn {
-          position: relative;
-          text-align: left; }
-          #footer .footer_area #familySite .f_btn::after {
-            -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-            content: "";
-            position: absolute;
-            right: 10px;
-            top: 50%;
-            border-bottom: 6px solid #fff;
-            border-left: 6.5px solid transparent;
-            border-right: 6.5px solid transparent; }
-          #footer .footer_area #familySite .f_btn.on::after {
-            border-bottom: none;
-            border-top: 6px solid #fff; }
-        #footer .footer_area #familySite ul {
-          display: none;
-          position: absolute;
-          bottom: 30px;
-          line-height: 32px;
-          z-index: 100; }
-          #footer .footer_area #familySite ul li + li {
-            margin-top: -1px; }
-          #footer .footer_area #familySite ul li a {
-            height: 34px; }
-            #footer .footer_area #familySite ul li a:hover, #footer .footer_area #familySite ul li a:focus {
-              text-decoration: underline;
-              color: #00a499;
-              background: #fff; }
-        #footer .footer_area #familySite .fGo_btn {
-          position: absolute;
-          width: 86px;
-          height: 34px;
-          line-height: 34px;
-          color: #fff;
-          background: #00a499;
-          border: 2px solid #fff; }
-          #footer .footer_area #familySite .fGo_btn:hover, #footer .footer_area #familySite .fGo_btn:focus {
-            background: #fff;
-            color: #00a499;
-            border-color: #7FD1CC; } }
-/* 글자 너비에 따라 변화하는 태블릿 */
-@media screen and (max-width: 900px) {
-  .summary {
-    margin: 1.2rem 0 1.8rem; } }
-/* 모바일 */
-@media screen and (max-width: 768px) {
-  html {
-    font-size: 12px; }
-
-  .summary {
-    margin: 1.2rem 0 1.2rem; } }
+                font-size: 1.8rem; } }
 
 /*# sourceMappingURL=common.css.map */
