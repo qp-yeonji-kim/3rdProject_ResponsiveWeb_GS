@@ -178,16 +178,8 @@ h2 {
       width: 20px;
       height: 20px;
       background: url("../images/icon/search.svg") no-repeat center; }
-    .header .util .frequent {
-      width: 440px; }
-      .header .util .frequent li {
-        float: left;
-        padding: 0 20px; }
-        .header .util .frequent li::nth-child(odd) {
-          background: #005eb8; }
-        .header .util .frequent li::nth-child(even) {
-          background: #00a499; }
   .header .search_wrap {
+    display: none;
     position: absolute;
     left: 0;
     top: 81px;
@@ -211,8 +203,8 @@ h2 {
       .header .search_wrap .searchtxt::placeholder {
         color: #000; }
     .header .search_wrap button {
-      -webkit-background-size: cover !important;
-      background-size: cover !important;
+      -webkit-background-size: contain !important;
+      background-size: contain !important;
       -webkit-transform: translateY(-50%);
       transform: translateY(-50%);
       position: absolute;
@@ -220,7 +212,27 @@ h2 {
       top: 50%;
       width: 24px;
       height: 24px;
-      background: gold url("../images/icon/big-search.svg") no-repeat center; }
+      background: url("../images/icon/big-search.svg") no-repeat center; }
+    .header .search_wrap .frequent {
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      position: absolute;
+      left: 50%;
+      top: 182px;
+      width: 440px; }
+      .header .search_wrap .frequent li {
+        float: left;
+        width: auto;
+        height: 30px;
+        padding: 0 22px;
+        margin: 0 10px 16px;
+        line-height: 30px;
+        color: #fff;
+        border-radius: 20px; }
+        .header .search_wrap .frequent li:nth-child(odd) {
+          background: #005eb8; }
+        .header .search_wrap .frequent li:nth-child(even) {
+          background: #007069; }
 
 /* gnb */
 #pcGnb {
@@ -297,7 +309,7 @@ h2 {
   #footer .footer_area {
     width: 100%;
     height: 100%;
-    background: hotpink; }
+    background: red; }
     #footer .footer_area .info_link {
       max-width: 920px;
       height: 80px;

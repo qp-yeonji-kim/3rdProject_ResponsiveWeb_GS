@@ -187,16 +187,16 @@ h2 {
     width: 120px;
     height: 100%;
 
-    .lang{
-      li{
+    .lang {
+      li {
         position: relative;
         float: left;
         line-height: 80px;
 
-        + li{
+        +li {
           margin-left: 13px;
 
-          &::after{
+          &::after {
             @include t-form(translateY(-50%));
             content: "";
             position: absolute;
@@ -209,8 +209,9 @@ h2 {
         }
       }
     }
-    .search{
-      button{
+
+    .search {
+      button {
         @include t-form(translateY(-50%));
         @include bg-size(contain);
         position: absolute;
@@ -221,33 +222,18 @@ h2 {
         background: url("../images/icon/search.svg") no-repeat center;
       }
     }
-
-    .frequent{
-      width: 440px;
-
-      li{
-        float: left;
-        padding: 0 20px;
-
-        &::nth-child(odd){
-          background: $blue;
-        }
-        &::nth-child(even){
-          background: $bluegreen;
-        }
-      }
-    }
   }
 
-  .search_wrap{
+  .search_wrap {
+    display: none;
     position: absolute;
     left: 0;
     top: 81px;
     width: 100%;
     height: 400px;
-    background:rgba(255, 255, 255, .8);
+    background: rgba(255, 255, 255, .8);
 
-    form{
+    form {
       @include t-form(translateX(-50%));
       position: absolute;
       left: 50%;
@@ -258,7 +244,7 @@ h2 {
       border-bottom: 2px solid $bluegreen;
     }
 
-    .searchtxt{
+    .searchtxt {
       width: 320px;
       height: 36px;
       background: orange;
@@ -268,15 +254,42 @@ h2 {
       }
     }
 
-    button{
-      @include bg-size(cover);
+    button {
+      @include bg-size(contain);
       @include t-form(translateY(-50%));
       position: absolute;
       right: 18px;
       top: 50%;
       width: 24px;
       height: 24px;
-      background: gold url("../images/icon/big-search.svg") no-repeat center;
+      background: url("../images/icon/big-search.svg") no-repeat center;
+    }
+
+    .frequent {
+      @include t-form(translateX(-50%));
+      position: absolute;
+      left: 50%;
+      top: 182px;
+      width: 440px;
+
+      li {
+        float: left;
+        width: auto;
+        height: 30px;
+        padding: 0 22px;
+        margin: 0 10px 16px;
+        line-height: 30px;
+        color: #fff;
+        border-radius: 20px;
+
+        &:nth-child(odd) {
+          background: $blue;
+        }
+
+        &:nth-child(even) {
+          background: #007069;
+        }
+      }
     }
   }
 }
@@ -372,7 +385,7 @@ h2 {
   .footer_area {
     width: 100%;
     height: 100%;
-    background: hotpink;
+    background: red;
 
     .info_link {
       max-width: 920px;
@@ -388,11 +401,11 @@ h2 {
         font-size: 18px;
         text-align: center;
 
-        &:last-child{
+        &:last-child {
           width: 120px;
         }
 
-        + li{
+        +li {
           margin-left: 20px;
         }
 
@@ -426,7 +439,7 @@ h2 {
       }
     }
 
-    .info_txt{
+    .info_txt {
       float: left;
       width: 440px;
       height: 80px;
@@ -436,11 +449,11 @@ h2 {
         font-size: 18px;
         line-height: 1.5;
       }
-  
+
       >span {
         display: block;
         font-size: 14px;
-      }  
+      }
     }
 
     #familySite {
@@ -531,9 +544,7 @@ h2 {
   }
 }
 
-@media screen and (max-width: 1400px) {
-
-}
+@media screen and (max-width: 1400px) {}
 
 @media screen and (max-width: 1024px) {
   .header {

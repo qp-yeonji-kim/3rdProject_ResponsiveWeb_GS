@@ -12,7 +12,9 @@
     background-image: url("../images/main/mainslider2.png"); }
   #coreValue .swiper-container .swiper-wrapper .swiper-slide.citizen {
     background-image: url("../images/main/mainslider3.jpg"); }
-  #coreValue .swiper-container .swiper-wrapper .swiper-slide strong, #coreValue .swiper-container .swiper-wrapper .swiper-slide p, #coreValue .swiper-container .swiper-wrapper .swiper-slide span {
+  #coreValue .swiper-container .swiper-wrapper .swiper-slide strong,
+  #coreValue .swiper-container .swiper-wrapper .swiper-slide p,
+  #coreValue .swiper-container .swiper-wrapper .swiper-slide span {
     position: absolute;
     left: 20%; }
   #coreValue .swiper-container .swiper-wrapper .swiper-slide strong {
@@ -43,13 +45,16 @@
     width: 100%;
     height: 2px;
     background: #fff; }
-  #coreValue .swiper-container .controller .swiper-button-prev, #coreValue .swiper-container .controller .swiper-button-next, #coreValue .swiper-container .controller .autoplay {
+  #coreValue .swiper-container .controller .swiper-button-prev,
+  #coreValue .swiper-container .controller .swiper-button-next,
+  #coreValue .swiper-container .controller .autoplay {
     -webkit-background-size: cover !important;
     background-size: cover !important;
     width: 1.6rem;
     height: 1.6rem;
     background: no-repeat center; }
-  #coreValue .swiper-container .controller .swiper-button-prev, #coreValue .swiper-container .controller .swiper-button-next {
+  #coreValue .swiper-container .controller .swiper-button-prev,
+  #coreValue .swiper-container .controller .swiper-button-next {
     top: 0;
     margin-top: 0; }
   #coreValue .swiper-container .controller .swiper-button-prev {
@@ -66,7 +71,8 @@
     background-image: url("../images/common/pause_w.svg"); }
   #coreValue .swiper-container .controller .autoplay.play {
     background-image: url("../images/common/play_w.svg"); }
-  #coreValue .swiper-container .controller .swiper-button-next::after, #coreValue .swiper-container .controller .swiper-button-prev::after {
+  #coreValue .swiper-container .controller .swiper-button-next::after,
+  #coreValue .swiper-container .controller .swiper-button-prev::after {
     display: none; }
   #coreValue .swiper-container .controller .swiper-pagination {
     display: none; }
@@ -145,7 +151,10 @@
         width: 4rem;
         height: 0.2rem;
         background: #fff; }
-    #subsidairy .fields > li .txtbox, #subsidairy .fields > li h3::before, #subsidairy .fields > li p, #subsidairy .fields > li .keypoint {
+    #subsidairy .fields > li .txtbox,
+    #subsidairy .fields > li h3::before,
+    #subsidairy .fields > li p,
+    #subsidairy .fields > li .keypoint {
       -webkit-transition: all 0.5s;
       -moz-transition: all 0.5s;
       -o-transition: all 0.5s;
@@ -182,7 +191,8 @@
   margin-top: 20px;
   font-size: 40px;
   font-weight: 700; }
-#grow .article_grow ul, #grow .article_grow .tabpanel {
+#grow .article_grow ul,
+#grow .article_grow .tabpanel {
   float: left; }
 #grow .article_grow ul {
   display: inline-block;
@@ -352,13 +362,16 @@
   height: 2rem;
   right: 0px;
   top: 5px; }
-  #news .swiper-container .controller .swiper-button-prev, #news .swiper-container .controller .swiper-button-next, #news .swiper-container .controller .autoplay {
+  #news .swiper-container .controller .swiper-button-prev,
+  #news .swiper-container .controller .swiper-button-next,
+  #news .swiper-container .controller .autoplay {
     -webkit-background-size: cover !important;
     background-size: cover !important;
     width: 1.4rem;
     height: 1.4rem;
     background: no-repeat center; }
-  #news .swiper-container .controller .swiper-button-prev, #news .swiper-container .controller .swiper-button-next {
+  #news .swiper-container .controller .swiper-button-prev,
+  #news .swiper-container .controller .swiper-button-next {
     top: 0;
     margin-top: 0; }
   #news .swiper-container .controller .swiper-button-prev {
@@ -375,14 +388,17 @@
     background-image: url("../images/common/pause_b.svg"); }
   #news .swiper-container .controller .autoplay.play {
     background-image: url("../images/common/play_b.svg"); }
-  #news .swiper-container .controller .swiper-button-prev::after, #news .swiper-container .controller .swiper-button-next::after, #news .swiper-container .controller .autoplay::after {
+  #news .swiper-container .controller .swiper-button-prev::after,
+  #news .swiper-container .controller .swiper-button-next::after,
+  #news .swiper-container .controller .autoplay::after {
     display: none; }
 
 @media screen and (max-width: 1400px) {
   #grow article {
     width: auto;
     float: none; }
-  #grow .article_grow ul, #grow .article_grow .tabpanel {
+  #grow .article_grow ul,
+  #grow .article_grow .tabpanel {
     margin-top: 40px; }
   #grow .article_grow ul {
     width: 30%; }
@@ -442,7 +458,11 @@
         float: none;
         width: 100vw;
         height: 38.96103896103896vw; }
-        #subsidairy .fields > li .txtbox, #subsidairy .fields > li h3, #subsidairy .fields > li h3::before, #subsidairy .fields > li p, #subsidairy .fields > li .keypoint {
+        #subsidairy .fields > li .txtbox,
+        #subsidairy .fields > li h3,
+        #subsidairy .fields > li h3::before,
+        #subsidairy .fields > li p,
+        #subsidairy .fields > li .keypoint {
           -webkit-transition: all 0.5s;
           -moz-transition: all 0.5s;
           -o-transition: all 0.5s;
@@ -495,7 +515,9 @@
     height: 100vh;
     background: no-repeat center;
     color: #fff; }
-    #coreValue .swiper-container .swiper-wrapper .swiper-slide strong, #coreValue .swiper-container .swiper-wrapper .swiper-slide p, #coreValue .swiper-container .swiper-wrapper .swiper-slide span {
+    #coreValue .swiper-container .swiper-wrapper .swiper-slide strong,
+    #coreValue .swiper-container .swiper-wrapper .swiper-slide p,
+    #coreValue .swiper-container .swiper-wrapper .swiper-slide span {
       position: absolute;
       left: 20%; }
     #coreValue .swiper-container .swiper-wrapper .swiper-slide strong {
@@ -556,7 +578,9 @@
       left: 20px; } }
 /* 모바일 */
 @media screen and (max-width: 768px) {
-  #coreValue .swiper-container .swiper-wrapper .swiper-slide strong, #coreValue .swiper-container .swiper-wrapper .swiper-slide p, #coreValue .swiper-container .swiper-wrapper .swiper-slide span {
+  #coreValue .swiper-container .swiper-wrapper .swiper-slide strong,
+  #coreValue .swiper-container .swiper-wrapper .swiper-slide p,
+  #coreValue .swiper-container .swiper-wrapper .swiper-slide span {
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     position: absolute;
