@@ -109,6 +109,7 @@ footer {
 
 body {
   font-family: "Noto Sans KR", "맑은 고딕", "Malgun Gothic", sans-serif;
+  font-size: 18px;
   color: #000;
   word-break: keep-all;
 }
@@ -185,153 +186,101 @@ h2 {
     float: right;
     width: 120px;
     height: 100%;
-    background: red;
 
-    >li {
-      float: left;
-      position: absolute;
-      top: 0;
-      height: 100%;
-      background: green;
+    .lang{
+      li{
+        position: relative;
+        float: left;
+        line-height: 80px;
+
+        + li{
+          margin-left: 13px;
+
+          &::after{
+            @include t-form(translateY(-50%));
+            content: "";
+            position: absolute;
+            left: -6px;
+            top: calc(50% + 2px);
+            width: 1px;
+            height: 14px;
+            background: $bluegreen;
+          }
+        }
+      }
+    }
+    .search{
+      button{
+        @include t-form(translateY(-50%));
+        @include bg-size(contain);
+        position: absolute;
+        right: 6px;
+        top: calc(50% + 2px);
+        width: 20px;
+        height: 20px;
+        background: url("../images/icon/search.svg") no-repeat center;
+      }
     }
 
-    .search >button {
+    .frequent{
+      width: 440px;
+
+      li{
+        float: left;
+        padding: 0 20px;
+
+        &::nth-child(odd){
+          background: $blue;
+        }
+        &::nth-child(even){
+          background: $bluegreen;
+        }
+      }
+    }
+  }
+
+  .search_wrap{
+    position: absolute;
+    left: 0;
+    top: 81px;
+    width: 100%;
+    height: 400px;
+    background:rgba(255, 255, 255, .8);
+
+    form{
+      @include t-form(translateX(-50%));
+      position: absolute;
+      left: 50%;
+      top: 114px;
+      width: 420px;
+      height: 38px;
+      background: red;
+      border-bottom: 2px solid $bluegreen;
+    }
+
+    .searchtxt{
+      width: 320px;
+      height: 36px;
+      background: orange;
+
+      &::placeholder {
+        color: #000;
+      }
+    }
+
+    button{
       @include bg-size(cover);
       @include t-form(translateY(-50%));
       position: absolute;
+      right: 18px;
       top: 50%;
-      height: 2.4rem;
-      background: center no-repeat;
-    }
-
-    .lang {
-      left: 0;
-      width: 7.5rem;
-
-      &.on {
-        >button {
-          color: $red;
-          border-color: $red;
-
-          span {
-            border-color: $red;
-          }
-        }
-
-        .lang_menu {
-          display: block;
-        }
-      }
-
-      >button {
-        display: inline-block;
-        width: 2.4rem;
-        font-size: 1.6rem;
-        font-weight: 500;
-        background-image: url("../images/common/global.svg");
-
-        &:focus {
-          color: $red;
-
-          span {
-            border-color: $red;
-          }
-        }
-
-        span {
-          display: inline-block;
-          margin-left: 2.8rem;
-          border-bottom: 1px solid transparent;
-        }
-      }
-
-      .lang_menu {
-        display: none;
-        position: absolute;
-        top: 8.4rem;
-
-        li {
-          width: 7.5rem;
-          height: 3.5rem;
-          background: rgba(255, 255, 255, .8);
-          border: 1px solid #fff;
-          font-size: 1.6rem;
-          text-align: center;
-          line-height: 3.7rem;
-
-          a {
-            border-bottom: 1px solid transparent;
-
-            &:hover,
-            &:focus {
-              color: $red;
-              border-color: $red;
-            }
-          }
-        }
-      }
-    }
-
-    .search {
-      left: 8.5rem;
-      width: 2.8rem;
-
-      >button {
-        width: 2.8rem;
-        background-image: url("../images/common/search_b.svg");
-
-        &::after {
-          content: "";
-          position: absolute;
-          top: 0.6rem;
-          left: -1rem;
-          width: 2px;
-          height: 18px;
-          background-color: rgba(0, 0, 0, .3);
-        }
-      }
-    }
-  }
-
-  .search_wrap {
-    display: none;
-    position: absolute;
-    top: 80px;
-    left: 0;
-    width: 100%;
-    height: 170px;
-    background: rgba(255, 255, 255, .8);
-
-    .search_place {
-      @include t-form(translateY(-50%));
-      width: 500px;
-      margin: 85px auto;
-      border-bottom: 2px solid rgba(0, 164, 153, .6);
-
-      * {
-        vertical-align: middle;
-      }
-
-      .searchTxt {
-        padding: 0 30px 0 40px;
-        width: 420px;
-        height: 36px;
-        font-size: 28px;
-
-        &::placeholder {
-          height: 36px;
-          font-size: 28px;
-        }
-      }
-
-      button {
-        width: 45px;
-        padding-bottom: 8px;
-        vertical-align: middle
-      }
+      width: 24px;
+      height: 24px;
+      background: gold url("../images/icon/big-search.svg") no-repeat center;
     }
   }
 }
+
 
 /* gnb */
 #pcGnb {
@@ -344,7 +293,6 @@ h2 {
   a {
     display: block;
     height: 80px;
-    font-size: 18px;
     font-weight: 700;
     line-height: 80px;
     border-bottom: 1px solid transparent;
