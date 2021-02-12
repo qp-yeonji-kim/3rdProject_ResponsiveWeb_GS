@@ -48,6 +48,9 @@
     height: 26px;
     margin-top: 0;
     z-index: 100; }
+    #coreValue .swiper-container .controller .swiper-button-prev img,
+    #coreValue .swiper-container .controller .swiper-button-next img {
+      vertical-align: top; }
   #coreValue .swiper-container .controller .swiper-button-prev {
     left: 16px; }
   #coreValue .swiper-container .controller .swiper-button-next {
@@ -78,29 +81,44 @@
     color: #fff; }
 
 #introduce {
-  position: relative;
-  height: 810px;
+  height: 800px;
   margin-top: 200px; }
-  #introduce > * {
-    position: absolute; }
-  #introduce .intro {
-    bottom: 12%;
-    right: 10%;
-    padding: 50px;
-    background: #fff;
-    z-index: 10; }
-    #introduce .intro strong {
-      display: block;
-      margin: 18px 0 28px;
-      font-size: 4rem;
-      font-weight: 700; }
-    #introduce .intro p {
-      width: 50rem;
-      font-size: 1.8rem;
-      line-height: 1.4; }
-  #introduce img {
-    width: 862px;
-    height: 574px; }
+  #introduce li {
+    float: left;
+    width: 320px;
+    margin-top: 50px;
+    text-align: center; }
+    #introduce li + li {
+      margin-left: 40px; }
+    #introduce li .intro-icon {
+      -webkit-background-size: contain !important;
+      background-size: contain !important;
+      width: 120px;
+      height: 130px;
+      margin: 50px auto 30px;
+      background: no-repeat center bottom; }
+    #introduce li:nth-child(1) .intro-icon {
+      background-image: url("../images/icon/intro-company.svg"); }
+    #introduce li:nth-child(2) .intro-icon {
+      background-image: url("../images/icon/intro-history.svg"); }
+    #introduce li:nth-child(3) .intro-icon {
+      background-image: url("../images/icon/intro-holding.svg"); }
+    #introduce li:nth-child(4) .intro-icon {
+      background-image: url("../images/icon/intro-invest.svg"); }
+  #introduce .intro-icon + strong {
+    display: block;
+    font-size: 26px;
+    margin-bottom: 30px; }
+  #introduce p {
+    width: 220px;
+    margin: 0 auto 40px;
+    line-height: 1.5; }
+  #introduce a {
+    -webkit-background-size: 6px 9.6px !important;
+    background-size: 6px 9.6px !important;
+    display: inline-block;
+    padding-right: 12px;
+    background: url("../images/icon/small-arrow.svg") no-repeat top 9px right; }
 
 #subsidairy {
   margin-bottom: 100px; }

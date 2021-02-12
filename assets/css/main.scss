@@ -70,6 +70,10 @@
         height: 26px;
         margin-top: 0;
         z-index: 100;
+
+        img {
+          vertical-align: top;
+        }
       }
 
       .swiper-button-prev {
@@ -114,38 +118,61 @@
 }
 
 #introduce {
-  position: relative;
-  height: 810px;
+  height: 800px;
   margin-top: 200px;
 
-  >* {
-    position: absolute;
-  }
+  li {
+    float: left;
+    width: 320px;
+    margin-top: 50px;
+    text-align: center;
 
-  .intro {
-    bottom: 12%;
-    right: 10%;
-    padding: 50px;
-    background: #fff;
-    z-index: 10;
-
-    strong {
-      display: block;
-      margin: 18px 0 28px;
-      font-size: 4rem;
-      font-weight: 700;
+    +li {
+      margin-left: 40px;
     }
 
-    p {
-      width: 50rem;
-      font-size: 1.8rem;
-      line-height: 1.4;
+    .intro-icon {
+      @include bg-size(contain);
+      width: 120px;
+      height: 130px;
+      margin: 50px auto 30px;
+      background: no-repeat center bottom;
+    }
+
+    &:nth-child(1) .intro-icon{
+      background-image: url("../images/icon/intro-company.svg");
+    }
+
+    &:nth-child(2) .intro-icon{
+      background-image: url("../images/icon/intro-history.svg");
+    }
+
+    &:nth-child(3) .intro-icon{
+      background-image: url("../images/icon/intro-holding.svg");
+    }
+
+    &:nth-child(4) .intro-icon{
+      background-image: url("../images/icon/intro-invest.svg");
     }
   }
 
-  img {
-    width: 862px;
-    height: 574px;
+  .intro-icon+strong {
+    display: block;
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+
+  p {
+    width: 220px;
+    margin: 0 auto 40px;
+    line-height: 1.5;
+  }
+
+  a{
+    @include bg-size(6px 9.6px);
+    display: inline-block;
+    padding-right: 12px;
+    background: url("../images/icon/small-arrow.svg") no-repeat top 9px right;
   }
 }
 
