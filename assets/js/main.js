@@ -3,7 +3,7 @@ $(document).ready(function () {
 	var mainSlider = new Swiper('#coreValue .swiper-container', {
 		pagination: {
 			el: '.swiper-pagination',
-			type: 'bullets',
+			type: 'fraction',
 		},
 		navigation: {
 			nextEl: '.swiper-button-next',

@@ -4,8 +4,8 @@
   background-size: cover !important;
   width: 100%;
   height: 100vh;
-  background: no-repeat top center;
-  color: #fff; }
+  color: #fff;
+  background: no-repeat top center; }
   #coreValue .swiper-container .swiper-wrapper .swiper-slide.customer {
     background-image: url("../images/main/mainslider1.png"); }
   #coreValue .swiper-container .swiper-wrapper .swiper-slide.job {
@@ -17,63 +17,65 @@
     left: 19.79166666666667vw;
     background: red; }
   #coreValue .swiper-container .swiper-wrapper .swiper-slide span {
-    top: 20.37037037037037vh;
     display: inline-block;
+    top: 20%;
     padding-bottom: 8px;
     font-size: 22px;
     line-height: 1;
     border-bottom: 1px solid #fff; }
   #coreValue .swiper-container .swiper-wrapper .swiper-slide strong {
-    top: 25vh;
     display: block;
+    top: 30%;
     font-size: 50px;
     font-weight: 700;
     line-height: 1.6; }
   #coreValue .swiper-container .swiper-wrapper .swiper-slide p {
-    bottom: 44.44444444444444vh;
+    top: 65%;
     font-size: 18px;
     line-height: 28px; }
 #coreValue .swiper-container .controller {
   position: absolute;
+  left: 19.79166666666667vw;
   top: 75%;
-  left: 120px;
   width: 200px;
-  height: 24px;
+  height: 26px;
   padding: 0 16px;
-  margin-left: 120px;
-  z-index: 100;
-  background: green; }
-  #coreValue .swiper-container .controller .swiper-button-prev,
-  #coreValue .swiper-container .controller .swiper-button-next,
-  #coreValue .swiper-container .controller .autoplay {
-    -webkit-background-size: cover !important;
-    background-size: cover !important;
-    width: 1.6rem;
-    height: 1.6rem;
-    background: no-repeat center; }
+  z-index: 10000; }
   #coreValue .swiper-container .controller .swiper-button-prev,
   #coreValue .swiper-container .controller .swiper-button-next {
     top: 0;
-    margin-top: 0; }
+    width: 26px;
+    height: 26px;
+    margin-top: 0;
+    z-index: 100; }
   #coreValue .swiper-container .controller .swiper-button-prev {
-    left: 0.1rem;
-    background-image: url("../images/common/prev_equal_w.svg"); }
+    left: 16px; }
   #coreValue .swiper-container .controller .swiper-button-next {
-    right: 0.1rem;
-    background-image: url("../images/common/next_equal_w.svg"); }
+    right: 16px; }
   #coreValue .swiper-container .controller .autoplay {
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
     position: absolute;
-    left: 2.8rem;
-    z-index: 10; }
-  #coreValue .swiper-container .controller .autoplay.stop {
-    background-image: url("../images/common/pause_w.svg"); }
-  #coreValue .swiper-container .controller .autoplay.play {
-    background-image: url("../images/common/play_w.svg"); }
+    right: 60px;
+    top: 50%;
+    width: 18px;
+    height: 18px;
+    z-index: 100; }
+    #coreValue .swiper-container .controller .autoplay img {
+      width: 18px;
+      height: 18px;
+      vertical-align: top; }
   #coreValue .swiper-container .controller .swiper-button-next::after,
   #coreValue .swiper-container .controller .swiper-button-prev::after {
     display: none; }
   #coreValue .swiper-container .controller .swiper-pagination {
-    display: none; }
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    top: 50%;
+    height: 28px;
+    line-height: 28px;
+    font-size: 22px;
+    color: #fff; }
 
 #introduce {
   position: relative;
