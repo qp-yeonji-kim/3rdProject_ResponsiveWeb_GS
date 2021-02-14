@@ -128,19 +128,28 @@
     transform: translateX(-50%);
     position: relative;
     left: 50%;
-    margin-top: 120px; }
+    margin: 120px 0 100px; }
   #promote .movie_point {
-    float: left;
+    float: right;
+    width: 680px;
+    margin-right: 40px;
     font-size: 22px;
-    background: orange; }
+    line-height: 40px; }
     #promote .movie_point strong {
       display: block;
-      font-size: 80px; }
+      font-size: 80px;
+      margin-bottom: 70px;
+      line-height: 1; }
   #promote video {
-    float: right; }
+    float: right;
+    width: 930px;
+    height: 523px;
+    margin-bottom: 150px; }
 
 #subsidairy {
-  margin-top: 100px; }
+  margin-top: 150px; }
+  #subsidairy .fields {
+    margin-top: 50px; }
   #subsidairy .fields > li {
     -webkit-background-size: cover !important;
     background-size: cover !important;
@@ -150,8 +159,8 @@
     height: calc(100vw / 2);
     overflow: hidden;
     text-align: center;
-    background: center no-repeat;
-    color: #fff; }
+    color: #fff;
+    background: center no-repeat; }
     #subsidairy .fields > li.active .txtbox {
       top: 30%; }
     #subsidairy .fields > li.active p {
@@ -168,25 +177,25 @@
       background-image: url("../images/main/build.png"); }
     #subsidairy .fields > li .txtbox {
       position: absolute;
-      top: 45%;
       left: 0%;
+      top: 45%;
       width: 100%; }
     #subsidairy .fields > li h3 {
       -webkit-transform: translateX(-50%);
       transform: translateX(-50%);
       position: relative;
-      top: 50%;
       left: 50%;
+      top: 50%;
       margin-bottom: 5.9375%;
       font-size: 36px;
       font-weight: 700; }
       #subsidairy .fields > li h3::before {
         content: "";
         position: absolute;
-        top: -2rem;
-        left: calc(50% - 2rem);
-        width: 4rem;
-        height: 0.2rem;
+        top: -20px;
+        left: calc(50% - 20px);
+        width: 40px;
+        height: 2px;
         background: #fff; }
     #subsidairy .fields > li .txtbox,
     #subsidairy .fields > li h3::before,
@@ -197,17 +206,18 @@
       -o-transition: all 0.5s;
       transition: all 0.5s; }
     #subsidairy .fields > li p {
-      padding: 0 7%;
-      font-size: 2rem;
+      padding: 0 20px;
+      line-height: 1.8;
+      font-size: 22px;
       font-weight: 500; }
     #subsidairy .fields > li .keypoint {
       opacity: 0; }
       #subsidairy .fields > li .keypoint strong {
         display: block;
-        font-size: 1.8rem;
-        font-weight: 500; }
+        font-size: 22px;
+        font-weight: 400; }
       #subsidairy .fields > li .keypoint .company {
-        width: 18rem;
+        width: 180px;
         margin: 20px auto 0; }
         #subsidairy .fields > li .keypoint .company li + li {
           margin-top: 20px; }
@@ -215,11 +225,81 @@
           -webkit-border-radius: 2px;
           border-radius: 2px;
           display: block;
-          width: 16rem;
-          height: 5rem;
-          font-size: 2rem;
-          line-height: 5.2rem;
+          width: 160px;
+          height: 50px;
+          font-size: 22px;
+          line-height: 50px;
           border: 1px solid #fff; }
+
+#manage {
+  margin-top: 200px; }
+  #manage .summary {
+    margin-bottom: 60px; }
+  #manage .core-manage {
+    float: left;
+    position: relative;
+    width: 700px;
+    height: 568px;
+    margin: 4px 4px 4px 0;
+    background: url("../images/main/manage-main@1x.png") no-repeat center; }
+    #manage .core-manage > * {
+      position: absolute;
+      left: 40px;
+      color: #fff;
+      text-shadow: 0 0 2px #000; }
+    #manage .core-manage strong {
+      bottom: 100px;
+      font-size: 26px; }
+    #manage .core-manage p {
+      bottom: 40px; }
+  #manage ul {
+    float: right;
+    width: 696px; }
+    #manage ul li {
+      position: relative;
+      float: left;
+      width: 342px;
+      height: 280px;
+      margin: 4px;
+      color: #fff; }
+      #manage ul li:nth-child(even) {
+        margin-right: 0; }
+      #manage ul li:nth-child(1) a {
+        background-image: url("../images/main/manage-ethical.png"); }
+        #manage ul li:nth-child(1) a:focus, #manage ul li:nth-child(1) a:hover {
+          background-image: url("../images/main/manage-ethical-c.png"); }
+      #manage ul li:nth-child(2) a {
+        background-image: url("../images/main/manage-codevelop.png"); }
+        #manage ul li:nth-child(2) a:focus, #manage ul li:nth-child(2) a:hover {
+          background-image: url("../images/main/manage-codevelop-c.png"); }
+      #manage ul li:nth-child(3) a {
+        background-image: url("../images/main/manage-contribute.png"); }
+        #manage ul li:nth-child(3) a:focus, #manage ul li:nth-child(3) a:hover {
+          background-image: url("../images/main/manage-contribute-c.png"); }
+      #manage ul li:nth-child(4) a {
+        background-image: url("../images/main/manage-eco.png"); }
+        #manage ul li:nth-child(4) a:focus, #manage ul li:nth-child(4) a:hover {
+          background-image: url("../images/main/manage-eco-c.png"); }
+    #manage ul a {
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s;
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-shadow: 0 0 4px #000;
+      background: no-repeat center; }
+    #manage ul strong {
+      position: absolute;
+      left: 20px;
+      bottom: 68px;
+      font-size: 22px; }
+    #manage ul p {
+      position: absolute;
+      left: 20px;
+      bottom: 20px;
+      font-size: 16px; }
 
 #recruit {
   position: relative;
