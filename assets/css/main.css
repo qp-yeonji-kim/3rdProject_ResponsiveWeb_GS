@@ -1,4 +1,6 @@
 @charset "UTF-8";
+/* PC-12column(40gutter) */
+/* TABLET-6column(16gutter) */
 #coreValue .swiper-container .swiper-wrapper .swiper-slide {
   -webkit-background-size: cover !important;
   background-size: cover !important;
@@ -86,7 +88,8 @@
     float: left;
     width: 320px;
     margin-top: 50px;
-    text-align: center; }
+    text-align: center;
+    background: pink; }
     #introduce li + li {
       margin-left: 40px; }
     #introduce li .intro-icon {
@@ -95,7 +98,7 @@
       width: 120px;
       height: 130px;
       margin: 50px auto 30px;
-      background: no-repeat center bottom; }
+      background: green no-repeat center bottom; }
     #introduce li:nth-child(1) .intro-icon {
       background-image: url("../images/icon/intro-company.svg"); }
     #introduce li:nth-child(2) .intro-icon {
@@ -111,10 +114,11 @@
   #introduce p {
     width: 220px;
     margin: 0 auto 40px;
-    line-height: 1.5; }
+    line-height: 1.5;
+    background: orange; }
   #introduce a {
-    -webkit-background-size: 6px 9.6px !important;
-    background-size: 6px 9.6px !important;
+    -webkit-background-size: 6px 10px !important;
+    background-size: 6px 10px !important;
     display: inline-block;
     padding-right: 12px;
     background: url("../images/icon/small-arrow.svg") no-repeat top 9px right; }
@@ -129,22 +133,21 @@
     position: relative;
     left: 50%;
     margin: 120px 0 100px; }
-  #promote .movie_point {
+  #promote video {
     float: right;
     width: 680px;
-    margin-right: 40px;
+    height: 382.5px;
+    margin-bottom: 150px; }
+  #promote .movie_point {
+    margin-left: 40px;
     font-size: 22px;
-    line-height: 40px; }
+    line-height: 40px;
+    background: pink; }
     #promote .movie_point strong {
       display: block;
       font-size: 80px;
       margin-bottom: 70px;
       line-height: 1; }
-  #promote video {
-    float: right;
-    width: 930px;
-    height: 523px;
-    margin-bottom: 150px; }
 
 #subsidairy {
   margin-top: 150px; }
@@ -242,6 +245,14 @@
     height: 568px;
     margin: 4px 4px 4px 0;
     background: url("../images/main/manage-main.png") no-repeat center; }
+    #manage .core-manage::after {
+      content: "";
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      width: 680px;
+      height: 548px;
+      border: 1px solid #fff; }
     #manage .core-manage > * {
       position: absolute;
       left: 40px;
@@ -281,10 +292,10 @@
         #manage ul li:nth-child(4) a:focus, #manage ul li:nth-child(4) a:hover {
           background-image: url("../images/main/manage-eco-c.png"); }
     #manage ul a {
-      -webkit-transition: all 0.5s;
-      -moz-transition: all 0.5s;
-      -o-transition: all 0.5s;
-      transition: all 0.5s;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
       display: block;
       width: 100%;
       height: 100%;
@@ -359,35 +370,25 @@
 
 #news .news_content {
   position: relative;
-  padding: 20px 50px 20px 150px; }
+  width: 100%;
+  padding: 20px 50px 20px 150px;
+  background: pink;
+  box-sizing: border-box; }
   #news .news_content > a {
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
     position: absolute;
     left: 20px;
-    top: 0;
-    width: 100px;
-    height: 100%; }
+    top: 50%;
+    width: 100px; }
     #news .news_content > a h2 {
-      -webkit-transform: translateY(-50%);
-      transform: translateY(-50%);
-      position: absolute;
-      top: 50%;
-      padding-bottom: 0;
-      line-height: 1;
+      -webkit-background-size: 6px 10px !important;
+      background-size: 6px 10px !important;
+      padding: 0 14px 2px 0;
       font-size: 18px;
       font-weight: 700;
-      border: none; }
-      #news .news_content > a h2::after {
-        -webkit-transform: translateY(-50%);
-        transform: translateY(-50%);
-        -webkit-background-size: contain !important;
-        background-size: contain !important;
-        position: absolute;
-        content: "";
-        top: 50%;
-        right: -18px;
-        width: 16px;
-        height: 18px;
-        background: url("../images/icon/next_equal_b.svg") no-repeat bottom; }
+      border: none;
+      background: url("../images/icon/small-arrow.svg") no-repeat right 9px; }
 #news .swiper-container .swiper-wrapper .swiper-slide {
   font-size: 0; }
   #news .swiper-container .swiper-wrapper .swiper-slide > * {
@@ -451,62 +452,21 @@
   #news .swiper-container .controller .autoplay::after {
     display: none; }
 
-@media screen and (max-width: 1400px) {
-  #grow article {
-    width: auto;
-    float: none; }
-  #grow .article_grow ul,
-  #grow .article_grow .tabpanel {
-    margin-top: 40px; }
-  #grow .article_grow ul {
-    width: 30%; }
-  #grow .article_grow .tabpanel {
-    width: 60%;
-    padding: 0; }
-    #grow .article_grow .tabpanel > img {
-      width: 100%;
-      height: 100%; }
-    #grow .article_grow .tabpanel p {
-      width: 100%;
-      height: auto;
-      padding: 25px; }
-  #grow .article_promote {
-    margin-top: 100px;
-    border-left: none; }
-    #grow .article_promote video {
-      display: block;
-      width: 100%;
-      height: auto;
-      /* width: 100vw;height: 56.32352941176471vw; */
-      margin-bottom: 40px;
-      padding-left: 0; }
-    #grow .article_promote h2 {
-      float: none; } }
-@media screen and (max-width: 1200px) {
-  #introduce {
-    position: static;
-    height: auto;
-    margin-top: 100px; }
-    #introduce > * {
-      position: static; }
-    #introduce .intro {
-      bottom: 0;
-      right: 0;
-      padding: 0 0 50px 0;
-      background: none; }
-      #introduce .intro strong {
-        display: block;
-        margin: 18px 0 28px;
-        font-size: 40px;
-        font-weight: 700; }
-      #introduce .intro p {
-        width: 50rem;
-        font-size: 1.8rem;
-        line-height: 1.4; }
-    #introduce img {
-      width: 100%;
-      height: 66.58932714617169%; }
+/* PC: 1460~1200 */
+@media screen and (max-width: 1460px) {
+  #introduce li {
+    float: left;
+    width: 20.1171875vw; }
 
+  #manage .core-manage {
+    float: none;
+    margin: 0 auto;
+    width: 71.09375vw; }
+  #manage ul {
+    float: none;
+    margin: 0 auto; } }
+/* PC: 1200~1024 */
+@media screen and (max-width: 1200px) {
   #subsidairy {
     margin: 100px 0; }
     #subsidairy .fields {

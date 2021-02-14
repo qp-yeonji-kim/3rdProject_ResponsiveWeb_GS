@@ -95,9 +95,10 @@ footer {
 }
 
 .max1400 {
-  max-width: 1400px;
-  width: 1400px;
+  max-width: 1440px;
+  padding: 0 20px;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .summary {
@@ -171,12 +172,14 @@ h2 {
     position: relative;
     top: 50%;
     z-index: 100;
+    background: red;
   }
 
   h1 {
     float: left;
     width: 80px;
     height: 41.52px;
+    margin-left: 20px;
 
     img {
       width: 80px;
@@ -187,6 +190,7 @@ h2 {
     float: right;
     width: 120px;
     height: 100%;
+    margin-right: 20px;
 
     .lang {
       li {
@@ -203,9 +207,9 @@ h2 {
             position: absolute;
             left: -6px;
             top: calc(50% + 2px);
-            width: 1px;
+            width: 2px;
             height: 14px;
-            background: $bluegreen;
+            background: #aaa;
           }
         }
       }
@@ -383,14 +387,14 @@ h2 {
   background: $bluegreen;
 
   .footer_area {
-    width: 100%;
+    margin: 0 20px;
     height: 100%;
-    background: red;
 
     .info_link {
-      max-width: 920px;
+      width: 920px;
       height: 80px;
       margin: 0 auto;
+      background: red;
 
       li {
         float: left;
@@ -462,7 +466,7 @@ h2 {
       height: 80px;
       font-size: 18px;
       color: #fff;
-      background: skyblue;
+      background: blue;
 
       strong {
         display: block;
@@ -544,7 +548,17 @@ h2 {
   }
 }
 
-@media screen and (max-width: 1400px) {}
+@media screen and (max-width: 1460px) {
+  #coreValue, #introduce, #subsidairy, #manage{
+    h2{
+      margin-left: 40px;
+    }
+  
+    .summary{
+      margin-left: 40px;
+    }
+  }
+}
 
 @media screen and (max-width: 1024px) {
   .header {

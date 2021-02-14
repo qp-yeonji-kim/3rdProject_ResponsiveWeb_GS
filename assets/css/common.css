@@ -1,5 +1,7 @@
 @charset "UTF-8";
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,regular,700);
+/* PC-12column(40gutter) */
+/* TABLET-6column(16gutter) */
 body,
 h1,
 h2,
@@ -78,9 +80,10 @@ footer {
   float: right; }
 
 .max1400 {
-  max-width: 1400px;
-  width: 1400px;
-  margin: 0 auto; }
+  max-width: 1440px;
+  padding: 0 20px;
+  margin: 0 auto;
+  box-sizing: border-box; }
 
 .summary {
   display: block;
@@ -142,17 +145,20 @@ h2 {
     transform: translateY(-50%);
     position: relative;
     top: 50%;
-    z-index: 100; }
+    z-index: 100;
+    background: red; }
   .header h1 {
     float: left;
     width: 80px;
-    height: 41.52px; }
+    height: 41.52px;
+    margin-left: 20px; }
     .header h1 img {
       width: 80px; }
   .header .util {
     float: right;
     width: 120px;
-    height: 100%; }
+    height: 100%;
+    margin-right: 20px; }
     .header .util .lang li {
       position: relative;
       float: left;
@@ -166,9 +172,9 @@ h2 {
           position: absolute;
           left: -6px;
           top: calc(50% + 2px);
-          width: 1px;
+          width: 2px;
           height: 14px;
-          background: #00a499; }
+          background: #aaa; }
     .header .util .search button {
       -webkit-transform: translateY(-50%);
       transform: translateY(-50%);
@@ -309,13 +315,13 @@ h2 {
   color: #fff;
   background: #00a499; }
   #footer .footer_area {
-    width: 100%;
-    height: 100%;
-    background: red; }
+    margin: 0 20px;
+    height: 100%; }
     #footer .footer_area .info_link {
-      max-width: 920px;
+      width: 920px;
       height: 80px;
-      margin: 0 auto; }
+      margin: 0 auto;
+      background: red; }
       #footer .footer_area .info_link li {
         float: left;
         position: relative;
@@ -366,7 +372,7 @@ h2 {
       height: 80px;
       font-size: 18px;
       color: #fff;
-      background: skyblue; }
+      background: blue; }
       #footer .footer_area #familySite strong {
         display: block;
         line-height: 38px; }
@@ -420,6 +426,11 @@ h2 {
           color: #00a499;
           border-color: #7FD1CC; }
 
+@media screen and (max-width: 1460px) {
+  #coreValue h2, #introduce h2, #subsidairy h2, #manage h2 {
+    margin-left: 40px; }
+  #coreValue .summary, #introduce .summary, #subsidairy .summary, #manage .summary {
+    margin-left: 40px; } }
 @media screen and (max-width: 1024px) {
   .header {
     display: none; }
