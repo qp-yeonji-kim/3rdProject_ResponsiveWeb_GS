@@ -513,20 +513,31 @@
       >a {
         position: absolute;
         left: 20px;
+        top: 0;
         width: 100px;
-        padding-top: 4px;
+        height: 100%;
 
         h2 {
+          @include t-form(translateY(-50%));
+          position: absolute;
+          top: 50%;
+          padding-bottom: 0;
+          line-height: 1;
           font-size: 18px;
-          line-height: 20px;
           font-weight: 700;
-          border-bottom: 0;
-        }
+          border: none;
 
-        img {
-          width: 14px;
-          height: 14px;
-          vertical-align: top;
+          &::after{
+            @include t-form(translateY(-50%));
+            @include bg-size(contain);
+            position: absolute;
+            content: "";
+            top: 50%;
+            right: -18px;
+            width: 16px;
+            height: 18px;
+            background: url("../images/icon/next_equal_b.svg") no-repeat bottom;
+          }
         }
       }
     }
@@ -535,20 +546,18 @@
       .swiper-wrapper {
         .swiper-slide {
           font-size: 0;
-          line-height: 18px;
 
           >* {
             display: inline-block;
-            padding-top: 6px;
-            vertical-align: middle
+            vertical-align: middle;
           }
 
           a {
             width: 65%;
             font-size: 18px;
             white-space: nowrap;
-            overflow: hidden;
             text-overflow: ellipsis;
+            overflow: hidden;
           }
 
           span {
@@ -560,10 +569,11 @@
 
         .swiper-slide-active {
           &::before {
+            @include t-form(translateY(-50%));
             content: "";
             position: absolute;
-            top: 5%;
             right: 5%;
+            top: 50%;
             width: 1px;
             height: 16px;
             background: #aaa;
@@ -583,8 +593,8 @@
         .swiper-button-next,
         .autoplay {
           @include bg-size(cover);
-          width: 14px;
-          height: 14px;
+          width: 16px;
+          height: 18px;
           background: no-repeat center;
         }
 
@@ -596,26 +606,26 @@
 
         .swiper-button-prev {
           left: 5px;
-          background-image: url("../images/common/prev_equal_b.svg");
+          background-image: url("../images/icon/prev_equal_b.svg");
         }
 
         .swiper-button-next {
           right: 5px;
-          background-image: url("../images/common/next_equal_b.svg");
+          background-image: url("../images/icon/next_equal_b.svg");
         }
 
         .autoplay {
           position: absolute;
-          left: 29px;
+          left: 27px;
           z-index: 10;
         }
 
         .autoplay.stop {
-          background-image: url("../images/common/pause_b.svg");
+          background-image: url("../images/icon/pause_b.svg");
         }
 
         .autoplay.play {
-          background-image: url("../images/common/play_b.svg");
+          background-image: url("../images/icon/play_b.svg");
         }
 
         .swiper-button-prev,

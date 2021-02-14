@@ -363,39 +363,53 @@
   #news .news_content > a {
     position: absolute;
     left: 20px;
+    top: 0;
     width: 100px;
-    padding-top: 4px; }
+    height: 100%; }
     #news .news_content > a h2 {
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
+      position: absolute;
+      top: 50%;
+      padding-bottom: 0;
+      line-height: 1;
       font-size: 18px;
-      line-height: 20px;
       font-weight: 700;
-      border-bottom: 0; }
-    #news .news_content > a img {
-      width: 14px;
-      height: 14px;
-      vertical-align: top; }
+      border: none; }
+      #news .news_content > a h2::after {
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-background-size: contain !important;
+        background-size: contain !important;
+        position: absolute;
+        content: "";
+        top: 50%;
+        right: -18px;
+        width: 16px;
+        height: 18px;
+        background: url("../images/icon/next_equal_b.svg") no-repeat bottom; }
 #news .swiper-container .swiper-wrapper .swiper-slide {
-  font-size: 0;
-  line-height: 18px; }
+  font-size: 0; }
   #news .swiper-container .swiper-wrapper .swiper-slide > * {
     display: inline-block;
-    padding-top: 6px;
     vertical-align: middle; }
   #news .swiper-container .swiper-wrapper .swiper-slide a {
     width: 65%;
     font-size: 18px;
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis; }
+    text-overflow: ellipsis;
+    overflow: hidden; }
   #news .swiper-container .swiper-wrapper .swiper-slide span {
     padding-left: 10px;
     font-size: 16px;
     font-weight: 300; }
 #news .swiper-container .swiper-wrapper .swiper-slide-active::before {
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
   content: "";
   position: absolute;
-  top: 5%;
   right: 5%;
+  top: 50%;
   width: 1px;
   height: 16px;
   background: #aaa;
@@ -411,8 +425,8 @@
   #news .swiper-container .controller .autoplay {
     -webkit-background-size: cover !important;
     background-size: cover !important;
-    width: 14px;
-    height: 14px;
+    width: 16px;
+    height: 18px;
     background: no-repeat center; }
   #news .swiper-container .controller .swiper-button-prev,
   #news .swiper-container .controller .swiper-button-next {
@@ -420,18 +434,18 @@
     margin-top: 0; }
   #news .swiper-container .controller .swiper-button-prev {
     left: 5px;
-    background-image: url("../images/common/prev_equal_b.svg"); }
+    background-image: url("../images/icon/prev_equal_b.svg"); }
   #news .swiper-container .controller .swiper-button-next {
     right: 5px;
-    background-image: url("../images/common/next_equal_b.svg"); }
+    background-image: url("../images/icon/next_equal_b.svg"); }
   #news .swiper-container .controller .autoplay {
     position: absolute;
-    left: 29px;
+    left: 27px;
     z-index: 10; }
   #news .swiper-container .controller .autoplay.stop {
-    background-image: url("../images/common/pause_b.svg"); }
+    background-image: url("../images/icon/pause_b.svg"); }
   #news .swiper-container .controller .autoplay.play {
-    background-image: url("../images/common/play_b.svg"); }
+    background-image: url("../images/icon/play_b.svg"); }
   #news .swiper-container .controller .swiper-button-prev::after,
   #news .swiper-container .controller .swiper-button-next::after,
   #news .swiper-container .controller .autoplay::after {
