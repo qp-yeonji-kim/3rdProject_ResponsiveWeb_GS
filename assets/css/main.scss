@@ -339,43 +339,45 @@
   }
 
   .core-manage {
+    @include bg-size(cover);
     float: left;
     position: relative;
     width: 700px;
     height: 568px;
     margin: 4px 4px 4px 0;
-    background: url("../images/main/manage-main.png") no-repeat center;
+    background: pink url("../images/main/manage-main.png") no-repeat center;
 
     &::after {
       content: "";
       position: absolute;
       left: 10px;
       top: 10px;
-      width: 680px;
-      height: 548px;
+      width: calc(100% - 20px);
+      height: calc(100% - 20px);
       border: 1px solid #fff;
     }
 
     >* {
       position: absolute;
-      left: 40px;
+      left: 6%;
       color: #fff;
       text-shadow: 0 0 2px #000;
     }
 
     strong {
-      bottom: 100px;
+      bottom: 17%;
       font-size: 26px;
     }
 
     p {
-      bottom: 40px;
+      bottom: 6%;
     }
   }
 
   ul {
-    float: right;
+    float: left;
     width: 696px;
+    background: orange;
 
     li {
       position: relative;
@@ -384,6 +386,7 @@
       height: 280px;
       margin: 4px;
       color: #fff;
+      background: green;
 
       &:nth-child(even) {
         margin-right: 0;
@@ -434,19 +437,20 @@
       height: 100%;
       text-shadow: 0 0 4px #000;
       background: no-repeat center;
+
+      >* {
+        position: absolute;
+        left: 6%;
+      }
     }
 
     strong {
-      position: absolute;
-      left: 20px;
-      bottom: 68px;
+      bottom: 24%;
       font-size: 22px;
     }
 
     p {
-      position: absolute;
-      left: 20px;
-      bottom: 20px;
+      bottom: 5.5%;
       font-size: 16px;
     }
   }
@@ -641,6 +645,20 @@
 
 /* PC: 1460~1200 */
 @media screen and (max-width: 1460px) {
+
+  #coreValue,
+  #introduce,
+  #subsidairy,
+  #manage {
+    h2 {
+      margin-left: 40px;
+    }
+
+    .summary {
+      margin-left: 40px;
+    }
+  }
+
   #introduce {
 
     li {
@@ -650,16 +668,62 @@
   }
 
   #manage {
-
     .core-manage {
       float: none;
-      margin: 0 auto;
-      width: 71.09375vw;
+      width: $w728;
+      height: $h591;
+      margin: 0 auto 8px;
     }
 
     ul {
       float: none;
+      width: $w728;
       margin: 0 auto;
+
+      li {
+        width: $w356;
+        height: $h291;
+        margin: 8px 0;
+
+        &:nth-child(even){
+          margin-left: 16px;
+        }
+        &:nth-child(1) a {
+          background-image: url("../images/main/manage-ethical@2x.png");
+  
+          &:focus,
+          &:hover {
+            background-image: url("../images/main/manage-ethical-c@2x.png");
+          }
+        }
+  
+        &:nth-child(2) a {
+          background-image: url("../images/main/manage-codevelop@2x.png");
+  
+          &:focus,
+          &:hover {
+            background-image: url("../images/main/manage-codevelop-c@2x.png");
+          }
+        }
+  
+        &:nth-child(3) a {
+          background-image: url("../images/main/manage-contribute@2x.png");
+  
+          &:focus,
+          &:hover {
+            background-image: url("../images/main/manage-contribute-c@2x.png");
+          }
+        }
+  
+        &:nth-child(4) a {
+          background-image: url("../images/main/manage-eco@2x.png");
+  
+          &:focus,
+          &:hover {
+            background-image: url("../images/main/manage-eco-c@2x.png");
+          }
+        }
+      }
     }
   }
 }

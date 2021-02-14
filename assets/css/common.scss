@@ -548,18 +548,6 @@ h2 {
   }
 }
 
-@media screen and (max-width: 1460px) {
-  #coreValue, #introduce, #subsidairy, #manage{
-    h2{
-      margin-left: 40px;
-    }
-  
-    .summary{
-      margin-left: 40px;
-    }
-  }
-}
-
 @media screen and (max-width: 1024px) {
   .header {
     display: none;
