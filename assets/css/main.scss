@@ -120,6 +120,16 @@
 #introduce {
   margin-top: 200px;
 
+  .wrap-list{
+    text-align: center;
+    background: plum;
+
+    ul{
+      display: inline-block;
+      background: skyblue;
+    }
+  }
+
   li {
     float: left;
     width: 320px;
@@ -199,7 +209,7 @@
   .movie_point {
     margin-left: 40px;
     font-size: 22px;
-    line-height: 40px;
+    line-height: 1.8;
     background: pink;
 
     strong {
@@ -339,7 +349,7 @@
   }
 
   .core-manage {
-    @include bg-size(cover);
+    @include bg-size(contain);
     float: left;
     position: relative;
     width: 700px;
@@ -429,8 +439,8 @@
       }
     }
 
-
     a {
+      @include bg-size(contain);
       @include t-sition(all .3s);
       display: block;
       width: 100%;
@@ -643,9 +653,8 @@
   }
 }
 
-/* PC: 1460~1200 */
+/* PC: 1460~1240 */
 @media screen and (max-width: 1460px) {
-
   #coreValue,
   #introduce,
   #subsidairy,
@@ -662,65 +671,86 @@
   #introduce {
 
     li {
-      float: left;
-      width: $w206;
+      width: $pc-c3g2;
+    }
+    p {
+      width: $pc-c3g2;
+      margin: 0 auto 40px;
+    }
+  }
+
+  #promote{
+    video {
+      width: $pc-c6g5;
+      height: $h382;
     }
   }
 
   #manage {
     .core-manage {
       float: none;
-      width: $w728;
-      height: $h591;
-      margin: 0 auto 8px;
+      width: 718px;
+      height: 591px;
+      margin: 0 auto;
     }
 
     ul {
       float: none;
-      width: $w728;
+      width: 721px;
       margin: 0 auto;
 
       li {
-        width: $w356;
-        height: $h291;
-        margin: 8px 0;
+        width: 356px;
+        height: 291px;
+        margin: 3.5px;
 
-        &:nth-child(even){
-          margin-left: 16px;
+        &:nth-child(odd) {
+          margin-left: 0;
         }
+
+        &:nth-child(even) {
+          margin-right: 0;
+        }
+
         &:nth-child(1) a {
           background-image: url("../images/main/manage-ethical@2x.png");
-  
+
           &:focus,
           &:hover {
             background-image: url("../images/main/manage-ethical-c@2x.png");
           }
         }
-  
+
         &:nth-child(2) a {
           background-image: url("../images/main/manage-codevelop@2x.png");
-  
+
           &:focus,
           &:hover {
             background-image: url("../images/main/manage-codevelop-c@2x.png");
           }
         }
-  
+
         &:nth-child(3) a {
           background-image: url("../images/main/manage-contribute@2x.png");
-  
+
           &:focus,
           &:hover {
             background-image: url("../images/main/manage-contribute-c@2x.png");
           }
         }
-  
+
         &:nth-child(4) a {
           background-image: url("../images/main/manage-eco@2x.png");
-  
+
           &:focus,
           &:hover {
             background-image: url("../images/main/manage-eco-c@2x.png");
+          }
+        }
+
+        a {
+          >* {
+            left: 4%;
           }
         }
       }
@@ -729,8 +759,17 @@
 }
 
 
-/* PC: 1200~1024 */
-@media screen and (max-width: 1200px) {
+/* PC: 1240~1024 */
+@media screen and (max-width: 1240px) {
+  #promote{
+    .movie_point {
+      font-size: 18px;
+  
+      strong {
+        font-size: 68px;
+      }
+    }
+  }
 
   #subsidairy {
     margin: 100px 0;

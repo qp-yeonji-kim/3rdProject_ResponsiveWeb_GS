@@ -1,5 +1,6 @@
 @charset "UTF-8";
-/* PC-12column(gutter40px) 1400px */
+/* PC-12column(gutter40px) 1440px~ */
+/* 1024px~1440px  */
 /* TABLET-6column(16gutter) 1024px */
 #coreValue .swiper-container .swiper-wrapper .swiper-slide {
   -webkit-background-size: cover !important;
@@ -84,6 +85,12 @@
 
 #introduce {
   margin-top: 200px; }
+  #introduce .wrap-list {
+    text-align: center;
+    background: plum; }
+    #introduce .wrap-list ul {
+      display: inline-block;
+      background: skyblue; }
   #introduce li {
     float: left;
     width: 320px;
@@ -141,7 +148,7 @@
   #promote .movie_point {
     margin-left: 40px;
     font-size: 22px;
-    line-height: 40px;
+    line-height: 1.8;
     background: pink; }
     #promote .movie_point strong {
       display: block;
@@ -239,8 +246,8 @@
   #manage .summary {
     margin-bottom: 60px; }
   #manage .core-manage {
-    -webkit-background-size: cover !important;
-    background-size: cover !important;
+    -webkit-background-size: contain !important;
+    background-size: contain !important;
     float: left;
     position: relative;
     width: 700px;
@@ -296,6 +303,8 @@
         #manage ul li:nth-child(4) a:focus, #manage ul li:nth-child(4) a:hover {
           background-image: url("../images/main/manage-eco-c.png"); }
     #manage ul a {
+      -webkit-background-size: contain !important;
+      background-size: contain !important;
       -webkit-transition: all 0.3s;
       -moz-transition: all 0.3s;
       -o-transition: all 0.3s;
@@ -455,7 +464,7 @@
   #news .swiper-container .controller .autoplay::after {
     display: none; }
 
-/* PC: 1460~1200 */
+/* PC: 1460~1240 */
 @media screen and (max-width: 1460px) {
   #coreValue h2,
   #introduce h2,
@@ -469,24 +478,32 @@
     margin-left: 40px; }
 
   #introduce li {
-    float: left;
-    width: 20.1171875vw; }
+    width: 20.0396825397vw; }
+  #introduce p {
+    width: 20.0396825397vw;
+    margin: 0 auto 40px; }
+
+  #promote video {
+    width: 47.2222222222vw;
+    height: 26.5277777778vw; }
 
   #manage .core-manage {
     float: none;
-    width: 71.09375vw;
-    height: 57.71484375vw;
-    margin: 0 auto 8px; }
+    width: 718px;
+    height: 591px;
+    margin: 0 auto; }
   #manage ul {
     float: none;
-    width: 71.09375vw;
+    width: 721px;
     margin: 0 auto; }
     #manage ul li {
-      width: 34.765625vw;
-      height: 28.41796875vw;
-      margin: 8px 0; }
+      width: 356px;
+      height: 291px;
+      margin: 3.5px; }
+      #manage ul li:nth-child(odd) {
+        margin-left: 0; }
       #manage ul li:nth-child(even) {
-        margin-left: 16px; }
+        margin-right: 0; }
       #manage ul li:nth-child(1) a {
         background-image: url("../images/main/manage-ethical@2x.png"); }
         #manage ul li:nth-child(1) a:focus, #manage ul li:nth-child(1) a:hover {
@@ -502,9 +519,16 @@
       #manage ul li:nth-child(4) a {
         background-image: url("../images/main/manage-eco@2x.png"); }
         #manage ul li:nth-child(4) a:focus, #manage ul li:nth-child(4) a:hover {
-          background-image: url("../images/main/manage-eco-c@2x.png"); } }
-/* PC: 1200~1024 */
-@media screen and (max-width: 1200px) {
+          background-image: url("../images/main/manage-eco-c@2x.png"); }
+      #manage ul li a > * {
+        left: 4%; } }
+/* PC: 1240~1024 */
+@media screen and (max-width: 1240px) {
+  #promote .movie_point {
+    font-size: 18px; }
+    #promote .movie_point strong {
+      font-size: 68px; }
+
   #subsidairy {
     margin: 100px 0; }
     #subsidairy .fields {
