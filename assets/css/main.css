@@ -529,55 +529,50 @@
     #promote .movie_point strong {
       font-size: 68px; }
 
-  #subsidairy {
-    margin: 100px 0; }
-    #subsidairy .fields {
-      width: 100%;
-      height: auto; }
-      #subsidairy .fields > li {
-        float: none;
-        width: 100vw;
-        height: 38.96103896103896vw; }
-        #subsidairy .fields > li .txtbox,
-        #subsidairy .fields > li h3,
-        #subsidairy .fields > li h3::before,
-        #subsidairy .fields > li p,
-        #subsidairy .fields > li .keypoint {
-          -webkit-transition: all 0.5s;
-          -moz-transition: all 0.5s;
-          -o-transition: all 0.5s;
-          transition: all 0.5s; }
-        #subsidairy .fields > li .txtbox {
-          top: 28%; }
-          #subsidairy .fields > li .txtbox h3 {
-            margin-bottom: 15px; }
-            #subsidairy .fields > li .txtbox h3::before {
-              opacity: 0; }
-          #subsidairy .fields > li .txtbox p {
-            display: none; }
-          #subsidairy .fields > li .txtbox .keypoint {
-            opacity: 1; }
-            #subsidairy .fields > li .txtbox .keypoint strong {
-              opacity: 1;
-              font-size: 1.8rem; }
-            #subsidairy .fields > li .txtbox .keypoint .company {
-              opacity: 1;
-              width: 100%;
-              height: 5rem;
-              text-align: center; }
-              #subsidairy .fields > li .txtbox .keypoint .company li {
-                display: inline-block;
-                width: 8rem;
-                height: 3rem; }
-                #subsidairy .fields > li .txtbox .keypoint .company li + li {
-                  margin-top: 0;
-                  margin-left: 10px; }
-              #subsidairy .fields > li .txtbox .keypoint .company a {
-                float: left;
-                width: 8rem;
-                height: 3rem;
-                line-height: 3.2rem;
-                font-size: 1.4rem; }
+  #subsidairy .fields > li {
+    float: none;
+    width: 100%;
+    height: 38.96103896103896vw; }
+    #subsidairy .fields > li .txtbox,
+    #subsidairy .fields > li h3,
+    #subsidairy .fields > li h3::before,
+    #subsidairy .fields > li p,
+    #subsidairy .fields > li .keypoint {
+      -webkit-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -o-transition: all 0.5s;
+      transition: all 0.5s; }
+    #subsidairy .fields > li .txtbox {
+      top: 28%; }
+      #subsidairy .fields > li .txtbox h3 {
+        margin-bottom: 15px; }
+        #subsidairy .fields > li .txtbox h3::before {
+          opacity: 0; }
+      #subsidairy .fields > li .txtbox p {
+        display: none; }
+      #subsidairy .fields > li .txtbox .keypoint {
+        opacity: 1; }
+        #subsidairy .fields > li .txtbox .keypoint strong {
+          opacity: 1;
+          font-size: 1.8rem; }
+        #subsidairy .fields > li .txtbox .keypoint .company {
+          opacity: 1;
+          width: 100%;
+          height: 5rem;
+          text-align: center; }
+          #subsidairy .fields > li .txtbox .keypoint .company li {
+            display: inline-block;
+            width: 8rem;
+            height: 3rem; }
+            #subsidairy .fields > li .txtbox .keypoint .company li + li {
+              margin-top: 0;
+              margin-left: 10px; }
+          #subsidairy .fields > li .txtbox .keypoint .company a {
+            float: left;
+            width: 8rem;
+            height: 3rem;
+            line-height: 3.2rem;
+            font-size: 1.4rem; }
 
   #news .news_content {
     padding: 20px 100px 20px 210px; }

@@ -326,7 +326,6 @@ h2 {
       position: relative;
       float: left;
       width: 140px;
-      max-width: 140px;
       height: 100%;
       text-align: center;
 
@@ -548,238 +547,35 @@ h2 {
   }
 }
 
-@media screen and (max-width: 1024px) {
-  .header {
-    display: none;
+@media screen and (max-width: 1240px) {
 
-    &#mHeader {
-      display: block;
-      width: 100%;
-      background: #fff;
-    }
-
-    h1 {
-      left: 5%;
-      width: 8.6rem;
-      height: 4.5rem;
-    }
-
-    .util {
-      float: right;
-      width: 15rem;
-      height: 100%;
-      padding-bottom: 1.5rem;
+  #pcGnb {
+    >ul {
+      width: 720px;
 
       >li {
-        float: left;
-        position: absolute;
-        top: 0;
-        height: 100%;
-      }
-
-      .lang>button,
-      .menuBtn>button {
-        @include bg-size(cover);
-        @include t-form(translateY(-50%));
-        position: relative;
-        top: 50%;
-        height: 2.4rem;
-        background: center no-repeat;
-      }
-
-      .lang {
-        left: 0;
-        width: 7.5rem;
-
-        &.on {
-          >button {
-            color: $red;
-            border-color: $red;
-
-            span {
-              border-color: $red;
-            }
-          }
-
-          .lang_menu {
-            display: block;
-          }
-        }
-
-        >button {
-          display: inline-block;
-          width: 2.4rem;
-          font-size: 1.6rem;
-          font-weight: 500;
-          background-image: url("../images/common/global.svg");
-
-          &:focus {
-            color: $red;
-
-            span {
-              border-color: $red;
-            }
-          }
-
-          span {
-            display: inline-block;
-            margin-left: 2.8rem;
-            border-bottom: 1px solid transparent;
-          }
-        }
-
-        .lang_menu {
-          display: none;
-          position: absolute;
-          top: 8.4rem;
-
-          li {
-            width: 7.5rem;
-            height: 3.5rem;
-            background: rgba(255, 255, 255, .8);
-            border: 1px solid #fff;
-            font-size: 1.6rem;
-            text-align: center;
-            line-height: 3.7rem;
-
-            a {
-              border-bottom: 1px solid transparent;
-
-              &:hover,
-              &:focus {
-                color: $red;
-                border-color: $red;
-              }
-            }
-          }
-        }
-      }
-
-      .menuBtn {
-        button {
-          left: 8rem;
-          width: 2.8rem;
-          height: 2.4rem;
-
-          span {
-            @include t-sition(all, 0.5s);
-            position: absolute;
-            display: block;
-            width: 2.8rem;
-            height: 0.4rem;
-            background: #000;
-
-            &:nth-child(2) {
-              top: 0;
-            }
-
-            &:nth-child(3) {
-              @include t-form(translateY(-50%));
-              top: 50%;
-            }
-
-            &:nth-child(4) {
-              bottom: 0;
-            }
-          }
-        }
-
-        &.on {
-
-          span:nth-child(2),
-          span:nth-child(4) {
-            @include t-form(translateY(-50%));
-            top: 50%;
-          }
-
-          span:nth-child(2) {
-            transform: rotate(45deg);
-          }
-
-          span:nth-child(3) {
-            opacity: 0;
-          }
-
-          span:nth-child(4) {
-            transform: rotate(-45deg);
-          }
-        }
+        width: 120px;
+        font-size: 16px;
       }
     }
   }
 
-  .gnb {
-    display: none;
-
-    &#mGnb {
-      display: block;
-      top: 8.4rem;
-      width: 100%;
-      background: #fff;
-      overflow-y: auto;
-
-      ::before {
-        display: none;
+  #footer {
+    .footer_area {
+      
+      .info_link {
+        width: 920px;
+        margin: 0 auto;
       }
 
-      >ul {
-        display: none;
-        width: 100%;
-        margin: 0;
-        border-top: 1px solid rgba(0, 0, 0, .5);
+      p {
+        margin: 0 20px 0 0;
+      }
 
-        >li {
-          float: none;
-          display: block;
-          width: 100%;
-          text-align: left;
-          border-bottom: 1px solid rgba(0, 0, 0, .5);
-
-          a {
-            display: block;
-
-            &:hover,
-            &focus {
-              color: $red;
-              text-decoration: underline;
-            }
-          }
-
-          >a {
-            width: 100%;
-            height: 5rem;
-            padding-top: 2px;
-            padding-left: 10%;
-            font-size: 2rem;
-            line-height: 5rem;
-          }
-
-          ul {
-            display: none;
-            padding-bottom: 1rem;
-            border-top: 1px solid rgba(0, 0, 0, .5);
-
-            &::after {
-              content: "";
-              clear: both;
-              display: block;
-            }
-
-            li {
-              float: left;
-              width: 50%;
-              height: 5.4rem;
-
-              a {
-                margin-left: 20%;
-                height: 5.4rem;
-                line-height: 5.4rem;
-                font-size: 1.8rem;
-              }
-            }
-          }
-        }
+      #familySite {
+        width: 280px;
       }
     }
   }
+
 }

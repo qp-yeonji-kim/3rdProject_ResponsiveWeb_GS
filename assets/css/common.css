@@ -266,7 +266,6 @@ h2 {
       position: relative;
       float: left;
       width: 140px;
-      max-width: 140px;
       height: 100%;
       text-align: center; }
       #pcGnb > ul > li.on {
@@ -427,161 +426,19 @@ h2 {
           color: #00a499;
           border-color: #7FD1CC; }
 
-@media screen and (max-width: 1024px) {
-  .header {
-    display: none; }
-    .header#mHeader {
-      display: block;
-      width: 100%;
-      background: #fff; }
-    .header h1 {
-      left: 5%;
-      width: 8.6rem;
-      height: 4.5rem; }
-    .header .util {
-      float: right;
-      width: 15rem;
-      height: 100%;
-      padding-bottom: 1.5rem; }
-      .header .util > li {
-        float: left;
-        position: absolute;
-        top: 0;
-        height: 100%; }
-      .header .util .lang > button,
-      .header .util .menuBtn > button {
-        -webkit-background-size: cover !important;
-        background-size: cover !important;
-        -webkit-transform: translateY(-50%);
-        transform: translateY(-50%);
-        position: relative;
-        top: 50%;
-        height: 2.4rem;
-        background: center no-repeat; }
-      .header .util .lang {
-        left: 0;
-        width: 7.5rem; }
-        .header .util .lang.on > button {
-          color: #cf4520;
-          border-color: #cf4520; }
-          .header .util .lang.on > button span {
-            border-color: #cf4520; }
-        .header .util .lang.on .lang_menu {
-          display: block; }
-        .header .util .lang > button {
-          display: inline-block;
-          width: 2.4rem;
-          font-size: 1.6rem;
-          font-weight: 500;
-          background-image: url("../images/common/global.svg"); }
-          .header .util .lang > button:focus {
-            color: #cf4520; }
-            .header .util .lang > button:focus span {
-              border-color: #cf4520; }
-          .header .util .lang > button span {
-            display: inline-block;
-            margin-left: 2.8rem;
-            border-bottom: 1px solid transparent; }
-        .header .util .lang .lang_menu {
-          display: none;
-          position: absolute;
-          top: 8.4rem; }
-          .header .util .lang .lang_menu li {
-            width: 7.5rem;
-            height: 3.5rem;
-            background: rgba(255, 255, 255, 0.8);
-            border: 1px solid #fff;
-            font-size: 1.6rem;
-            text-align: center;
-            line-height: 3.7rem; }
-            .header .util .lang .lang_menu li a {
-              border-bottom: 1px solid transparent; }
-              .header .util .lang .lang_menu li a:hover, .header .util .lang .lang_menu li a:focus {
-                color: #cf4520;
-                border-color: #cf4520; }
-      .header .util .menuBtn button {
-        left: 8rem;
-        width: 2.8rem;
-        height: 2.4rem; }
-        .header .util .menuBtn button span {
-          -webkit-transition: all, 0.5s;
-          -moz-transition: all, 0.5s;
-          -o-transition: all, 0.5s;
-          transition: all, 0.5s;
-          position: absolute;
-          display: block;
-          width: 2.8rem;
-          height: 0.4rem;
-          background: #000; }
-          .header .util .menuBtn button span:nth-child(2) {
-            top: 0; }
-          .header .util .menuBtn button span:nth-child(3) {
-            -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-            top: 50%; }
-          .header .util .menuBtn button span:nth-child(4) {
-            bottom: 0; }
-      .header .util .menuBtn.on span:nth-child(2),
-      .header .util .menuBtn.on span:nth-child(4) {
-        -webkit-transform: translateY(-50%);
-        transform: translateY(-50%);
-        top: 50%; }
-      .header .util .menuBtn.on span:nth-child(2) {
-        transform: rotate(45deg); }
-      .header .util .menuBtn.on span:nth-child(3) {
-        opacity: 0; }
-      .header .util .menuBtn.on span:nth-child(4) {
-        transform: rotate(-45deg); }
+@media screen and (max-width: 1240px) {
+  #pcGnb > ul {
+    width: 720px; }
+    #pcGnb > ul > li {
+      width: 120px;
+      font-size: 16px; }
 
-  .gnb {
-    display: none; }
-    .gnb#mGnb {
-      display: block;
-      top: 8.4rem;
-      width: 100%;
-      background: #fff;
-      overflow-y: auto; }
-      .gnb#mGnb ::before {
-        display: none; }
-      .gnb#mGnb > ul {
-        display: none;
-        width: 100%;
-        margin: 0;
-        border-top: 1px solid rgba(0, 0, 0, 0.5); }
-        .gnb#mGnb > ul > li {
-          float: none;
-          display: block;
-          width: 100%;
-          text-align: left;
-          border-bottom: 1px solid rgba(0, 0, 0, 0.5); }
-          .gnb#mGnb > ul > li a {
-            display: block; }
-            .gnb#mGnb > ul > li a:hover, .gnb#mGnb > ul > li afocus {
-              color: #cf4520;
-              text-decoration: underline; }
-          .gnb#mGnb > ul > li > a {
-            width: 100%;
-            height: 5rem;
-            padding-top: 2px;
-            padding-left: 10%;
-            font-size: 2rem;
-            line-height: 5rem; }
-          .gnb#mGnb > ul > li ul {
-            display: none;
-            padding-bottom: 1rem;
-            border-top: 1px solid rgba(0, 0, 0, 0.5); }
-            .gnb#mGnb > ul > li ul::after {
-              content: "";
-              clear: both;
-              display: block; }
-            .gnb#mGnb > ul > li ul li {
-              float: left;
-              width: 50%;
-              height: 5.4rem; }
-              .gnb#mGnb > ul > li ul li a {
-                margin-left: 20%;
-                height: 5.4rem;
-                line-height: 5.4rem;
-                font-size: 1.8rem; } }
+  #footer .footer_area .info_link {
+    width: 920px;
+    margin: 0 auto; }
+  #footer .footer_area p {
+    margin: 0 20px 0 0; }
+  #footer .footer_area #familySite {
+    width: 280px; } }
 
 /*# sourceMappingURL=common.css.map */

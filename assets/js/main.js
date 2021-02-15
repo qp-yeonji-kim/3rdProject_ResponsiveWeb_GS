@@ -45,7 +45,7 @@ $(document).ready(function () {
 		slidesPerView: 1,
 		slidesPerGroup: 1,
 		breakpoints: {
-			1201: {
+			1240: {
 				slidesPerView: 2,
 				slidesPerGroup: 2,
 			}
