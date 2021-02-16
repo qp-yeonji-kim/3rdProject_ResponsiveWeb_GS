@@ -10,26 +10,39 @@
   background: -o-linear-gradient($deg, $col1, $col2);
   background: linear-gradient($deg, $col1, $col2);
 }
+
 @mixin gnb_underline{
   background: #cf4520;
   background: -webkit-linear-gradient(90deg, #cf4520, #f2a900, #78be20, #00a499,  #71c5e8, #005eb8);
   background: -o-linear-gradient(90deg, #cf4520, #f2a900, #78be20, #00a499,  #71c5e8, #005eb8);
   background: linear-gradient(90deg, #cf4520, #f2a900, #78be20, #00a499,  #71c5e8, #005eb8);
 }
+
+@mixin bg-size($value...){
+  -webkit-background-size: $value !important;
+  background-size: $value !important;
+}
+
 @mixin t-form($value...){
   -webkit-transform: $value;
   transform: $value;
 }
+
+@mixin t-form-origin($value...){
+  -webkit-transform-origin: $value;
+  -moz-transform-origin: $value;
+  -ms-transform-origin: $value;
+  -o-transform-origin: $value;
+  transform-origin: $value;
+}
+
 @mixin t-sition($value...){
   -webkit-transition: $value;
   -moz-transition: $value;
   -o-transition: $value;
   transition: $value;
 }
-@mixin bg-size($value...){
-  -webkit-background-size: $value !important;
-  background-size: $value !important;
-}
+
 @mixin b-radius($value...){
   -webkit-border-radius: $value; 
   border-radius: $value; 

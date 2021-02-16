@@ -51,11 +51,18 @@ $(document).ready(function () {
         $dep1ul.find('>li.on').removeClass('on');
     }
 
-    //5)첫번째, 마지막 a에서 포커스 떠나기
     $dep1ul.find('a:first, a:last').on('blur', function () {
         setTimeout(function () {
             if (!$dep1ul.find('a').is(':focus')) gnbReturn();
         }, 10);
+    });
+
+    /* 태블릿 메뉴 열기 */
+    var $tabdep1 = $('#mGnb > ul > li');
+
+    $tabdep1.children('a').on('click', function(e){
+        e.preventDefault();
+        $(this).parent().addClass('active').find('ul').stop().slideDown();
     });
 
 
