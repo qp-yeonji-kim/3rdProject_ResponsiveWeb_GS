@@ -95,10 +95,10 @@ footer {
 }
 
 .max1400 {
+  @include borderbox;
   max-width: 1440px;
   padding: 0 20px;
   margin: 0 auto;
-  box-sizing: border-box;
 }
 
 .summary {
@@ -134,21 +134,21 @@ h2 {
 #skip a:focus {
   left: 0;
   width: 100%;
-  height: 6rem;
-  line-height: 6rem;
-  font-size: 1.8rem;
-  font-weight: 500;
-  color: #fff;
+  height: 60px;
+  line-height: 60px;
+  font-size: 22px;
+  font-weight: 700;
   text-align: center;
+  color: #fff;
   background: $bluegreen;
 }
 
-#wrap {
-  max-width: 1400px;
+/* header */
+#mHeader {
+  display: none;
 }
 
-/* header */
-.header {
+#pcHeader {
   position: fixed;
   left: 0;
   top: 0;
@@ -156,14 +156,8 @@ h2 {
   height: 80px;
   z-index: 100;
 
-  &#mHeader {
-    display: none;
-  }
-
-  .header_content {
-    max-width: 1400px;
+  .max1400 {
     height: 100%;
-    margin: 0 auto;
   }
 
   h1,
@@ -190,7 +184,6 @@ h2 {
     float: right;
     width: 120px;
     height: 100%;
-    margin-right: 20px;
 
     .lang {
       li {
@@ -547,6 +540,7 @@ h2 {
   }
 }
 
+/* PC: 1240~1024 */
 @media screen and (max-width: 1240px) {
 
   #pcGnb {
@@ -562,7 +556,7 @@ h2 {
 
   #footer {
     .footer_area {
-      
+
       .info_link {
         width: 920px;
         margin: 0 auto;
@@ -579,3 +573,124 @@ h2 {
   }
 
 }
+
+/* Tablet: 1024~768 */
+@media screen and (max-width: 1024px) {
+  #pcHeader {
+    display: none;
+  }
+
+  #mHeader {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background: #fff;
+    z-index: 1000;
+
+    .max1400 {
+      @include borderbox;
+      position: relative;
+      width: 768px;
+      height: 100%;
+      padding: 0 16px;
+      margin: 0 auto;
+      background: pink;
+    }
+
+    h1 {
+      @include t-form(translateY(-50%));
+      position: absolute;
+      top: 50%;
+      width: 82px;
+      height: 42px;
+      background: red;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .util {
+      @include t-form(translateY(-50%));
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      width: 108px;
+      height: 34px;
+      background: tomato;
+
+      .lang {
+        position: absolute;
+        left: 10px;
+        width: 34px;
+        height: 34px;
+        background: orange;
+  
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    .menuBtn{
+      position: absolute;
+      right: 10px;
+      width: 34px;
+      height: 34px;
+      background: gold;
+
+      button{
+        width: 100%;
+        height: 100%;
+      }
+
+      span{
+        @include t-sition(all .3s);
+        position: absolute;
+        left: 0;
+
+        + span{
+          @include b-radius(100px);
+          width: 34px;
+          height: 4px;
+          background: #000;
+        }
+        
+        &:nth-child(2){
+          top: 3px;
+        }
+        &:nth-child(3){
+          top: 15px;
+        }
+        &:nth-child(4){
+          bottom: 3px;
+        }
+      }
+
+      button.active{
+        span{
+          &:nth-child(2){
+            @include t-form(rotate(45deg));
+            top: 15px;
+          }
+          &:nth-child(3){
+            width: 0;
+          }
+          &:nth-child(4){
+            @include t-form(rotate(-45deg));
+            top: 15px;
+          }
+        }
+      }
+
+    }
+
+    
+  }
+
+}
+
+/* Mobile: 768~ */

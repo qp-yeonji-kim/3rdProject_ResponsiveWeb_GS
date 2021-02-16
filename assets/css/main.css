@@ -553,7 +553,7 @@
   #news .swiper-container .swiper-wrapper .swiper-slide-active::before {
     display: none; } }
 /* Tablet: 1024~768 */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1024px) {
   #coreValue .swiper-container .swiper-wrapper .swiper-slide {
     -webkit-background-size: cover !important;
     background-size: cover !important;
@@ -577,15 +577,6 @@
     float: none;
     width: 100%;
     height: 38.96103896103896vw; }
-    #subsidairy .fields > li .txtbox,
-    #subsidairy .fields > li h3,
-    #subsidairy .fields > li h3::before,
-    #subsidairy .fields > li p,
-    #subsidairy .fields > li .keypoint {
-      -webkit-transition: all 0.5s;
-      -moz-transition: all 0.5s;
-      -o-transition: all 0.5s;
-      transition: all 0.5s; }
     #subsidairy .fields > li .txtbox {
       top: 28%; }
       #subsidairy .fields > li .txtbox h3 {
@@ -601,21 +592,20 @@
         #subsidairy .fields > li .txtbox .keypoint .company {
           opacity: 1;
           width: 100%;
-          height: 5rem;
+          height: 40px;
           text-align: center; }
           #subsidairy .fields > li .txtbox .keypoint .company li {
             display: inline-block;
-            width: 8rem;
-            height: 3rem; }
+            width: 108px;
+            height: 40px; }
             #subsidairy .fields > li .txtbox .keypoint .company li + li {
               margin-top: 0;
-              margin-left: 10px; }
+              margin-left: 16px; }
           #subsidairy .fields > li .txtbox .keypoint .company a {
             float: left;
-            width: 8rem;
-            height: 3rem;
-            line-height: 3.2rem;
-            font-size: 1.4rem; }
+            width: 100%;
+            height: 40px;
+            line-height: 40px; }
 
   #recruit {
     position: relative;
@@ -666,7 +656,7 @@
     padding: 20px 20px 20px 160px; }
     #news .news_content > a {
       left: 20px; } }
-/* Mobile: 768~420 */
+/* Mobile: 768~ */
 @media screen and (max-width: 768px) {
   #coreValue .swiper-container .swiper-wrapper .swiper-slide strong,
   #coreValue .swiper-container .swiper-wrapper .swiper-slide p,
