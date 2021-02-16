@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* PC-12column(gutter40px) 1440px~ */
 /* 1024px~1440px  */
 /* TABLET-6column(16gutter) 1024px */
@@ -166,10 +165,10 @@
     position: relative;
     float: left;
     width: calc(100% / 3);
-    height: calc(100vw / 2);
-    overflow: hidden;
+    height: 50vw;
     text-align: center;
     color: #fff;
+    overflow: hidden;
     background: center no-repeat; }
     #subsidairy .fields > li.active .txtbox {
       top: 30%; }
@@ -196,7 +195,7 @@
       position: relative;
       left: 50%;
       top: 50%;
-      margin-bottom: 5.9375%;
+      margin-bottom: 6%;
       font-size: 36px;
       font-weight: 700; }
       #subsidairy .fields > li h3::before {
@@ -227,18 +226,19 @@
         font-size: 22px;
         font-weight: 400; }
       #subsidairy .fields > li .keypoint .company {
-        width: 180px;
-        margin: 20px auto 0; }
+        width: 200px;
+        margin: 20px auto 0;
+        background: red; }
         #subsidairy .fields > li .keypoint .company li + li {
           margin-top: 20px; }
         #subsidairy .fields > li .keypoint .company a {
           -webkit-border-radius: 2px;
           border-radius: 2px;
           display: block;
-          width: 160px;
+          width: 100%;
           height: 50px;
-          font-size: 22px;
           line-height: 50px;
+          font-size: 22px;
           border: 1px solid #fff; }
 
 #manage {
@@ -487,6 +487,19 @@
     width: 47.2222222222vw;
     height: 26.5277777778vw; }
 
+  #subsidairy .fields > li.active .txtbox {
+    top: 25%; }
+  #subsidairy .fields > li .txtbox {
+    top: 35%; }
+  #subsidairy .fields > li h3 {
+    font-size: 32px; }
+  #subsidairy .fields > li p {
+    font-size: 18px; }
+  #subsidairy .fields > li .keypoint strong {
+    font-size: 18px; }
+  #subsidairy .fields > li .keypoint .company a {
+    font-size: 18px; }
+
   #manage .core-manage {
     float: none;
     width: 718px;
@@ -529,6 +542,37 @@
     #promote .movie_point strong {
       font-size: 68px; }
 
+  #subsidairy .fields > li.active .txtbox {
+    top: 18%; }
+
+  #news .news_content {
+    padding: 20px 100px 20px 210px; }
+    #news .news_content > a {
+      width: 140px;
+      left: 30px; }
+  #news .swiper-container .swiper-wrapper .swiper-slide-active::before {
+    display: none; } }
+/* Tablet: 1024~768 */
+@media screen and (max-width: 900px) {
+  #coreValue .swiper-container .swiper-wrapper .swiper-slide {
+    -webkit-background-size: cover !important;
+    background-size: cover !important;
+    width: 100%;
+    height: 100vh;
+    background: no-repeat center;
+    color: #fff; }
+    #coreValue .swiper-container .swiper-wrapper .swiper-slide strong,
+    #coreValue .swiper-container .swiper-wrapper .swiper-slide p,
+    #coreValue .swiper-container .swiper-wrapper .swiper-slide span {
+      position: absolute;
+      left: 20%; }
+    #coreValue .swiper-container .swiper-wrapper .swiper-slide strong {
+      top: 25%;
+      font-size: 50px;
+      font-weight: 700; }
+    #coreValue .swiper-container .swiper-wrapper .swiper-slide p {
+      display: none; }
+
   #subsidairy .fields > li {
     float: none;
     width: 100%;
@@ -553,8 +597,7 @@
       #subsidairy .fields > li .txtbox .keypoint {
         opacity: 1; }
         #subsidairy .fields > li .txtbox .keypoint strong {
-          opacity: 1;
-          font-size: 1.8rem; }
+          opacity: 1; }
         #subsidairy .fields > li .txtbox .keypoint .company {
           opacity: 1;
           width: 100%;
@@ -573,34 +616,6 @@
             height: 3rem;
             line-height: 3.2rem;
             font-size: 1.4rem; }
-
-  #news .news_content {
-    padding: 20px 100px 20px 210px; }
-    #news .news_content > a {
-      width: 140px;
-      left: 30px; }
-  #news .swiper-container .swiper-wrapper .swiper-slide-active::before {
-    display: none; } }
-/* 글자 너비에 따라 변화하는 태블릿 */
-@media screen and (max-width: 900px) {
-  #coreValue .swiper-container .swiper-wrapper .swiper-slide {
-    -webkit-background-size: cover !important;
-    background-size: cover !important;
-    width: 100%;
-    height: 100vh;
-    background: no-repeat center;
-    color: #fff; }
-    #coreValue .swiper-container .swiper-wrapper .swiper-slide strong,
-    #coreValue .swiper-container .swiper-wrapper .swiper-slide p,
-    #coreValue .swiper-container .swiper-wrapper .swiper-slide span {
-      position: absolute;
-      left: 20%; }
-    #coreValue .swiper-container .swiper-wrapper .swiper-slide strong {
-      top: 25%;
-      font-size: 50px;
-      font-weight: 700; }
-    #coreValue .swiper-container .swiper-wrapper .swiper-slide p {
-      display: none; }
 
   #recruit {
     position: relative;
@@ -651,7 +666,7 @@
     padding: 20px 20px 20px 160px; }
     #news .news_content > a {
       left: 20px; } }
-/* 모바일 */
+/* Mobile: 768~420 */
 @media screen and (max-width: 768px) {
   #coreValue .swiper-container .swiper-wrapper .swiper-slide strong,
   #coreValue .swiper-container .swiper-wrapper .swiper-slide p,

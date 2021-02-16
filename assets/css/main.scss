@@ -233,10 +233,10 @@
     position: relative;
     float: left;
     width: calc(100% / 3);
-    height: calc(100vw / 2);
-    overflow: hidden;
+    height: 50vw;
     text-align: center;
     color: #fff;
+    overflow: hidden;
     background: center no-repeat;
 
     &.active {
@@ -281,7 +281,7 @@
       position: relative;
       left: 50%;
       top: 50%;
-      margin-bottom: 5.9375%;
+      margin-bottom: 6%;
       font-size: 36px;
       font-weight: 700;
 
@@ -320,8 +320,9 @@
       }
 
       .company {
-        width: 180px;
+        width: 200px;
         margin: 20px auto 0;
+        background: red;
 
         li+li {
           margin-top: 20px;
@@ -330,10 +331,10 @@
         a {
           @include b-radius(2px);
           display: block;
-          width: 160px;
+          width: 100%;
           height: 50px;
-          font-size: 22px;
           line-height: 50px;
+          font-size: 22px;
           border: 1px solid #fff;
         }
       }
@@ -686,6 +687,44 @@
     }
   }
 
+  #subsidairy {
+  
+    .fields>li {
+
+      &.active {
+        .txtbox {
+          top: 25%;
+        }
+      }
+  
+      .txtbox {
+        top: 35%;
+      }
+  
+      h3 {
+        font-size: 32px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+  
+      .keypoint {
+  
+        strong {
+          font-size: 18px;
+        }
+  
+        .company {
+  
+          a {
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+
   #manage {
     .core-manage {
       float: none;
@@ -758,7 +797,6 @@
   }
 }
 
-
 /* PC: 1240~1024 */
 @media screen and (max-width: 1240px) {
   #promote{
@@ -772,9 +810,77 @@
   }
 
   #subsidairy {
+  
+    .fields>li {
+
+      &.active {
+        .txtbox {
+          top: 18%;
+        }
+      }
+    }
+  }
+
+
+  #news {
+    .news_content {
+      padding: 20px 100px 20px 210px;
+
+      >a {
+        width: 140px;
+        left: 30px;
+      }
+    }
+
+    .swiper-container {
+      .swiper-wrapper {
+        .swiper-slide-active {
+          &::before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+/* Tablet: 1024~768 */
+@media screen and (max-width: 900px) {
+  #coreValue {
+    .swiper-container {
+      .swiper-wrapper {
+        .swiper-slide {
+          @include bg-size(cover);
+          width: 100%;
+          height: 100vh;
+          background: no-repeat center;
+          color: #fff;
+
+          strong,
+          p,
+          span {
+            position: absolute;
+            left: 20%;
+          }
+
+          strong {
+            top: 25%;
+            font-size: 50px;
+            font-weight: 700;
+          }
+
+          p {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  #subsidairy {
 
     .fields {
-
 
       >li {
         float: none;
@@ -809,7 +915,6 @@
 
             strong {
               opacity: 1;
-              font-size: 1.8rem;
             }
 
             .company {
@@ -843,62 +948,6 @@
     }
   }
 
-  #news {
-    .news_content {
-      padding: 20px 100px 20px 210px;
-
-      >a {
-        width: 140px;
-        left: 30px;
-      }
-    }
-
-    .swiper-container {
-      .swiper-wrapper {
-        .swiper-slide-active {
-          &::before {
-            display: none;
-          }
-        }
-      }
-    }
-  }
-
-}
-
-
-/* 글자 너비에 따라 변화하는 태블릿 */
-@media screen and (max-width: 900px) {
-  #coreValue {
-    .swiper-container {
-      .swiper-wrapper {
-        .swiper-slide {
-          @include bg-size(cover);
-          width: 100%;
-          height: 100vh;
-          background: no-repeat center;
-          color: #fff;
-
-          strong,
-          p,
-          span {
-            position: absolute;
-            left: 20%;
-          }
-
-          strong {
-            top: 25%;
-            font-size: 50px;
-            font-weight: 700;
-          }
-
-          p {
-            display: none;
-          }
-        }
-      }
-    }
-  }
 
   #recruit {
     position: relative;
@@ -968,7 +1017,7 @@
 }
 
 
-/* 모바일 */
+/* Mobile: 768~420 */
 @media screen and (max-width: 768px) {
   #coreValue {
     .swiper-container {
