@@ -529,30 +529,33 @@ h2 {
         top: 15px; }
 
   #mGnb {
-    position: absolute;
+    display: none;
+    position: fixed;
     left: 0;
     top: 60px;
     width: 100%;
-    background: #fff; }
+    background: tomato; }
     #mGnb * {
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box; }
+    #mGnb > ul {
+      width: 100%;
+      background: orange; }
     #mGnb > ul > li {
       width: 100%;
-      height: 50px;
       font-weight: 700;
-      border-bottom: 1px solid #aaa;
       background: #fff; }
       #mGnb > ul > li > a {
         position: relative;
         display: block;
         width: 100%;
         max-width: 768px;
-        height: 100%;
+        height: 50px;
         padding: 0 50px;
         margin: 0 auto;
-        line-height: 50px; }
+        line-height: 50px;
+        border-bottom: 1px solid #aaa; }
         #mGnb > ul > li > a::after {
           -webkit-background-size: contain !important;
           background-size: contain !important;
@@ -568,7 +571,7 @@ h2 {
           top: 50%;
           width: 22px;
           height: 22px;
-          background: pink url("../images/icon/second-menu.svg") no-repeat center; }
+          background: url("../images/icon/second-menu.svg") no-repeat center; }
       #mGnb > ul > li.active > a {
         color: #00a499; }
         #mGnb > ul > li.active > a::after {
@@ -579,9 +582,9 @@ h2 {
       display: none;
       width: 100%;
       max-width: 768px;
-      height: 100%;
       margin: 0 auto;
-      background: orange; }
+      background: #ececec;
+      border-bottom: 1px solid #aaa; }
       #mGnb ul li ul li {
         float: left;
         width: 50%;
@@ -594,8 +597,7 @@ h2 {
           padding: 0 50px;
           line-height: 40px;
           font-size: 16px;
-          font-weight: 500;
-          background: #ececec; }
+          font-weight: 500; }
     #mGnb .search_wrap {
       position: relative;
       width: 100%;

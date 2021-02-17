@@ -690,21 +690,25 @@ h2 {
   }
 
   #mGnb{
-    position: absolute;
+    display: none;
+    position: fixed;
     left: 0;
     top: 60px;
     width: 100%;
-    background: #fff;
+    background: tomato;
 
     *{
       @include borderbox;
     }
 
+    > ul{
+      width: 100%;
+      background: orange;
+    }
+
     > ul > li{
       width: 100%;
-      height: 50px;
       font-weight: 700;
-      border-bottom: 1px solid #aaa;
       background: #fff;
 
       >a{
@@ -712,10 +716,11 @@ h2 {
         display: block;
         width: 100%;
         max-width: 768px;
-        height: 100%;
+        height: 50px;
         padding: 0 50px;
         margin: 0 auto;
         line-height: 50px;
+        border-bottom: 1px solid #aaa;
 
         &::after{
           @include bg-size(contain);
@@ -727,7 +732,7 @@ h2 {
           top: 50%;
           width: 22px;
           height: 22px;
-          background: pink url("../images/icon/second-menu.svg") no-repeat center;
+          background: url("../images/icon/second-menu.svg") no-repeat center;
         }
       }
       &.active >a{
@@ -740,13 +745,13 @@ h2 {
       }
     }
 
-    ul li ul{
+    ul li ul{ 
       display: none;
       width: 100%;
       max-width: 768px;
-      height: 100%;
       margin: 0 auto;
-      background: orange;
+      background: #ececec;
+      border-bottom: 1px solid #aaa;
 
       li {
       float: left;
@@ -762,7 +767,7 @@ h2 {
           line-height: 40px;
           font-size: 16px;
           font-weight: 500;
-          background: #ececec;
+
         }
       }
     }
