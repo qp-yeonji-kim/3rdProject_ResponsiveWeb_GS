@@ -59,6 +59,8 @@ $(document).ready(function () {
 
 	/* Tablet 메뉴 열기 */
 	$('#mHeader .menuBtn button').on('click', function () {
+		$(this).toggleClass('active');
+		
 		if (!$('#mGnb').hasClass('active')) {
 			$('#mGnb').addClass('active');
 			$('#mGnb').stop().slideDown();
