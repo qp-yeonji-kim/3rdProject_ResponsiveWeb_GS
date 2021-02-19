@@ -817,8 +817,11 @@ h2 {
   }
 
   #footer {
+    text-align: center;
+
     .info_link {
-      width: 100%;
+      display: inline-block;
+      width: auto;
       height: 60px;
       margin-bottom: 12px;
 
@@ -839,7 +842,7 @@ h2 {
         }
 
         &::after {
-          right: -8px;
+          right: -9px;
         }
       }
     }
@@ -853,6 +856,7 @@ h2 {
     .info_txt {
       width: 320px;
       font-weight: 300;
+      text-align: left;
 
       address {
         font-size: 14px;
@@ -863,6 +867,7 @@ h2 {
     #familySite {
       width: 232px;
       font-size: 14px;
+      text-align: left;
   
       .f_btn,
       ul a {
@@ -889,4 +894,22 @@ h2 {
   }
 }
 
+/* Tablet: 780~768 */
+@media screen and (max-width: 780px) {
+  #footer {
+    .info_link {
+      li {
+        width: 96px;
+        height: 60px;
+        line-height: 60px;
+        background: tomato;
+        margin: 0 8px;
+      }
+    }
+  }
+}
+
 /* Mobile: 768~ */
+@media screen and (max-width: 768px) {
+  
+}

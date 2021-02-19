@@ -11,6 +11,13 @@
   background: linear-gradient($deg, $col1, $col2);
 }
 
+@mixin bg-g3($deg, $col1, $col2, $col3){
+  background: $col2;
+  background: -webkit-linear-gradient($deg, $col1, $col2, $col3);
+  background: -o-linear-gradient($deg, $col1, $col2, $col3);
+  background: linear-gradient($deg, $col1, $col2, $col3);
+}
+
 @mixin gnb_underline{
   background: #cf4520;
   background: -webkit-linear-gradient(90deg, #cf4520, #f2a900, #78be20, #00a499,  #71c5e8, #005eb8);
