@@ -1,6 +1,6 @@
 /* PC-12column(gutter40px) 1440px~ */
-/* 1024px~1440px  */
-/* TABLET-6column(16gutter) 1024px */
+/* PC-12column(gutter40px) 1024px~1440px */
+/* Mobile-6column(gutter16px) 425px */
 #coreValue .swiper-container .swiper-wrapper .swiper-slide {
   -webkit-background-size: cover !important;
   background-size: cover !important;
@@ -119,21 +119,21 @@
       background-image: url("../images/icon/intro-holding.svg"); }
     #introduce li:nth-child(4) .intro-icon {
       background-image: url("../images/icon/intro-invest.svg"); }
-  #introduce .intro-icon + strong {
-    display: block;
-    font-size: 26px;
-    margin-bottom: 30px; }
-  #introduce p {
-    width: 220px;
-    margin: 0 auto 40px;
-    line-height: 1.5;
-    background: orange; }
-  #introduce a {
-    -webkit-background-size: 6px 10px !important;
-    background-size: 6px 10px !important;
-    display: inline-block;
-    padding-right: 12px;
-    background: url("../images/icon/small-arrow.svg") no-repeat top 9px right; }
+    #introduce li strong {
+      display: block;
+      font-size: 26px;
+      margin-bottom: 30px; }
+    #introduce li p {
+      width: 220px;
+      margin: 0 auto 40px;
+      line-height: 1.5;
+      background: orange; }
+    #introduce li a {
+      -webkit-background-size: 6px 10px !important;
+      background-size: 6px 10px !important;
+      display: inline-block;
+      padding-right: 12px;
+      background: url("../images/icon/small-arrow.svg") no-repeat top 9px right; }
 
 #promote {
   width: 100%;
@@ -624,8 +624,8 @@
       width: 108px;
       height: 120px;
       margin: 0;
-      background: green no-repeat center; }
-    #introduce li .intro-icon + strong {
+      background: no-repeat center; }
+    #introduce li strong {
       left: 152px;
       top: 20px;
       width: 232px;
@@ -634,10 +634,10 @@
       text-align: left; }
     #introduce li p {
       left: 152px;
-      bottom: 0;
+      bottom: 20px;
       width: 480px;
       height: auto;
-      margin: 0 0 20px 0;
+      margin: 0;
       text-align: left; }
     #introduce li a {
       right: 14px;
@@ -691,7 +691,6 @@
               margin-top: 0;
               margin-left: 16px; }
           #subsidairy .fields > li .txtbox .keypoint .company a {
-            float: left;
             width: 100%;
             height: 40px;
             line-height: 40px; }
@@ -759,6 +758,115 @@
   #coreValue .swiper-container .controller {
     bottom: 25%; }
 
+  #introduce {
+    margin-top: 100px; }
+    #introduce .wrap-list {
+      max-width: none; }
+    #introduce li {
+      width: 75.2941176471vw;
+      min-width: 320px;
+      height: 100px;
+      margin-top: 30px; }
+      #introduce li + li {
+        margin-top: 40px; }
+      #introduce li .intro-icon {
+        width: 96px;
+        height: 100px; }
+      #introduce li strong, #introduce li p, #introduce li a {
+        left: 33.8823529412vw; }
+      #introduce li strong {
+        top: 6px;
+        width: auto;
+        font-size: 14px;
+        background: gold; }
+      #introduce li p {
+        bottom: 26px;
+        width: 168px;
+        margin: 0;
+        font-size: 14px; }
+      #introduce li a {
+        bottom: 4px;
+        right: auto;
+        font-size: 12px;
+        text-align: left;
+        background-position: top 5px right; }
+
+  #promote {
+    margin-top: 80px;
+    padding-bottom: 80px; }
+    #promote h2 {
+      margin: 60px 0 40px; }
+    #promote .movie_point {
+      font-size: 18px; }
+      #promote .movie_point strong {
+        margin: 30px 0 30px 0;
+        font-size: 36px; }
+
+  #subsidairy {
+    margin-top: 100px; }
+    #subsidairy .fields {
+      margin-top: 0; }
+      #subsidairy .fields > li .txtbox {
+        top: 18%; }
+        #subsidairy .fields > li .txtbox h3 {
+          margin-bottom: 10px;
+          font-size: 28px; }
+        #subsidairy .fields > li .txtbox p {
+          display: none; }
+        #subsidairy .fields > li .txtbox .keypoint .company {
+          width: 100%;
+          height: auto;
+          margin-top: 8px; }
+          #subsidairy .fields > li .txtbox .keypoint .company li {
+            display: inline-block;
+            width: 96px;
+            height: 34px;
+            margin: 8px;
+            background: orange; }
+            #subsidairy .fields > li .txtbox .keypoint .company li + li {
+              margin: 8px; }
+          #subsidairy .fields > li .txtbox .keypoint .company a {
+            width: 100%;
+            height: 34px;
+            line-height: 34px; }
+
+  #manage {
+    margin-top: 100px; }
+    #manage .summary {
+      margin-bottom: 30px; }
+    #manage .core-manage {
+      width: 320px;
+      height: 259px;
+      margin: 0 auto 8px; }
+      #manage .core-manage strong {
+        left: 22px;
+        bottom: 22px;
+        font-size: 18px; }
+      #manage .core-manage p {
+        display: none; }
+    #manage ul {
+      width: 320px;
+      margin: 0 auto; }
+      #manage ul li {
+        width: 152px;
+        height: 124px;
+        margin: 8px; }
+        #manage ul li:nth-child(odd) {
+          margin-left: 0; }
+        #manage ul li:nth-child(even) {
+          margin-right: 0; }
+        #manage ul li a strong {
+          left: 16px;
+          bottom: 16px;
+          font-size: 14px; }
+        #manage ul li a p {
+          display: none; }
+
+  #recruit {
+    margin-top: 80px; }
+
+  #news .news_content > a {
+    margin-bottom: 0; }
   #news .swiper-container .swiper-wrapper .swiper-slide a {
     width: 60%; } }
 @media screen and (max-width: 640px) {
@@ -767,8 +875,7 @@
     #news .news_content > a {
       position: static;
       display: block;
-      width: auto;
-      margin-bottom: 10px; }
+      width: auto; }
   #news .swiper-container .swiper-wrapper .swiper-slide a {
     width: 55%; } }
 @media screen and (max-width: 360px) {
@@ -783,6 +890,6 @@
       width: auto;
       margin-bottom: 10px; }
   #news .swiper-container .swiper-wrapper .swiper-slide a {
-    width: 55%; } }
+    width: 50%; } }
 
 /*# sourceMappingURL=main.css.map */
