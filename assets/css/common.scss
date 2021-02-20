@@ -552,7 +552,7 @@ body {
   }
 }
 
-/* Tablet: 1024~768 */
+/* Tablet: 1024~780 */
 @media screen and (max-width: 1024px) {
   .max1400 {
     max-width: 768px;
@@ -879,6 +879,7 @@ body {
 /* Tablet: 780~768 */
 @media screen and (max-width: 780px) {
   #footer {
+
     .info_link {
       li {
         width: 96px;
@@ -898,7 +899,7 @@ body {
   }
   
   #footer {
-    height: auto;
+  height: 300px;
 
     .info_link {
       width: 336px;

@@ -86,8 +86,8 @@ h2 {
     height: 18px;
     z-index: 100; }
     #coreValue .swiper-container .controller .autoplay img {
-      width: 18px;
-      height: 18px;
+      width: 100%;
+      height: 100%;
       vertical-align: top; }
   #coreValue .swiper-container .controller .swiper-button-next::after,
   #coreValue .swiper-container .controller .swiper-button-prev::after {
@@ -633,7 +633,18 @@ h2 {
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     left: 50%;
-    bottom: 30%; }
+    top: auto;
+    bottom: 30%;
+    height: 34px; }
+    #coreValue .swiper-container .controller .swiper-button-prev,
+    #coreValue .swiper-container .controller .swiper-button-next {
+      width: 34px;
+      height: 34px; }
+    #coreValue .swiper-container .controller .autoplay {
+      right: 52px;
+      top: 52%;
+      width: 34px;
+      height: 34px; }
 
   #introduce .wrap-list {
     width: 100%;

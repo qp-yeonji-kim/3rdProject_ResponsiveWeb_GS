@@ -425,7 +425,7 @@ body {
     margin: 0 20px 0 0; }
   #footer #familySite {
     width: 280px; } }
-/* Tablet: 1024~768 */
+/* Tablet: 1024~780 */
 @media screen and (max-width: 1024px) {
   .max1400 {
     max-width: 768px;
@@ -679,7 +679,7 @@ body {
     padding: 0 20px; }
 
   #footer {
-    height: auto; }
+    height: 300px; }
     #footer .info_link {
       width: 336px;
       height: auto;
