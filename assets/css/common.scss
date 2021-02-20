@@ -102,26 +102,11 @@ footer {
   margin: 0 auto;
 }
 
-.summary {
-  display: block;
-  margin: 20px 0 0;
-  font-size: 38px;
-  line-height: 1.4;
-  font-weight: 400;
-}
-
 body {
   font-family: "Noto Sans KR", "맑은 고딕", "Malgun Gothic", sans-serif;
   font-size: 18px;
   color: #000;
   word-break: keep-all;
-}
-
-h2 {
-  display: inline-block;
-  font-size: 22px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid #000;
 }
 
 #skip a {
@@ -859,7 +844,7 @@ h2 {
         font-size: 14px;
         line-height: 1.5;
       }
-    }
+    } 
 
     #familySite {
       width: 232px;
@@ -909,19 +894,9 @@ h2 {
 /* Mobile: 768~ */
 @media screen and (max-width: 768px) {
   .max1400 {
-    padding: 0 20px 30px;
+    padding: 0 20px;
   }
   
-  .summary {
-    margin: 10px 0 0;
-    font-size: 18px;
-  }
-  
-  h2 {
-    padding-bottom: 6px;
-    font-size: 18px;
-  }
-
   #footer {
     height: auto;
 
@@ -964,6 +939,77 @@ h2 {
 
     #familySite {
       float: none;
+      margin: 30px auto 0;
+    }
+  }
+
+}
+
+@media screen and (max-width: 380px) {
+  #footer {
+
+    .info_link {
+      width: 288px;
+      margin: 20px auto;
+
+      li {
+        margin: 0;
+
+        &:first-child {
+          margin-left: 0px;
+        }
+
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+
+    .info_txt{
+      float: none;
+      width: auto;
+      margin: 0 auto;
+      address{
+        font-size: 12px;
+      }
+      span{
+        font-size: 10px;
+      }
+    }
+
+    #familySite {
+      margin: 30px auto 0;
+    }
+  }
+
+}
+
+@media screen and (max-width: 349px) {
+  .max1400 {
+    padding: 0;
+  }
+
+  #mHeader {
+    h1 {
+      left: 20px;
+    }
+  }
+
+  #footer {
+
+    .info_txt{
+      float: none;
+      width: 280px;
+      margin: 0 auto;
+      address{
+        font-size: 12px;
+      }
+      span{
+        font-size: 10px;
+      }
+    }
+
+    #familySite {
       margin: 30px auto 0;
     }
   }
