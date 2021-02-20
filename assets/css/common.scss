@@ -152,7 +152,6 @@ body {
     position: relative;
     top: 50%;
     z-index: 100;
-    background: red;
   }
 
   h1 {
@@ -299,7 +298,6 @@ body {
     max-width: 840px;
     height: 80px;
     margin: 0 auto;
-    background: orange;
 
     >li {
       position: relative;
@@ -368,7 +366,6 @@ body {
     width: 920px;
     height: 80px;
     margin: 0 auto;
-    background: red;
 
     li {
       float: left;
@@ -411,7 +408,6 @@ body {
     width: 154px;
     height: 80px;
     margin: 0 40px 0 46px;
-    background: orange;
 
     img {
       width: 100%;
@@ -423,7 +419,6 @@ body {
     float: left;
     width: 440px;
     height: auto;
-    background: green;
 
     address {
       font-size: 18px;
@@ -437,12 +432,12 @@ body {
   }
 
   #familySite {
+    position: relative;
     float: right;
     width: 320px;
     height: auto;
     font-size: 18px;
     color: #fff;
-    background: blue;
 
     strong {
       display: block;
@@ -451,6 +446,7 @@ body {
 
     .f_btn,
     ul a {
+      @include borderbox;
       display: inline-block;
       width: 200px;
       height: 40px;
@@ -483,6 +479,7 @@ body {
     ul {
       display: none;
       position: absolute;
+      left: 0;
       bottom: 40px;
       line-height: 40px;
       z-index: 100;
@@ -582,7 +579,6 @@ body {
       top: 50%;
       width: 82px;
       height: 42px;
-      background: red;
 
       img {
         width: 100%;
@@ -597,14 +593,12 @@ body {
       top: 50%;
       width: 108px;
       height: 34px;
-      background: tomato;
 
       .lang {
         position: absolute;
         left: 10px;
         width: 34px;
         height: 34px;
-        background: orange;
 
         img {
           width: 100%;
@@ -618,7 +612,6 @@ body {
       right: 10px;
       width: 34px;
       height: 34px;
-      background: gold;
 
       button {
         width: 100%;
@@ -677,7 +670,6 @@ body {
     left: 0;
     top: 60px;
     width: 100%;
-    background: tomato;
 
     * {
       @include borderbox;
@@ -685,7 +677,6 @@ body {
 
     >ul {
       width: 100%;
-      background: orange;
     }
 
     >ul>li {
@@ -762,7 +753,7 @@ body {
       max-width: 768px;
       padding: 0 16px;
       margin: 0 auto;
-      background: pink;
+      background: #fff;
 
       form {
         @include t-form(translate(-50%, -50%));
@@ -771,14 +762,12 @@ body {
         top: 50%;
         width: 420px;
         height: 38px;
-        background: red;
         border-bottom: 2px solid $bluegreen;
       }
 
       .searchtxt {
         width: 320px;
         height: 36px;
-        background: orange;
 
         &::placeholder {
           color: #000;
@@ -811,7 +800,6 @@ body {
         width: 108px;
         height: 60px;
         line-height: 60px;
-        background: tomato;
         margin: 0 8px;
 
         &:first-child {
@@ -844,13 +832,13 @@ body {
         font-size: 14px;
         line-height: 1.5;
       }
-    } 
+    }
 
     #familySite {
       width: 232px;
       font-size: 14px;
       text-align: left;
-  
+
       .f_btn,
       ul a {
         width: 124px;
@@ -861,7 +849,7 @@ body {
       ul {
         bottom: 34px;
         line-height: 34x;
-  
+
         li {
           &+li {
             margin-top: -1px;
@@ -885,7 +873,6 @@ body {
         width: 96px;
         height: 60px;
         line-height: 60px;
-        background: tomato;
         margin: 0 8px;
       }
     }
@@ -897,9 +884,9 @@ body {
   .max1400 {
     padding: 0 20px;
   }
-  
+
   #footer {
-  height: 300px;
+    height: 300px;
 
     .info_link {
       width: 336px;
@@ -929,11 +916,11 @@ body {
       }
     }
 
-    p{
+    p {
       display: none;
     }
 
-    .info_txt{
+    .info_txt {
       float: none;
       margin: 0 auto;
     }
@@ -998,14 +985,16 @@ body {
       }
     }
 
-    .info_txt{
+    .info_txt {
       float: none;
       width: auto;
       margin: 0 auto;
-      address{
+
+      address {
         font-size: 12px;
       }
-      span{
+
+      span {
         font-size: 10px;
       }
     }
@@ -1029,14 +1018,16 @@ body {
   }
 
   #footer {
-    .info_txt{
+    .info_txt {
       float: none;
       width: 280px;
       margin: 0 auto;
-      address{
+
+      address {
         font-size: 12px;
       }
-      span{
+
+      span {
         font-size: 10px;
       }
     }

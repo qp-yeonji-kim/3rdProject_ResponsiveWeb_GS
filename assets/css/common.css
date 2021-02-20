@@ -132,8 +132,7 @@ body {
     transform: translateY(-50%);
     position: relative;
     top: 50%;
-    z-index: 100;
-    background: red; }
+    z-index: 100; }
   #pcHeader h1 {
     float: left;
     width: 80px;
@@ -245,8 +244,7 @@ body {
     position: relative;
     max-width: 840px;
     height: 80px;
-    margin: 0 auto;
-    background: orange; }
+    margin: 0 auto; }
     #pcGnb > ul > li {
       position: relative;
       float: left;
@@ -302,8 +300,7 @@ body {
   #footer .info_link {
     width: 920px;
     height: 80px;
-    margin: 0 auto;
-    background: red; }
+    margin: 0 auto; }
     #footer .info_link li {
       float: left;
       position: relative;
@@ -334,16 +331,14 @@ body {
     float: left;
     width: 154px;
     height: 80px;
-    margin: 0 40px 0 46px;
-    background: orange; }
+    margin: 0 40px 0 46px; }
     #footer p img {
       width: 100%;
       height: 100%; }
   #footer .info_txt {
     float: left;
     width: 440px;
-    height: auto;
-    background: green; }
+    height: auto; }
     #footer .info_txt address {
       font-size: 18px;
       line-height: 1.5; }
@@ -351,17 +346,20 @@ body {
       display: block;
       font-size: 14px; }
   #footer #familySite {
+    position: relative;
     float: right;
     width: 320px;
     height: auto;
     font-size: 18px;
-    color: #fff;
-    background: blue; }
+    color: #fff; }
     #footer #familySite strong {
       display: block;
       line-height: 2; }
     #footer #familySite .f_btn,
     #footer #familySite ul a {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
       display: inline-block;
       width: 200px;
       height: 40px;
@@ -387,6 +385,7 @@ body {
     #footer #familySite ul {
       display: none;
       position: absolute;
+      left: 0;
       bottom: 40px;
       line-height: 40px;
       z-index: 100; }
@@ -450,8 +449,7 @@ body {
       position: absolute;
       top: 50%;
       width: 82px;
-      height: 42px;
-      background: red; }
+      height: 42px; }
       #mHeader h1 img {
         width: 100%;
         height: 100%; }
@@ -462,14 +460,12 @@ body {
       right: 16px;
       top: 50%;
       width: 108px;
-      height: 34px;
-      background: tomato; }
+      height: 34px; }
       #mHeader .util .lang {
         position: absolute;
         left: 10px;
         width: 34px;
-        height: 34px;
-        background: orange; }
+        height: 34px; }
         #mHeader .util .lang img {
           width: 100%;
           height: 100%; }
@@ -477,8 +473,7 @@ body {
       position: absolute;
       right: 10px;
       width: 34px;
-      height: 34px;
-      background: gold; }
+      height: 34px; }
       #mHeader .menuBtn button {
         width: 100%;
         height: 100%; }
@@ -517,15 +512,13 @@ body {
     position: fixed;
     left: 0;
     top: 60px;
-    width: 100%;
-    background: tomato; }
+    width: 100%; }
     #mGnb * {
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box; }
     #mGnb > ul {
-      width: 100%;
-      background: orange; }
+      width: 100%; }
     #mGnb > ul > li {
       width: 100%;
       font-weight: 700;
@@ -589,7 +582,7 @@ body {
       max-width: 768px;
       padding: 0 16px;
       margin: 0 auto;
-      background: pink; }
+      background: #fff; }
       #mGnb .search_wrap form {
         -webkit-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
@@ -598,12 +591,10 @@ body {
         top: 50%;
         width: 420px;
         height: 38px;
-        background: red;
         border-bottom: 2px solid #00a499; }
       #mGnb .search_wrap .searchtxt {
         width: 320px;
-        height: 36px;
-        background: orange; }
+        height: 36px; }
         #mGnb .search_wrap .searchtxt::placeholder {
           color: #000; }
       #mGnb .search_wrap button {
@@ -629,7 +620,6 @@ body {
         width: 108px;
         height: 60px;
         line-height: 60px;
-        background: tomato;
         margin: 0 8px; }
         #footer .info_link li:first-child {
           margin-left: 4px; }
@@ -671,7 +661,6 @@ body {
     width: 96px;
     height: 60px;
     line-height: 60px;
-    background: tomato;
     margin: 0 8px; } }
 /* Mobile: 768~ */
 @media screen and (max-width: 768px) {
