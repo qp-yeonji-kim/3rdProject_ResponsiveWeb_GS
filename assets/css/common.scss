@@ -945,6 +945,38 @@ body {
 
 }
 
+@media screen and (max-width: 520px) {
+  #mGnb {
+
+    ul li ul {
+      max-width: none;
+
+      li {
+        max-width: none;
+
+        a {
+          padding: 0 0 0 50px;
+          font-size: 14px;
+        }
+      }
+    }
+
+    .search_wrap {
+      height: 140px;
+      padding: 0;
+
+      form {
+        width: 280px;
+        max-width: none;
+      }
+
+      .searchtxt {
+        width: 220px;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 380px) {
   #footer {
 
@@ -996,7 +1028,6 @@ body {
   }
 
   #footer {
-
     .info_txt{
       float: none;
       width: 280px;

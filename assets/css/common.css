@@ -704,6 +704,22 @@ body {
     #footer #familySite {
       float: none;
       margin: 30px auto 0; } }
+@media screen and (max-width: 520px) {
+  #mGnb ul li ul {
+    max-width: none; }
+    #mGnb ul li ul li {
+      max-width: none; }
+      #mGnb ul li ul li a {
+        padding: 0 0 0 50px;
+        font-size: 14px; }
+  #mGnb .search_wrap {
+    height: 140px;
+    padding: 0; }
+    #mGnb .search_wrap form {
+      width: 280px;
+      max-width: none; }
+    #mGnb .search_wrap .searchtxt {
+      width: 220px; } }
 @media screen and (max-width: 380px) {
   #footer .info_link {
     width: 288px;
