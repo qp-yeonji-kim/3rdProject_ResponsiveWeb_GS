@@ -183,7 +183,7 @@ body {
             @include t-form(translateY(-50%));
             content: "";
             position: absolute;
-            left: -6px;
+            left: -7px;
             top: calc(50% + 2px);
             width: 2px;
             height: 14px;
@@ -223,14 +223,12 @@ body {
       top: 114px;
       width: 420px;
       height: 38px;
-      background: red;
       border-bottom: 2px solid $bluegreen;
     }
 
     .searchtxt {
       width: 320px;
       height: 36px;
-      background: orange;
 
       &::placeholder {
         color: #000;
@@ -626,7 +624,7 @@ body {
         +span {
           @include b-radius(100px);
           width: 34px;
-          height: 4px;
+          height: 2px;
           background: #000;
         }
 
@@ -635,7 +633,7 @@ body {
         }
 
         &:nth-child(3) {
-          top: 15px;
+          top: 16px;
         }
 
         &:nth-child(4) {
@@ -647,7 +645,7 @@ body {
         span {
           &:nth-child(2) {
             @include t-form(rotate(45deg));
-            top: 15px;
+            top: 16px;
           }
 
           &:nth-child(3) {
@@ -656,7 +654,7 @@ body {
 
           &:nth-child(4) {
             @include t-form(rotate(-45deg));
-            top: 15px;
+            top: 16px;
           }
         }
       }

@@ -2,6 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,regular,700);
 /* PC-12column(gutter40px) 1440px~ */
 /* PC-12column(gutter40px) 1024px~1440px */
+/* Mobile-6column(gutter16px) 768px~640px */
 /* Mobile-6column(gutter16px) 425px */
 body,
 h1,
@@ -155,7 +156,7 @@ body {
           transform: translateY(-50%);
           content: "";
           position: absolute;
-          left: -6px;
+          left: -7px;
           top: calc(50% + 2px);
           width: 2px;
           height: 14px;
@@ -187,12 +188,10 @@ body {
       top: 114px;
       width: 420px;
       height: 38px;
-      background: red;
       border-bottom: 2px solid #00a499; }
     #pcHeader .search_wrap .searchtxt {
       width: 320px;
-      height: 36px;
-      background: orange; }
+      height: 36px; }
       #pcHeader .search_wrap .searchtxt::placeholder {
         color: #000; }
     #pcHeader .search_wrap button {
@@ -488,24 +487,24 @@ body {
           -webkit-border-radius: 100px;
           border-radius: 100px;
           width: 34px;
-          height: 4px;
+          height: 2px;
           background: #000; }
         #mHeader .menuBtn span:nth-child(2) {
           top: 3px; }
         #mHeader .menuBtn span:nth-child(3) {
-          top: 15px; }
+          top: 16px; }
         #mHeader .menuBtn span:nth-child(4) {
           bottom: 3px; }
       #mHeader .menuBtn button.active span:nth-child(2) {
         -webkit-transform: rotate(45deg);
         transform: rotate(45deg);
-        top: 15px; }
+        top: 16px; }
       #mHeader .menuBtn button.active span:nth-child(3) {
         width: 0; }
       #mHeader .menuBtn button.active span:nth-child(4) {
         -webkit-transform: rotate(-45deg);
         transform: rotate(-45deg);
-        top: 15px; }
+        top: 16px; }
 
   #mGnb {
     display: none;
