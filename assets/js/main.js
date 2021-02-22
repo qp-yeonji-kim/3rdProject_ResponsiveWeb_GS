@@ -68,6 +68,16 @@ $(document).ready(function () {
 		newsSlider.autoplay.start();
 	});
 
+	//introduce hover, focus시 아이콘 움직이기
+	$('#introduce .wrap-list a').on('mouseenter focus', function(){
+		$(this).siblings('.intro-icon').addClass('active');
+	});
+
+	$('#introduce .wrap-list a').on('mouseleave blur', function(){
+		$('#introduce .intro-icon').removeClass('active');
+	});
+
+
 	//subsidairy li접근 시 클래스명 붙이기
 	$('.fields > li').on({
 		'mouseenter focusin': function () {
@@ -78,76 +88,6 @@ $(document).ready(function () {
 		}
 	});
 
-	/* tabpanel */
-	//접근성 제어
-	$('.tab:first-of-type, .tabpanel:first-of-type').addClass('on').attr('tabindex', 0);
-	$('.tab:first-of-type').attr('aria-selected', true).siblings().attr('aria-selected', false);
-	$('.tabpanel:first-of-type').attr('aria-hidden', false).siblings('.tabpanel').attr('aria-hidden', true);
-
-	//키보드 제어
-	$('.tab').on('keydown', function (e) {
-		var key = e.keyCode;
-		switch (key) {
-			case 40:
-			case 39:
-				e.preventDefault();
-				$(this).attr('tabIndex', -1);
-				if ($(this).hasClass('last')) {
-					$(this).siblings('.first').attr('tabIndex', 0).focus();
-				} else {
-					$(this).next().attr('tabIndex', 0).focus();
-				}
-				break;
-
-			case 37:
-			case 38:
-				e.preventDefault();
-				$(this).attr('tabIndex', -1);
-				if ($(this).hasClass('first')) {
-					$(this).siblings('.last').attr('tabIndex', 0).focus();
-				} else {
-					$(this).prev().attr('tabIndex', 0).focus();
-				}
-				break;
-			case 36:
-				e.preventDefault();
-				$(this).siblings('.first').attr('tabIndex', 0).focus();
-				break;
-			case 35:
-				e.preventDefault();
-				$(this).siblings('.last').attr('tabIdnex', 0).focus();
-				break;
-			case 13:
-			case 32:
-				var $pullLi = $(this);
-				tabOn($pullLi);
-		}
-	});
-
-	//마우스제어
-	$('.tab').on('click', function () {
-		var $pullLi = $(this);
-		tabOn($pullLi);
-	});
-
-	function tabOn($pullBtn) {
-		$pullBtn.addClass('on').attr({
-			tabIndex: 0,
-			'aria-selected': true
-		}).siblings().removeClass('on').attr({
-			tabIndex: -1,
-			'aria-selected': false
-		});
-		var pullPanel = $pullBtn.attr('aria-controls');
-		$('#' + pullPanel).addClass('on').attr({
-			tabIndex: 0,
-			'aria-hidden': false
-		}).siblings('.tabpanel').removeClass('on').attr({
-			tabIndex: -1,
-			'aria-hidden': true
-		});
-	}
-
 	//느린 스크롤로 배경 이동
 	$(window).on('scroll', function () {
 		var windowSize = $(window).width();
@@ -156,14 +96,17 @@ $(document).ready(function () {
 		var littleMov;
 
 		if (windowSize > 1400) {
-			start = $('#grow').offset().top;
-			littleMov = (scrollY - start) * -0.2;
-		} else if (windowSize > 1200) {
-			start = $('.article_promote').offset().top;
-			littleMov = (scrollY - start) * -0.05;
-		} else {
-			start = $('.article_promote').offset().top;
-			littleMov = (scrollY - start) * -0.08;
+			start = $('#news').offset().top;
+			littleMov = (start - scrollY) * -0.08;
+		}  else if (windowSize > 1024) {
+			start = $('#news').offset().top;
+			littleMov = (start - scrollY) * -0.01;
+		} else if (windowSize > 400) {
+			start = $('#news').offset().top;
+			littleMov = (start - scrollY) * -0.04;
+		} else{
+			start = $('#news').offset().top;
+			littleMov = (start - scrollY) * -0.01;
 		}
 
 		$('.recruit_bg').css('background-position', '50%' + littleMov + 'px');

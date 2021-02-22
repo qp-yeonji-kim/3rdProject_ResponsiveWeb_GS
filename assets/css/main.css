@@ -1,6 +1,5 @@
 /* PC-12column(gutter40px) 1440px~ */
 /* PC-12column(gutter40px) 1024px~1440px */
-/* Mobile-6column(gutter16px) 768px~640px */
 /* Mobile-6column(gutter16px) 425px */
 h2 {
   display: inline-block;
@@ -121,10 +120,17 @@ h2 {
     #introduce li .intro-icon {
       -webkit-background-size: contain !important;
       background-size: contain !important;
+      -webkit-transition: all, 0.5s;
+      -moz-transition: all, 0.5s;
+      -o-transition: all, 0.5s;
+      transition: all, 0.5s;
       width: 120px;
       height: 130px;
       margin: 50px auto 30px;
       background: no-repeat center bottom; }
+      #introduce li .intro-icon.active {
+        -webkit-transform: translateY(-18px);
+        transform: translateY(-18px); }
     #introduce li:nth-child(1) .intro-icon {
       background-image: url("../images/icon/intro-company.svg"); }
     #introduce li:nth-child(2) .intro-icon {
@@ -147,6 +153,9 @@ h2 {
       display: inline-block;
       padding-right: 12px;
       background: url("../images/icon/small-arrow.svg") no-repeat top 9px right; }
+      #introduce li a:hover, #introduce li a:focus {
+        color: #005eb8;
+        text-decoration: underline; }
 
 #promote {
   width: 100%;
@@ -208,10 +217,16 @@ h2 {
       opacity: 0; }
     #subsidairy .fields > li.f-energy {
       background-image: url("../images/main/energy.png"); }
+      #subsidairy .fields > li.f-energy a:hover, #subsidairy .fields > li.f-energy a:focus {
+        color: #cf4520; }
     #subsidairy .fields > li.f-circulation {
       background-image: url("../images/main/distribution.png"); }
+      #subsidairy .fields > li.f-circulation a:hover, #subsidairy .fields > li.f-circulation a:focus {
+        color: #00a499; }
     #subsidairy .fields > li.f-build {
       background-image: url("../images/main/build.png"); }
+      #subsidairy .fields > li.f-build a:hover, #subsidairy .fields > li.f-build a:focus {
+        color: #005eb8; }
     #subsidairy .fields > li .txtbox {
       position: absolute;
       left: 0%;
@@ -259,6 +274,10 @@ h2 {
         #subsidairy .fields > li .keypoint .company li + li {
           margin-top: 20px; }
         #subsidairy .fields > li .keypoint .company a {
+          -webkit-transition: all, 0.3s;
+          -moz-transition: all, 0.3s;
+          -o-transition: all, 0.3s;
+          transition: all, 0.3s;
           -webkit-border-radius: 2px;
           border-radius: 2px;
           display: block;
@@ -267,6 +286,8 @@ h2 {
           line-height: 50px;
           font-size: 22px;
           border: 1px solid #fff; }
+          #subsidairy .fields > li .keypoint .company a:hover, #subsidairy .fields > li .keypoint .company a:focus {
+            background: rgba(255, 255, 255, 0.7); }
 
 #manage {
   margin-top: 200px; }
@@ -388,17 +409,24 @@ h2 {
       #recruit .recruit_content .recruit_text p {
         font-size: 30px; }
       #recruit .recruit_content .recruit_text a {
+        -webkit-transition: all, 0.3s;
+        -moz-transition: all, 0.3s;
+        -o-transition: all, 0.3s;
+        transition: all, 0.3s;
         -webkit-background-size: 26px !important;
         background-size: 26px !important;
-        -webkit-border-radius: 2px;
-        border-radius: 2px;
         display: inline-block;
         margin-top: 40px;
-        padding: 10px 50px 10px 10px;
+        padding: 12px 50px 12px 12px;
         font-size: 26px;
         font-weight: 500;
-        border: 1px solid #000;
-        background: url("../images/icon/next_long_b.svg") no-repeat center right 14px; }
+        line-height: 100%;
+        background: url("../images/icon/next_long_b.svg") no-repeat center right 14px;
+        border: 1px solid #000; }
+        #recruit .recruit_content .recruit_text a:hover, #recruit .recruit_content .recruit_text a:focus {
+          color: #cf4520;
+          background: #fff url("../images/icon/next_long_b.svg") no-repeat center right 10px;
+          border: 1px solid #cf4520; }
   #recruit .recruit_img {
     -webkit-background-size: contain !important;
     background-size: contain !important;
@@ -421,6 +449,22 @@ h2 {
     left: 20px;
     top: 50%;
     width: 100px; }
+    #news .news_content > a::after {
+      -webkit-transition: all, 0.3s;
+      -moz-transition: all, 0.3s;
+      -o-transition: all, 0.3s;
+      transition: all, 0.3s;
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0px;
+      width: 0;
+      height: 1px;
+      background: #00a499; }
+    #news .news_content > a:hover, #news .news_content > a:focus {
+      color: #00a499; }
+      #news .news_content > a:hover::after, #news .news_content > a:focus::after {
+        width: 100%; }
     #news .news_content > a h2 {
       -webkit-background-size: 6px 10px !important;
       background-size: 6px 10px !important;
@@ -440,6 +484,8 @@ h2 {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden; }
+    #news .swiper-container .swiper-wrapper .swiper-slide a:hover, #news .swiper-container .swiper-wrapper .swiper-slide a:focus {
+      color: #00a499; }
   #news .swiper-container .swiper-wrapper .swiper-slide span {
     padding-left: 10px;
     font-size: 16px;
@@ -457,10 +503,12 @@ h2 {
   z-index: 10; }
 #news .swiper-container .controller {
   position: absolute;
+  right: 0px;
+  top: 5px;
   width: 70px;
   height: 20px;
-  right: 0px;
-  top: 5px; }
+  background: #fff;
+  z-index: 100; }
   #news .swiper-container .controller .swiper-button-prev,
   #news .swiper-container .controller .swiper-button-next,
   #news .swiper-container .controller .autoplay {
@@ -592,6 +640,8 @@ h2 {
     #news .news_content > a {
       width: 140px;
       left: 30px; }
+      #news .news_content > a:hover::after, #news .news_content > a:focus::after {
+        width: 70%; }
   #news .swiper-container .swiper-wrapper .swiper-slide-active::before {
     display: none; } }
 /* Tablet: 1024~768 */
@@ -669,8 +719,6 @@ h2 {
     width: 100%;
     max-width: 728px; }
   #introduce li {
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
     position: relative;
     float: none;
     width: 728px;
@@ -789,8 +837,8 @@ h2 {
 
   #news .news_content {
     padding: 20px 20px 20px 160px; }
-    #news .news_content > a {
-      left: 20px; } }
+    #news .news_content > a:hover::after, #news .news_content > a:focus::after {
+      width: 70%; } }
 /* Mobile: ~768 */
 @media screen and (max-width: 768px) {
   #coreValue h2,
@@ -942,7 +990,7 @@ h2 {
   #introduce li strong,
   #introduce li p,
   #introduce li a {
-    left: 33.8823529412vw; }
+    left: 154px; }
   #introduce li strong {
     font-size: 14px; }
   #introduce li p {
@@ -955,14 +1003,19 @@ h2 {
 
   #recruit {
     padding-bottom: 200px; }
+    #recruit .recruit_content .recruit_text h2 {
+      padding-bottom: 4px; }
     #recruit .recruit_content .recruit_text p {
+      margin-top: 8px;
       font-size: 14px; }
     #recruit .recruit_content .recruit_text a {
       -webkit-background-size: 14px !important;
       background-size: 14px !important;
-      padding: 6px 24px 6px 6px;
+      padding: 8px 26px 8px 8px;
       font-size: 14px;
-      background: url("../images/icon/next_long_b.svg") no-repeat center right 6px; }
+      background: url("../images/icon/next_long_b.svg") no-repeat center right 7px; }
+      #recruit .recruit_content .recruit_text a:hover, #recruit .recruit_content .recruit_text a:focus {
+        background: #fff url("../images/icon/next_long_b.svg") no-repeat center right 5px; }
     #recruit .recruit_img {
       right: 50%;
       width: 232px;
@@ -974,6 +1027,8 @@ h2 {
       position: static;
       display: block;
       width: auto; }
+      #news .news_content > a:hover::after, #news .news_content > a:focus::after {
+        width: 95px; }
   #news .swiper-container .swiper-wrapper .swiper-slide a {
     width: 55%; } }
 @media screen and (max-width: 480px) {
@@ -1025,7 +1080,6 @@ h2 {
         font-size: 16px;
         padding-bottom: 4px; }
       #recruit .recruit_content .recruit_text p {
-        margin-top: 8px;
         font-size: 12px; }
       #recruit .recruit_content .recruit_text a {
         margin-top: 10px;
@@ -1049,6 +1103,11 @@ h2 {
     font-size: 12px; }
     #coreValue .swiper-container .swiper-wrapper .swiper-slide span::after {
       bottom: -8px; }
+
+  #introduce li strong,
+  #introduce li p,
+  #introduce li a {
+    left: 140px; }
 
   #recruit {
     padding-bottom: 130px; }
@@ -1099,7 +1158,7 @@ h2 {
       #introduce li strong,
       #introduce li p,
       #introduce li a {
-        left: 112px; }
+        left: 130px; }
 
   #promote {
     margin-top: 80px;

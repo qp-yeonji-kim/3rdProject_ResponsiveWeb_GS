@@ -2,7 +2,6 @@
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,regular,700);
 /* PC-12column(gutter40px) 1440px~ */
 /* PC-12column(gutter40px) 1024px~1440px */
-/* Mobile-6column(gutter16px) 768px~640px */
 /* Mobile-6column(gutter16px) 425px */
 body,
 h1,
@@ -161,6 +160,9 @@ body {
           width: 2px;
           height: 14px;
           background: #aaa; }
+      #pcHeader .util .lang li a:hover, #pcHeader .util .lang li a:focus {
+        color: #005eb8;
+        text-decoration: underline; }
     #pcHeader .util .search button {
       -webkit-transform: translateY(-50%);
       transform: translateY(-50%);
@@ -326,6 +328,8 @@ body {
         background-color: rgba(255, 255, 255, 0.8); }
       #footer .info_link li:last-child::after {
         display: none; }
+      #footer .info_link li a:hover, #footer .info_link li a:focus {
+        text-decoration: underline; }
   #footer p {
     float: left;
     width: 154px;

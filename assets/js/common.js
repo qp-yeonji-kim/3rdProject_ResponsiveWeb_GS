@@ -1,12 +1,14 @@
 $(document).ready(function () {
+	/* 언어선택 */
+	$('[aria-current = page]').css('color', '#005eb8');
+
 	/* 검색창 열기 버튼 */
-	//1) 버튼 눌러 열고 닫기
 	var $searchOpen = $('.header .search button');
 	var $searchForm = $('.header .search_wrap form')
 	$searchOpen.on('click', function () {
 		$searchForm.parent().slideToggle();
 	});
-	//2) 포커스 빠져나가거나 다른 곳 클릭할 시 닫히기
+
 	$searchForm.find('button').on('blur', function () {
 		setTimeout(function () {
 			if (!$searchForm.children().is(':focus')) {
@@ -33,7 +35,7 @@ $(document).ready(function () {
 			$dep2ul.stop().slideUp(function () {
 				gnbReturn();
 				// $('#pcGnb').removeClass('on');
-			}); //초기화면 활성화 필요
+			});
 		}
 	);
 
@@ -87,11 +89,6 @@ $(document).ready(function () {
 	//1) 클릭하면 옵션 열고 닫기
 	$familyOpen.on('click', function () {
 		$(this).toggleClass('on').next('ul').stop().slideToggle();
-
-		// 옵션에서 마우스가 나가면 자동 닫힘
-		$('#familySite').on('mouseleave', function () {
-			$familyOpen.next('ul').stop().slideUp();
-		});
 	});
 
 	//2) 포커스 떠나면 옵션 닫기

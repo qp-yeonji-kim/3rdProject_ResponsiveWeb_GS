@@ -167,10 +167,15 @@ h2 {
 
     .intro-icon {
       @include bg-size(contain);
+      @include t-sition(all, .5s);
       width: 120px;
       height: 130px;
       margin: 50px auto 30px;
       background: no-repeat center bottom;
+
+      &.active{
+        @include t-form(translateY(-18px));
+      }
     }
 
     &:nth-child(1) .intro-icon {
@@ -206,6 +211,11 @@ h2 {
       display: inline-block;
       padding-right: 12px;
       background: url("../images/icon/small-arrow.svg") no-repeat top 9px right;
+
+      &:hover, &:focus{
+        color: $blue;
+        text-decoration: underline;
+      }
     }
   }
 }
@@ -289,14 +299,23 @@ h2 {
 
     &.f-energy {
       background-image: url("../images/main/energy.png");
+      a:hover, a:focus{
+        color: $red;
+      }
     }
 
     &.f-circulation {
       background-image: url("../images/main/distribution.png");
+      a:hover, a:focus{
+        color: $bluegreen;
+      }
     }
 
     &.f-build {
       background-image: url("../images/main/build.png");
+      a:hover, a:focus{
+        color: $blue;
+      }
     }
 
     .txtbox {
@@ -358,6 +377,7 @@ h2 {
         }
 
         a {
+          @include t-sition(all, .3s);
           @include b-radius(2px);
           display: block;
           width: 100%;
@@ -365,6 +385,10 @@ h2 {
           line-height: 50px;
           font-size: 22px;
           border: 1px solid #fff;
+
+          &:hover, &:focus{
+            background: rgba(255, 255, 255, .7);
+          }
         }
       }
     }
@@ -532,15 +556,22 @@ h2 {
       }
 
       a {
+        @include t-sition(all, .3s);
         @include bg-size(26px);
-        @include b-radius(2px);
         display: inline-block;
         margin-top: 40px;
-        padding: 10px 50px 10px 10px;
+        padding: 12px 50px 12px 12px;
         font-size: 26px;
         font-weight: 500;
-        border: 1px solid #000;
+        line-height: 100%;
         background: url("../images/icon/next_long_b.svg") no-repeat center right 14px;
+        border: 1px solid #000;
+        
+        &:hover, &:focus{
+          color: $red;
+          background: #fff url("../images/icon/next_long_b.svg") no-repeat center right 10px;
+          border: 1px solid $red;
+        }
       }
     }
   }
@@ -569,6 +600,25 @@ h2 {
       left: 20px;
       top: 50%;
       width: 100px;
+      
+      &::after{
+        @include t-sition(all, .3s);
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+        width: 0;
+        height: 1px;
+        background: $bluegreen;
+      }
+
+      &:hover, &:focus{
+        color: $bluegreen;
+
+        &::after{
+          width: 100%;
+        }
+      }
 
       h2 {
         @include bg-size(6px 10px);
@@ -597,6 +647,10 @@ h2 {
           white-space: nowrap;
           text-overflow: ellipsis;
           overflow: hidden;
+
+          &:hover, &:focus{
+            color: $bluegreen;
+          }
         }
 
         span {
@@ -623,10 +677,12 @@ h2 {
 
     .controller {
       position: absolute;
-      width: 70px;
-      height: 20px;
       right: 0px;
       top: 5px;
+      width: 70px;
+      height: 20px;
+      background: #fff;
+      z-index: 100;
 
       .swiper-button-prev,
       .swiper-button-next,
@@ -711,9 +767,10 @@ h2 {
       width: $pc-c6g5;
       height: $h382;
     }
+
     .movie_point {
       font-size: 18px;
-      
+
       strong {
         font-size: 68px;
       }
@@ -849,7 +906,7 @@ h2 {
     .movie_point {
       padding-right: 40px;
       font-size: 18px;
-      
+
       strong {
         margin-bottom: 40px;
         font-size: 64px;
@@ -877,6 +934,12 @@ h2 {
       >a {
         width: 140px;
         left: 30px;
+
+        &:hover, &:focus{
+          &::after{
+            width: 70%;
+          }
+        }
       }
     }
 
@@ -999,7 +1062,6 @@ h2 {
     }
 
     li {
-      @include b-radius(4px);
       position: relative;
       float: none;
       width: 728px;
@@ -1180,7 +1242,12 @@ h2 {
       padding: 20px 20px 20px 160px;
 
       >a {
-        left: 20px;
+  
+        &:hover, &:focus{
+          &::after{
+            width: 70%;
+          }
+        }
       }
     }
   }
@@ -1449,13 +1516,14 @@ h2 {
   #introduce {
 
     li {
+
       strong,
       p,
       a {
-        left: $m-c2g2;
+        left: 154px;
       }
 
-      strong{
+      strong {
         font-size: 14px;
       }
 
@@ -1464,6 +1532,7 @@ h2 {
         width: 168px;
         font-size: 14px;
       }
+
       a {
         bottom: 4px;
         font-size: 12px;
@@ -1478,15 +1547,24 @@ h2 {
 
       .recruit_text {
 
+        h2 {
+          padding-bottom: 4px;
+        }
+
         p {
+          margin-top: 8px;
           font-size: 14px;
         }
 
         a {
           @include bg-size(14px);
-          padding: 6px 24px 6px 6px;
+          padding: 8px 26px 8px 8px;
           font-size: 14px;
-          background: url("../images/icon/next_long_b.svg") no-repeat center right 6px;
+          background: url("../images/icon/next_long_b.svg") no-repeat center right 7px;
+
+          &:hover, &:focus{
+            background: #fff url("../images/icon/next_long_b.svg") no-repeat center right 5px;
+          }
         }
       }
     }
@@ -1506,6 +1584,12 @@ h2 {
         position: static;
         display: block;
         width: auto;
+
+        &:hover, &:focus{
+          &::after{
+            width: 95px;
+          }
+        }
       }
     }
 
@@ -1612,7 +1696,6 @@ h2 {
         }
 
         p {
-          margin-top: 8px;
           font-size: 12px;
         }
 
@@ -1667,6 +1750,18 @@ h2 {
             }
           }
         }
+      }
+    }
+  }
+
+  #introduce {
+
+    li {
+
+      strong,
+      p,
+      a {
+        left: 140px;
       }
     }
   }
@@ -1759,7 +1854,7 @@ h2 {
       strong,
       p,
       a {
-        left: 112px;
+        left: 130px;
       }
     }
   }
