@@ -173,7 +173,7 @@ h2 {
       margin: 50px auto 30px;
       background: no-repeat center bottom;
 
-      &.active{
+      &.active {
         @include t-form(translateY(-18px));
       }
     }
@@ -212,7 +212,8 @@ h2 {
       padding-right: 12px;
       background: url("../images/icon/small-arrow.svg") no-repeat top 9px right;
 
-      &:hover, &:focus{
+      &:hover,
+      &:focus {
         color: $blue;
         text-decoration: underline;
       }
@@ -299,21 +300,27 @@ h2 {
 
     &.f-energy {
       background-image: url("../images/main/energy.png");
-      a:hover, a:focus{
+
+      a:hover,
+      a:focus {
         color: $red;
       }
     }
 
     &.f-circulation {
       background-image: url("../images/main/distribution.png");
-      a:hover, a:focus{
+
+      a:hover,
+      a:focus {
         color: $bluegreen;
       }
     }
 
     &.f-build {
       background-image: url("../images/main/build.png");
-      a:hover, a:focus{
+
+      a:hover,
+      a:focus {
         color: $blue;
       }
     }
@@ -386,7 +393,8 @@ h2 {
           font-size: 22px;
           border: 1px solid #fff;
 
-          &:hover, &:focus{
+          &:hover,
+          &:focus {
             background: rgba(255, 255, 255, .7);
           }
         }
@@ -566,8 +574,9 @@ h2 {
         line-height: 100%;
         background: url("../images/icon/next_long_b.svg") no-repeat center right 14px;
         border: 1px solid #000;
-        
-        &:hover, &:focus{
+
+        &:hover,
+        &:focus {
           color: $red;
           background: #fff url("../images/icon/next_long_b.svg") no-repeat center right 10px;
           border: 1px solid $red;
@@ -600,8 +609,8 @@ h2 {
       left: 20px;
       top: 50%;
       width: 100px;
-      
-      &::after{
+
+      &::after {
         @include t-sition(all, .3s);
         content: "";
         position: absolute;
@@ -612,10 +621,11 @@ h2 {
         background: $bluegreen;
       }
 
-      &:hover, &:focus{
+      &:hover,
+      &:focus {
         color: $bluegreen;
 
-        &::after{
+        &::after {
           width: 100%;
         }
       }
@@ -648,7 +658,8 @@ h2 {
           text-overflow: ellipsis;
           overflow: hidden;
 
-          &:hover, &:focus{
+          &:hover,
+          &:focus {
             color: $bluegreen;
           }
         }
@@ -935,8 +946,9 @@ h2 {
         width: 140px;
         left: 30px;
 
-        &:hover, &:focus{
-          &::after{
+        &:hover,
+        &:focus {
+          &::after {
             width: 70%;
           }
         }
@@ -1242,9 +1254,10 @@ h2 {
       padding: 20px 20px 20px 160px;
 
       >a {
-  
-        &:hover, &:focus{
-          &::after{
+
+        &:hover,
+        &:focus {
+          &::after {
             width: 70%;
           }
         }
@@ -1562,7 +1575,8 @@ h2 {
           font-size: 14px;
           background: url("../images/icon/next_long_b.svg") no-repeat center right 7px;
 
-          &:hover, &:focus{
+          &:hover,
+          &:focus {
             background: #fff url("../images/icon/next_long_b.svg") no-repeat center right 5px;
           }
         }
@@ -1585,8 +1599,9 @@ h2 {
         display: block;
         width: auto;
 
-        &:hover, &:focus{
-          &::after{
+        &:hover,
+        &:focus {
+          &::after {
             width: 95px;
           }
         }

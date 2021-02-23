@@ -217,15 +217,18 @@ h2 {
       opacity: 0; }
     #subsidairy .fields > li.f-energy {
       background-image: url("../images/main/energy.png"); }
-      #subsidairy .fields > li.f-energy a:hover, #subsidairy .fields > li.f-energy a:focus {
+      #subsidairy .fields > li.f-energy a:hover,
+      #subsidairy .fields > li.f-energy a:focus {
         color: #cf4520; }
     #subsidairy .fields > li.f-circulation {
       background-image: url("../images/main/distribution.png"); }
-      #subsidairy .fields > li.f-circulation a:hover, #subsidairy .fields > li.f-circulation a:focus {
+      #subsidairy .fields > li.f-circulation a:hover,
+      #subsidairy .fields > li.f-circulation a:focus {
         color: #00a499; }
     #subsidairy .fields > li.f-build {
       background-image: url("../images/main/build.png"); }
-      #subsidairy .fields > li.f-build a:hover, #subsidairy .fields > li.f-build a:focus {
+      #subsidairy .fields > li.f-build a:hover,
+      #subsidairy .fields > li.f-build a:focus {
         color: #005eb8; }
     #subsidairy .fields > li .txtbox {
       position: absolute;

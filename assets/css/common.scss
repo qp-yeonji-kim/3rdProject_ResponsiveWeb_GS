@@ -1,6 +1,7 @@
 @charset "utf-8";
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,regular,700);
 @import "_mixin", "_var";
+
 body,
 h1,
 h2,
@@ -190,7 +191,8 @@ body {
           }
         }
 
-        & a:hover, & a:focus{
+        & a:hover,
+        & a:focus {
           color: $blue;
           text-decoration: underline;
         }
@@ -403,7 +405,8 @@ body {
         display: none;
       }
 
-      a:hover, a:focus{
+      a:hover,
+      a:focus {
         text-decoration: underline;
       }
     }
@@ -676,6 +679,7 @@ body {
     left: 0;
     top: 60px;
     width: 100%;
+    background: #fff;
 
     * {
       @include borderbox;

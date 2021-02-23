@@ -77,14 +77,13 @@ $(document).ready(function () {
 		$('#introduce .intro-icon').removeClass('active');
 	});
 
-
 	//subsidairy li접근 시 클래스명 붙이기
 	$('.fields > li').on({
 		'mouseenter focusin': function () {
-			if ($(window).width() >= 1024) $(this).addClass('active');
+			if ($(window).width() > 1024) $(this).addClass('active');
 		},
 		'mouseleave focusout': function () {
-			if ($(window).width() >= 1024) $(this).removeClass('active');
+			if ($(window).width() > 1024) $(this).removeClass('active');
 		}
 	});
 

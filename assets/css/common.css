@@ -328,7 +328,8 @@ body {
         background-color: rgba(255, 255, 255, 0.8); }
       #footer .info_link li:last-child::after {
         display: none; }
-      #footer .info_link li a:hover, #footer .info_link li a:focus {
+      #footer .info_link li a:hover,
+      #footer .info_link li a:focus {
         text-decoration: underline; }
   #footer p {
     float: left;
@@ -515,7 +516,8 @@ body {
     position: fixed;
     left: 0;
     top: 60px;
-    width: 100%; }
+    width: 100%;
+    background: #fff; }
     #mGnb * {
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
