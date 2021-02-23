@@ -70,11 +70,11 @@ $(document).ready(function () {
 
 	//introduce hover, focus시 아이콘 움직이기
 	$('#introduce .wrap-list a').on('mouseenter focus', function(){
-		$(this).siblings('.intro-icon').addClass('active');
+		if ($(window).width() > 1024)	$(this).siblings('.intro-icon').addClass('active');
 	});
 
 	$('#introduce .wrap-list a').on('mouseleave blur', function(){
-		$('#introduce .intro-icon').removeClass('active');
+		if ($(window).width() > 1024) $('#introduce .intro-icon').removeClass('active');
 	});
 
 	//subsidairy li접근 시 클래스명 붙이기
