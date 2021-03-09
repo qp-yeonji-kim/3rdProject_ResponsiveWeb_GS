@@ -42,7 +42,7 @@ $(document).ready(function () {
 	//3)depth1 li에 마우스, 포커스 진입
 	$dep1ul.children().on('mouseenter focusin', function () {
 		$('#pcGnb').addClass('on');
-		$dep2ul.stop().slideDown(); //포커스제어 필요
+		$dep2ul.stop().slideDown();
 		$(this).addClass('on').siblings().removeClass('on');
 	});
 
